@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "secretdoors:secret_oak_plank_door",
+    "secretdoors:secret_dark_oak_plank_door",
+    "secretdoors:secret_birch_plank_door",
+    "secretdoors:secret_acacia_plank_door",
+    "secretdoors:secret_spruce_plank_door",
+    "secretdoors:secret_jungle_plank_door",
+    "secretdoors:secret_oak_log_door",
+    "secretdoors:secret_dark_oak_log_door",
+    "secretdoors:secret_birch_log_door",
+    "secretdoors:secret_acacia_log_door",
+    "secretdoors:secret_spruce_log_door",
+    "secretdoors:secret_jungle_log_door"
+  ]
+}
