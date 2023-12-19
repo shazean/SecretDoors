@@ -29,6 +29,5 @@ public class ItemModels extends ItemModelProvider {
         singleTexture(SecretDoorsRegistry.SECRET_SPRUCE_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_spruce_log_door"));
         singleTexture(SecretDoorsRegistry.SECRET_JUNGLE_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_jungle_log_door"));
 
-
     }
 }
