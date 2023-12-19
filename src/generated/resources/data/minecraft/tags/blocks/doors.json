@@ -12,6 +12,26 @@
     "secretdoors:secret_birch_log_door",
     "secretdoors:secret_acacia_log_door",
     "secretdoors:secret_spruce_log_door",
-    "secretdoors:secret_jungle_log_door"
+    "secretdoors:secret_jungle_log_door",
+    "secretdoors:secret_stone_door",
+    "secretdoors:secret_cobblestone_door",
+    "secretdoors:secret_stone_bricks_door",
+    "secretdoors:secret_deepslate_door",
+    "secretdoors:secret_cobbled_deepslate_door",
+    "secretdoors:secret_deepslate_bricks_door",
+    "secretdoors:secret_polished_deepslate_door",
+    "secretdoors:secret_deepslate_tiles_door",
+    "secretdoors:secret_bookshelf_door",
+    "secretdoors:secret_netherrack_door",
+    "secretdoors:secret_nether_brick_door",
+    "secretdoors:secret_polished_blackstone_door",
+    "secretdoors:secret_polished_basalt_door",
+    "secretdoors:secret_blackstone_door",
+    "secretdoors:secret_andesite_door",
+    "secretdoors:secret_polished_andesite_door",
+    "secretdoors:secret_diorite_door",
+    "secretdoors:secret_polished_diorite_door",
+    "secretdoors:secret_granite_door",
+    "secretdoors:secret_polished_granite_door"
   ]
 }
