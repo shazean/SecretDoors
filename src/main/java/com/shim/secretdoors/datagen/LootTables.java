@@ -26,6 +26,5 @@ public class LootTables  extends BaseLootTableProvider {
         lootTables.put(SecretDoorsRegistry.SECRET_SPRUCE_LOG_DOOR.get(), createSimpleTable("secret_spruce_log_door", SecretDoorsRegistry.SECRET_SPRUCE_LOG_DOOR.get()));
         lootTables.put(SecretDoorsRegistry.SECRET_JUNGLE_LOG_DOOR.get(), createSimpleTable("secret_jungle_log_door", SecretDoorsRegistry.SECRET_JUNGLE_LOG_DOOR.get()));
 
-
     }
 }
