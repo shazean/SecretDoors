@@ -31,6 +31,27 @@ public class BlockStates extends BlockStateProvider {
         doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_SPRUCE_LOG_DOOR.get(), mcLoc("block/spruce_log"), mcLoc("block/spruce_log"));
         doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_JUNGLE_LOG_DOOR.get(), mcLoc("block/jungle_log"), mcLoc("block/jungle_log"));
 
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_DOOR.get(), mcLoc("block/stripped_oak_log"), mcLoc("block/stripped_oak_log"));
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_DOOR.get(), mcLoc("block/stripped_dark_oak_log"), mcLoc("block/stripped_dark_oak_log"));
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_BIRCH_LOG_DOOR.get(), mcLoc("block/stripped_birch_log"), mcLoc("block/stripped_birch_log"));
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_DOOR.get(), mcLoc("block/stripped_acacia_log"), mcLoc("block/stripped_acacia_log"));
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_DOOR.get(), mcLoc("block/stripped_spruce_log"), mcLoc("block/stripped_spruce_log"));
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_DOOR.get(), mcLoc("block/stripped_jungle_log"), mcLoc("block/stripped_jungle_log"));
+
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_OAK_LOG_DOOR.get(), modLoc("block/stripped_horizontal_oak_log"), modLoc("block/stripped_horizontal_oak_log"));
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_DARK_OAK_LOG_DOOR.get(), modLoc("block/stripped_horizontal_dark_oak_log"), modLoc("block/stripped_horizontal_dark_oak_log"));
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_BIRCH_LOG_DOOR.get(), modLoc("block/stripped_horizontal_birch_log"), modLoc("block/stripped_horizontal_birch_log"));
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_ACACIA_LOG_DOOR.get(), modLoc("block/stripped_horizontal_acacia_log"), modLoc("block/stripped_horizontal_acacia_log"));
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_SPRUCE_LOG_DOOR.get(), modLoc("block/stripped_horizontal_spruce_log"), modLoc("block/stripped_horizontal_spruce_log"));
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_JUNGLE_LOG_DOOR.get(), modLoc("block/stripped_horizontal_jungle_log"), modLoc("block/stripped_horizontal_jungle_log"));
+
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_HORIZONTAL_OAK_LOG_DOOR.get(), modLoc("block/horizontal_oak_log"), modLoc("block/horizontal_oak_log"));
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_HORIZONTAL_DARK_OAK_LOG_DOOR.get(), modLoc("block/horizontal_dark_oak_log"), modLoc("block/horizontal_dark_oak_log"));
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_HORIZONTAL_BIRCH_LOG_DOOR.get(), modLoc("block/horizontal_birch_log"), modLoc("block/horizontal_birch_log"));
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_HORIZONTAL_ACACIA_LOG_DOOR.get(), modLoc("block/horizontal_acacia_log"), modLoc("block/horizontal_acacia_log"));
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_HORIZONTAL_SPRUCE_LOG_DOOR.get(), modLoc("block/horizontal_spruce_log"), modLoc("block/horizontal_spruce_log"));
+        doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_HORIZONTAL_JUNGLE_LOG_DOOR.get(), modLoc("block/horizontal_jungle_log"), modLoc("block/horizontal_jungle_log"));
+
         doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_STONE_DOOR.get(), mcLoc("block/stone"), mcLoc("block/stone"));
         doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_COBBLESTONE_DOOR.get(), mcLoc("block/cobblestone"), mcLoc("block/cobblestone"));
         doorBlock((DoorBlock) SecretDoorsRegistry.SECRET_STONE_BRICKS_DOOR.get(), mcLoc("block/stone_bricks"), mcLoc("block/stone_bricks"));
@@ -72,6 +93,14 @@ public class BlockStates extends BlockStateProvider {
         trapdoorBlock((TrapDoorBlock) SecretDoorsRegistry.SECRET_ACACIA_LOG_TRAPDOOR.get(), mcLoc("block/acacia_log"), true);
         trapdoorBlock((TrapDoorBlock) SecretDoorsRegistry.SECRET_SPRUCE_LOG_TRAPDOOR.get(), mcLoc("block/spruce_log"), true);
         trapdoorBlock((TrapDoorBlock) SecretDoorsRegistry.SECRET_JUNGLE_LOG_TRAPDOOR.get(), mcLoc("block/jungle_log"), true);
+
+
+        trapdoorBlock((TrapDoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_TRAPDOOR.get(), mcLoc("block/stripped_oak_log"), true);
+        trapdoorBlock((TrapDoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_TRAPDOOR.get(), mcLoc("block/stripped_dark_oak_log"), true);
+        trapdoorBlock((TrapDoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_BIRCH_LOG_TRAPDOOR.get(), mcLoc("block/stripped_birch_log"),  true);
+        trapdoorBlock((TrapDoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_TRAPDOOR.get(), mcLoc("block/stripped_acacia_log"), true);
+        trapdoorBlock((TrapDoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_TRAPDOOR.get(), mcLoc("block/stripped_spruce_log"), true);
+        trapdoorBlock((TrapDoorBlock) SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_TRAPDOOR.get(), mcLoc("block/stripped_jungle_log"), true);
 
         trapdoorBlock((TrapDoorBlock) SecretDoorsRegistry.SECRET_STONE_TRAPDOOR.get(), mcLoc("block/stone"), true);
         trapdoorBlock((TrapDoorBlock) SecretDoorsRegistry.SECRET_COBBLESTONE_TRAPDOOR.get(), mcLoc("block/cobblestone"), true);

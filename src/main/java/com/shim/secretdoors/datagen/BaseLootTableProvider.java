@@ -2,9 +2,7 @@ package com.shim.secretdoors.datagen;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import net.minecraft.advancements.critereon.EnchantmentPredicate;
-import net.minecraft.advancements.critereon.ItemPredicate;
-import net.minecraft.advancements.critereon.MinMaxBounds;
+import net.minecraft.advancements.critereon.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.HashCache;
@@ -14,6 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.LootTables;
@@ -22,6 +21,9 @@ import net.minecraft.world.level.storage.loot.entries.DynamicLoot;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.*;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
+import net.minecraft.world.level.storage.loot.predicates.ExplosionCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.world.level.storage.loot.providers.nbt.ContextNbtProvider;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
@@ -33,6 +35,8 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
+import java.util.function.Supplier;
 
 public abstract class BaseLootTableProvider extends LootTableProvider {
 
@@ -65,6 +69,7 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
         return LootTable.lootTable().withPool(builder);
     }
 
+
     protected LootTable.Builder createSilkTouchTable(String name, Block block, Item lootItem, float min, float max) {
         LootPool.Builder builder = LootPool.lootPool()
                 .name(name)
@@ -92,10 +97,20 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
                                                 .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1))))),
                                 LootItem.lootTableItem(lootBlock)
                                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(min, max)))
-                                        .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 1))
-                                        .apply(ApplyExplosionDecay.explosionDecay())
-                        )
+                                        .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 1)))
                 );
+        return LootTable.lootTable().withPool(builder);
+    }
+
+    protected LootTable.Builder createDoorTable(String name, Block block) {
+        LootPool.Builder builder = LootPool.lootPool()
+//                .name(name)
+                .setRolls(ConstantValue.exactly(1))
+                .add(LootItem.lootTableItem(block)
+                    .when(() -> new LootItemBlockStatePropertyCondition.Builder(block)
+                        .setProperties(StatePropertiesPredicate.Builder.properties()
+                            .hasProperty(BlockStateProperties.HALF, "lower")).build()))
+                .when(ExplosionCondition.survivesExplosion());
         return LootTable.lootTable().withPool(builder);
     }
 

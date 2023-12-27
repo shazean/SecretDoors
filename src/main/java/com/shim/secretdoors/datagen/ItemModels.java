@@ -29,6 +29,28 @@ public class ItemModels extends ItemModelProvider {
         singleTexture(SecretDoorsRegistry.SECRET_SPRUCE_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_spruce_log_door"));
         singleTexture(SecretDoorsRegistry.SECRET_JUNGLE_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_jungle_log_door"));
 
+        singleTexture(SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_stripped_oak_log_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_stripped_dark_oak_log_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_STRIPPED_BIRCH_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_stripped_birch_log_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_stripped_acacia_log_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_stripped_spruce_log_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_stripped_jungle_log_door"));
+
+        singleTexture(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_OAK_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_stripped_horizontal_oak_log_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_DARK_OAK_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_stripped_horizontal_dark_oak_log_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_BIRCH_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_stripped_horizontal_birch_log_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_ACACIA_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_stripped_horizontal_acacia_log_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_SPRUCE_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_stripped_horizontal_spruce_log_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_JUNGLE_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_stripped_horizontal_jungle_log_door"));
+
+        singleTexture(SecretDoorsRegistry.SECRET_HORIZONTAL_OAK_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_horizontal_oak_log_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_HORIZONTAL_DARK_OAK_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_horizontal_dark_oak_log_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_HORIZONTAL_BIRCH_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_horizontal_birch_log_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_HORIZONTAL_ACACIA_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_horizontal_acacia_log_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_HORIZONTAL_SPRUCE_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_horizontal_spruce_log_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_HORIZONTAL_JUNGLE_LOG_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_horizontal_jungle_log_door"));
+
+
         singleTexture(SecretDoorsRegistry.SECRET_STONE_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_stone_door"));
         singleTexture(SecretDoorsRegistry.SECRET_COBBLESTONE_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_cobblestone_door"));
         singleTexture(SecretDoorsRegistry.SECRET_STONE_BRICKS_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_stone_bricks_door"));
@@ -70,6 +92,13 @@ public class ItemModels extends ItemModelProvider {
         withExistingParent(SecretDoorsRegistry.SECRET_ACACIA_LOG_TRAPDOOR_ITEM.get().getRegistryName().getPath(), modLoc("block/secret_acacia_log_trapdoor_bottom"));
         withExistingParent(SecretDoorsRegistry.SECRET_SPRUCE_LOG_TRAPDOOR_ITEM.get().getRegistryName().getPath(), modLoc("block/secret_spruce_log_trapdoor_bottom"));
         withExistingParent(SecretDoorsRegistry.SECRET_JUNGLE_LOG_TRAPDOOR_ITEM.get().getRegistryName().getPath(), modLoc("block/secret_jungle_log_trapdoor_bottom"));
+
+        withExistingParent(SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_TRAPDOOR_ITEM.get().getRegistryName().getPath(), modLoc("block/secret_stripped_oak_log_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_TRAPDOOR_ITEM.get().getRegistryName().getPath(), modLoc("block/secret_stripped_dark_oak_log_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_STRIPPED_BIRCH_LOG_TRAPDOOR_ITEM.get().getRegistryName().getPath(), modLoc("block/secret_stripped_birch_log_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_TRAPDOOR_ITEM.get().getRegistryName().getPath(), modLoc("block/secret_stripped_acacia_log_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_TRAPDOOR_ITEM.get().getRegistryName().getPath(), modLoc("block/secret_stripped_spruce_log_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_TRAPDOOR_ITEM.get().getRegistryName().getPath(), modLoc("block/secret_stripped_jungle_log_trapdoor_bottom"));
 
         withExistingParent(SecretDoorsRegistry.SECRET_STONE_TRAPDOOR_ITEM.get().getRegistryName().getPath(), modLoc("block/secret_stone_trapdoor_bottom"));
         withExistingParent(SecretDoorsRegistry.SECRET_COBBLESTONE_TRAPDOOR_ITEM.get().getRegistryName().getPath(), modLoc("block/secret_cobblestone_trapdoor_bottom"));

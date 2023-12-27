@@ -57,6 +57,27 @@ public class SecretDoorsRegistry {
     public static final RegistryObject<Block> SECRET_BIRCH_LOG_DOOR = BLOCKS.register("secret_birch_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.BIRCH_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
     public static final RegistryObject<Block> SECRET_JUNGLE_LOG_DOOR = BLOCKS.register("secret_jungle_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.JUNGLE_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
 
+    public static final RegistryObject<Block> SECRET_STRIPPED_OAK_LOG_DOOR = BLOCKS.register("secret_stripped_oak_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.OAK_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_STRIPPED_DARK_OAK_LOG_DOOR = BLOCKS.register("secret_stripped_dark_oak_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.DARK_OAK_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_STRIPPED_SPRUCE_LOG_DOOR = BLOCKS.register("secret_stripped_spruce_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.SPRUCE_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_STRIPPED_ACACIA_LOG_DOOR = BLOCKS.register("secret_stripped_acacia_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.ACACIA_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_STRIPPED_BIRCH_LOG_DOOR = BLOCKS.register("secret_stripped_birch_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.BIRCH_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_STRIPPED_JUNGLE_LOG_DOOR = BLOCKS.register("secret_stripped_jungle_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.JUNGLE_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+
+    public static final RegistryObject<Block> SECRET_STRIPPED_HORIZONTAL_OAK_LOG_DOOR = BLOCKS.register("secret_stripped_horizontal_oak_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.OAK_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_STRIPPED_HORIZONTAL_DARK_OAK_LOG_DOOR = BLOCKS.register("secret_stripped_horizontal_dark_oak_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.DARK_OAK_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_STRIPPED_HORIZONTAL_SPRUCE_LOG_DOOR = BLOCKS.register("secret_stripped_horizontal_spruce_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.SPRUCE_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_STRIPPED_HORIZONTAL_ACACIA_LOG_DOOR = BLOCKS.register("secret_stripped_horizontal_acacia_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.ACACIA_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_STRIPPED_HORIZONTAL_BIRCH_LOG_DOOR = BLOCKS.register("secret_stripped_horizontal_birch_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.BIRCH_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_STRIPPED_HORIZONTAL_JUNGLE_LOG_DOOR = BLOCKS.register("secret_stripped_horizontal_jungle_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.JUNGLE_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+
+
+    public static final RegistryObject<Block> SECRET_HORIZONTAL_OAK_LOG_DOOR = BLOCKS.register("secret_horizontal_oak_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.OAK_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_HORIZONTAL_DARK_OAK_LOG_DOOR = BLOCKS.register("secret_horizontal_dark_oak_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.DARK_OAK_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_HORIZONTAL_SPRUCE_LOG_DOOR = BLOCKS.register("secret_horizontal_spruce_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.SPRUCE_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_HORIZONTAL_ACACIA_LOG_DOOR = BLOCKS.register("secret_horizontal_acacia_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.ACACIA_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_HORIZONTAL_BIRCH_LOG_DOOR = BLOCKS.register("secret_horizontal_birch_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.BIRCH_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_HORIZONTAL_JUNGLE_LOG_DOOR = BLOCKS.register("secret_horizontal_jungle_log_door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.JUNGLE_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
 
     public static final RegistryObject<Block> SECRET_STONE_DOOR = BLOCKS.register("secret_stone_door", () -> new DoorBlock(Block.Properties.of(Material.STONE, Blocks.STONE.defaultMaterialColor()).strength(3.0F).sound(SoundType.STONE).noOcclusion()));
     public static final RegistryObject<Block> SECRET_COBBLESTONE_DOOR = BLOCKS.register("secret_cobblestone_door", () -> new DoorBlock(Block.Properties.of(Material.STONE, Blocks.COBBLESTONE.defaultMaterialColor()).strength(3.0F).sound(SoundType.STONE).noOcclusion()));
@@ -99,6 +120,13 @@ public class SecretDoorsRegistry {
     public static final RegistryObject<Block> SECRET_BIRCH_LOG_TRAPDOOR = BLOCKS.register("secret_birch_log_trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.WOOD, Blocks.BIRCH_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
     public static final RegistryObject<Block> SECRET_JUNGLE_LOG_TRAPDOOR = BLOCKS.register("secret_jungle_log_trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.WOOD, Blocks.JUNGLE_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
 
+
+    public static final RegistryObject<Block> SECRET_STRIPPED_OAK_LOG_TRAPDOOR = BLOCKS.register("secret_stripped_oak_log_trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.WOOD, Blocks.OAK_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_STRIPPED_DARK_OAK_LOG_TRAPDOOR = BLOCKS.register("secret_stripped_dark_oak_log_trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.WOOD, Blocks.DARK_OAK_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_STRIPPED_SPRUCE_LOG_TRAPDOOR = BLOCKS.register("secret_stripped_spruce_log_trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.WOOD, Blocks.SPRUCE_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_STRIPPED_ACACIA_LOG_TRAPDOOR = BLOCKS.register("secret_stripped_acacia_log_trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.WOOD, Blocks.ACACIA_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_STRIPPED_BIRCH_LOG_TRAPDOOR = BLOCKS.register("secret_stripped_birch_log_trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.WOOD, Blocks.BIRCH_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> SECRET_STRIPPED_JUNGLE_LOG_TRAPDOOR = BLOCKS.register("secret_stripped_jungle_log_trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.WOOD, Blocks.JUNGLE_LOG.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
 
     public static final RegistryObject<Block> SECRET_STONE_TRAPDOOR = BLOCKS.register("secret_stone_trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.STONE, Blocks.STONE.defaultMaterialColor()).strength(3.0F).sound(SoundType.STONE).noOcclusion()));
     public static final RegistryObject<Block> SECRET_COBBLESTONE_TRAPDOOR = BLOCKS.register("secret_cobblestone_trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.STONE, Blocks.COBBLESTONE.defaultMaterialColor()).strength(3.0F).sound(SoundType.STONE).noOcclusion()));
@@ -145,6 +173,33 @@ public class SecretDoorsRegistry {
     public static final RegistryObject<Item> SECRET_BIRCH_LOG_DOOR_ITEM = fromBlock(SECRET_BIRCH_LOG_DOOR);
     public static final RegistryObject<Item> SECRET_JUNGLE_LOG_DOOR_ITEM = fromBlock(SECRET_JUNGLE_LOG_DOOR);
 
+
+    public static final RegistryObject<Item> SECRET_STRIPPED_OAK_LOG_DOOR_ITEM = fromBlock(SECRET_STRIPPED_OAK_LOG_DOOR);
+    public static final RegistryObject<Item> SECRET_STRIPPED_DARK_OAK_LOG_DOOR_ITEM = fromBlock(SECRET_STRIPPED_DARK_OAK_LOG_DOOR);
+    public static final RegistryObject<Item> SECRET_STRIPPED_SPRUCE_LOG_DOOR_ITEM = fromBlock(SECRET_STRIPPED_SPRUCE_LOG_DOOR);
+    public static final RegistryObject<Item> SECRET_STRIPPED_ACACIA_LOG_DOOR_ITEM = fromBlock(SECRET_STRIPPED_ACACIA_LOG_DOOR);
+    public static final RegistryObject<Item> SECRET_STRIPPED_BIRCH_LOG_DOOR_ITEM = fromBlock(SECRET_STRIPPED_BIRCH_LOG_DOOR);
+    public static final RegistryObject<Item> SECRET_STRIPPED_JUNGLE_LOG_DOOR_ITEM = fromBlock(SECRET_STRIPPED_JUNGLE_LOG_DOOR);
+
+
+    public static final RegistryObject<Item> SECRET_STRIPPED_HORIZONTAL_OAK_LOG_DOOR_ITEM = fromBlock(SECRET_STRIPPED_HORIZONTAL_OAK_LOG_DOOR);
+    public static final RegistryObject<Item> SECRET_STRIPPED_HORIZONTAL_DARK_OAK_LOG_DOOR_ITEM = fromBlock(SECRET_STRIPPED_HORIZONTAL_DARK_OAK_LOG_DOOR);
+    public static final RegistryObject<Item> SECRET_STRIPPED_HORIZONTAL_SPRUCE_LOG_DOOR_ITEM = fromBlock(SECRET_STRIPPED_HORIZONTAL_SPRUCE_LOG_DOOR);
+    public static final RegistryObject<Item> SECRET_STRIPPED_HORIZONTAL_ACACIA_LOG_DOOR_ITEM = fromBlock(SECRET_STRIPPED_HORIZONTAL_ACACIA_LOG_DOOR);
+    public static final RegistryObject<Item> SECRET_STRIPPED_HORIZONTAL_BIRCH_LOG_DOOR_ITEM = fromBlock(SECRET_STRIPPED_HORIZONTAL_BIRCH_LOG_DOOR);
+    public static final RegistryObject<Item> SECRET_STRIPPED_HORIZONTAL_JUNGLE_LOG_DOOR_ITEM = fromBlock(SECRET_STRIPPED_HORIZONTAL_JUNGLE_LOG_DOOR);
+
+
+    public static final RegistryObject<Item> SECRET_HORIZONTAL_OAK_LOG_DOOR_ITEM = fromBlock(SECRET_HORIZONTAL_OAK_LOG_DOOR);
+    public static final RegistryObject<Item> SECRET_HORIZONTAL_DARK_OAK_LOG_DOOR_ITEM = fromBlock(SECRET_HORIZONTAL_DARK_OAK_LOG_DOOR);
+    public static final RegistryObject<Item> SECRET_HORIZONTAL_SPRUCE_LOG_DOOR_ITEM = fromBlock(SECRET_HORIZONTAL_SPRUCE_LOG_DOOR);
+    public static final RegistryObject<Item> SECRET_HORIZONTAL_ACACIA_LOG_DOOR_ITEM = fromBlock(SECRET_HORIZONTAL_ACACIA_LOG_DOOR);
+    public static final RegistryObject<Item> SECRET_HORIZONTAL_BIRCH_LOG_DOOR_ITEM = fromBlock(SECRET_HORIZONTAL_BIRCH_LOG_DOOR);
+    public static final RegistryObject<Item> SECRET_HORIZONTAL_JUNGLE_LOG_DOOR_ITEM = fromBlock(SECRET_HORIZONTAL_JUNGLE_LOG_DOOR);
+
+
+
+
     public static final RegistryObject<Item> SECRET_STONE_DOOR_ITEM = fromBlock(SECRET_STONE_DOOR);
     public static final RegistryObject<Item> SECRET_COBBLESTONE_DOOR_ITEM = fromBlock(SECRET_COBBLESTONE_DOOR);
     public static final RegistryObject<Item> SECRET_STONE_BRICKS_DOOR_ITEM = fromBlock(SECRET_STONE_BRICKS_DOOR);
@@ -187,6 +242,15 @@ public class SecretDoorsRegistry {
     public static final RegistryObject<Item> SECRET_ACACIA_LOG_TRAPDOOR_ITEM = fromBlock(SECRET_ACACIA_LOG_TRAPDOOR);
     public static final RegistryObject<Item> SECRET_BIRCH_LOG_TRAPDOOR_ITEM = fromBlock(SECRET_BIRCH_LOG_TRAPDOOR);
     public static final RegistryObject<Item> SECRET_JUNGLE_LOG_TRAPDOOR_ITEM = fromBlock(SECRET_JUNGLE_LOG_TRAPDOOR);
+
+
+    public static final RegistryObject<Item> SECRET_STRIPPED_OAK_LOG_TRAPDOOR_ITEM = fromBlock(SECRET_STRIPPED_OAK_LOG_TRAPDOOR);
+    public static final RegistryObject<Item> SECRET_STRIPPED_DARK_OAK_LOG_TRAPDOOR_ITEM = fromBlock(SECRET_STRIPPED_DARK_OAK_LOG_TRAPDOOR);
+    public static final RegistryObject<Item> SECRET_STRIPPED_SPRUCE_LOG_TRAPDOOR_ITEM = fromBlock(SECRET_STRIPPED_SPRUCE_LOG_TRAPDOOR);
+    public static final RegistryObject<Item> SECRET_STRIPPED_ACACIA_LOG_TRAPDOOR_ITEM = fromBlock(SECRET_STRIPPED_ACACIA_LOG_TRAPDOOR);
+    public static final RegistryObject<Item> SECRET_STRIPPED_BIRCH_LOG_TRAPDOOR_ITEM = fromBlock(SECRET_STRIPPED_BIRCH_LOG_TRAPDOOR);
+    public static final RegistryObject<Item> SECRET_STRIPPED_JUNGLE_LOG_TRAPDOOR_ITEM = fromBlock(SECRET_STRIPPED_JUNGLE_LOG_TRAPDOOR);
+
 
     public static final RegistryObject<Item> SECRET_STONE_TRAPDOOR_ITEM = fromBlock(SECRET_STONE_TRAPDOOR);
     public static final RegistryObject<Item> SECRET_COBBLESTONE_TRAPDOOR_ITEM = fromBlock(SECRET_COBBLESTONE_TRAPDOOR);
