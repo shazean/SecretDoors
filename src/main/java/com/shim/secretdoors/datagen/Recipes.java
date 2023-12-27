@@ -376,7 +376,6 @@ public class Recipes extends RecipeProvider {
                 .define('X', Items.STRIPPED_JUNGLE_LOG).define('#', ItemTags.WOODEN_TRAPDOORS)
                 .group("secretdoors").unlockedBy("stripped_jungle_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_JUNGLE_LOG)).save(consumer);
 
-
         ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STONE_TRAPDOOR.get())
                 .pattern("XXX").pattern("X#X").pattern("XXX")
                 .define('X', Items.STONE).define('#', ItemTags.TRAPDOORS)
