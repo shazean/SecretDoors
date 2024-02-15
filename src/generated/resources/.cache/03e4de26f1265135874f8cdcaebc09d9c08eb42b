@@ -1,0 +1,9 @@
+// 1.19.2	2024-02-15T10:36:14.157334	Tags for minecraft:item
+560f30fcedacce273492030646a2e889c709e978 data/minecraft/tags/items/doors.json
+1463786b108de1cf7964dbd6d0b5f34f2c2d9785 data/minecraft/tags/items/trapdoors.json
+f687504a35aa290ad019a3a5986e75754db12940 data/minecraft/tags/items/wooden_doors.json
+ce50df70cafc50d7b7012b5c71ce0b645219b3df data/minecraft/tags/items/wooden_trapdoors.json
+0658b906025443ce10c3ee03a4e097681f7eba90 data/secretdoors/tags/items/secret_log_trapdoors.json
+31f7fbf83507987d01b5beab12e71c13d14fd096 data/secretdoors/tags/items/secret_stone_trapdoors.json
+58db2b8447bb78867e7de0332062f998cfe6c014 data/secretdoors/tags/items/secret_wooden_plank_trapdoors.json
+689ce2ca1762c083ceea225db3c6a139ee3a955f data/secretdoors/tags/items/secret_wooden_trapdoors.json

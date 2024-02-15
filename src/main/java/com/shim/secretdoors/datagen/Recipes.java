@@ -8,7 +8,9 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Consumer;
 
@@ -20,462 +22,185 @@ public class Recipes extends RecipeProvider {
 
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_OAK_PLANK_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.OAK_PLANKS).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("oak_planks", InventoryChangeTrigger.TriggerInstance.hasItems(Items.OAK_PLANKS)).save(consumer);
 
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_DARK_OAK_PLANK_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.DARK_OAK_PLANKS).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("dark_oak_planks", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DARK_OAK_PLANKS)).save(consumer);
+        woodenDoor(SecretDoorsRegistry.SECRET_OAK_PLANK_DOOR_ITEM.get(), Items.OAK_PLANKS, consumer);
+        woodenDoor(SecretDoorsRegistry.SECRET_DARK_OAK_PLANK_DOOR_ITEM.get(), Items.DARK_OAK_PLANKS, consumer);
+        woodenDoor(SecretDoorsRegistry.SECRET_BIRCH_PLANK_DOOR_ITEM.get(), Items.BIRCH_PLANKS, consumer);
+        woodenDoor(SecretDoorsRegistry.SECRET_ACACIA_PLANK_DOOR_ITEM.get(), Items.ACACIA_PLANKS, consumer);
+        woodenDoor(SecretDoorsRegistry.SECRET_SPRUCE_PLANK_DOOR_ITEM.get(), Items.SPRUCE_PLANKS, consumer);
+        woodenDoor(SecretDoorsRegistry.SECRET_JUNGLE_PLANK_DOOR_ITEM.get(), Items.JUNGLE_PLANKS, consumer);
 
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_BIRCH_PLANK_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.BIRCH_PLANKS).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("birch_planks", InventoryChangeTrigger.TriggerInstance.hasItems(Items.BIRCH_PLANKS)).save(consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_OAK_LOG_DOOR_ITEM.get(), Items.OAK_LOG, consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_DARK_OAK_LOG_DOOR_ITEM.get(), Items.DARK_OAK_LOG, consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_BIRCH_LOG_DOOR_ITEM.get(), Items.BIRCH_LOG, consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_ACACIA_LOG_DOOR_ITEM.get(), Items.ACACIA_LOG, consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_SPRUCE_LOG_DOOR_ITEM.get(), Items.SPRUCE_LOG, consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_JUNGLE_LOG_DOOR_ITEM.get(), Items.JUNGLE_LOG, consumer);
 
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_ACACIA_PLANK_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.ACACIA_PLANKS).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("acacia_planks", InventoryChangeTrigger.TriggerInstance.hasItems(Items.ACACIA_PLANKS)).save(consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_DOOR_ITEM.get(), Items.STRIPPED_OAK_LOG, consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_DOOR_ITEM.get(), Items.STRIPPED_DARK_OAK_LOG, consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_STRIPPED_BIRCH_LOG_DOOR_ITEM.get(), Items.STRIPPED_BIRCH_LOG, consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_DOOR_ITEM.get(), Items.STRIPPED_ACACIA_LOG, consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_DOOR_ITEM.get(), Items.STRIPPED_SPRUCE_LOG, consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_DOOR_ITEM.get(), Items.STRIPPED_JUNGLE_LOG, consumer);
 
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_SPRUCE_PLANK_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.SPRUCE_PLANKS).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("spruce_planks", InventoryChangeTrigger.TriggerInstance.hasItems(Items.SPRUCE_PLANKS)).save(consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_OAK_LOG_DOOR_ITEM.get(), Items.STRIPPED_OAK_LOG, consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_DARK_OAK_LOG_DOOR_ITEM.get(), Items.STRIPPED_DARK_OAK_LOG, consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_BIRCH_LOG_DOOR_ITEM.get(), Items.STRIPPED_BIRCH_LOG, consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_ACACIA_LOG_DOOR_ITEM.get(), Items.STRIPPED_ACACIA_LOG, consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_SPRUCE_LOG_DOOR_ITEM.get(), Items.STRIPPED_SPRUCE_LOG, consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_JUNGLE_LOG_DOOR_ITEM.get(), Items.STRIPPED_JUNGLE_LOG, consumer);
 
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_JUNGLE_PLANK_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.JUNGLE_PLANKS).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("jungle_planks", InventoryChangeTrigger.TriggerInstance.hasItems(Items.JUNGLE_PLANKS)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_OAK_LOG_DOOR.get())
-                .pattern("X X").pattern("X#X").pattern("X X")
-                .define('X', Items.OAK_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("oak_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.OAK_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_DARK_OAK_LOG_DOOR.get())
-                .pattern("X X").pattern("X#X").pattern("X X")
-                .define('X', Items.DARK_OAK_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("dark_oak_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DARK_OAK_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_BIRCH_LOG_DOOR.get())
-                .pattern("X X").pattern("X#X").pattern("X X")
-                .define('X', Items.BIRCH_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("birch_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.BIRCH_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_ACACIA_LOG_DOOR.get())
-                .pattern("X X").pattern("X#X").pattern("X X")
-                .define('X', Items.ACACIA_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("acacia_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.ACACIA_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_SPRUCE_LOG_DOOR.get())
-                .pattern("X X").pattern("X#X").pattern("X X")
-                .define('X', Items.SPRUCE_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("spruce_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.SPRUCE_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_JUNGLE_LOG_DOOR.get())
-                .pattern("X X").pattern("X#X").pattern("X X")
-                .define('X', Items.JUNGLE_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("jungle_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.JUNGLE_LOG)).save(consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_HORIZONTAL_OAK_LOG_DOOR_ITEM.get(), Items.OAK_LOG, consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_HORIZONTAL_DARK_OAK_LOG_DOOR_ITEM.get(), Items.DARK_OAK_LOG, consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_HORIZONTAL_BIRCH_LOG_DOOR_ITEM.get(), Items.BIRCH_LOG, consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_HORIZONTAL_ACACIA_LOG_DOOR_ITEM.get(), Items.ACACIA_LOG, consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_HORIZONTAL_SPRUCE_LOG_DOOR_ITEM.get(), Items.SPRUCE_LOG, consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_HORIZONTAL_JUNGLE_LOG_DOOR_ITEM.get(), Items.JUNGLE_LOG, consumer);
 
 
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_DOOR.get())
-                .pattern("X X").pattern("X#X").pattern("X X")
-                .define('X', Items.STRIPPED_OAK_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("stripped_oak_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_OAK_LOG)).save(consumer);
+        door(SecretDoorsRegistry.SECRET_STONE_DOOR_ITEM.get(), Items.STONE, consumer);
+        door(SecretDoorsRegistry.SECRET_COBBLESTONE_DOOR_ITEM.get(), Items.COBBLESTONE, consumer);
+        door(SecretDoorsRegistry.SECRET_STONE_BRICKS_DOOR_ITEM.get(), Items.STONE_BRICKS, consumer);
 
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_DOOR.get())
-                .pattern("X X").pattern("X#X").pattern("X X")
-                .define('X', Items.STRIPPED_DARK_OAK_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("stripped_dark_oak_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_DARK_OAK_LOG)).save(consumer);
+        door(SecretDoorsRegistry.SECRET_DEEPSLATE_DOOR_ITEM.get(), Items.DEEPSLATE, consumer);
+        door(SecretDoorsRegistry.SECRET_COBBLED_DEEPSLATE_DOOR_ITEM.get(), Items.COBBLED_DEEPSLATE, consumer);
+        door(SecretDoorsRegistry.SECRET_DEEPSLATE_BRICKS_DOOR_ITEM.get(), Items.DEEPSLATE_BRICKS, consumer);
+        door(SecretDoorsRegistry.SECRET_DEEPSLATE_TILES_DOOR_ITEM.get(), Items.DEEPSLATE_TILES, consumer);
+        door(SecretDoorsRegistry.SECRET_POLISHED_DEEPSLATE_DOOR_ITEM.get(), Items.POLISHED_DEEPSLATE, consumer);
 
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_BIRCH_LOG_DOOR.get())
-                .pattern("X X").pattern("X#X").pattern("X X")
-                .define('X', Items.STRIPPED_BIRCH_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("stripped_birch_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_BIRCH_LOG)).save(consumer);
+        woodenDoor(SecretDoorsRegistry.SECRET_BOOKSHELF_DOOR_ITEM.get(), Items.BOOKSHELF, consumer);
 
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_DOOR.get())
-                .pattern("X X").pattern("X#X").pattern("X X")
-                .define('X', Items.STRIPPED_ACACIA_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("stripped_acacia_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_ACACIA_LOG)).save(consumer);
+        door(SecretDoorsRegistry.SECRET_NETHERRACK_DOOR_ITEM.get(), Items.NETHERRACK, consumer);
+        door(SecretDoorsRegistry.SECRET_NETHER_BRICK_DOOR_ITEM.get(), Items.NETHER_BRICK, consumer);
 
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_DOOR.get())
-                .pattern("X X").pattern("X#X").pattern("X X")
-                .define('X', Items.STRIPPED_SPRUCE_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("stripped)_spruce_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_SPRUCE_LOG)).save(consumer);
+        door(SecretDoorsRegistry.SECRET_POLISHED_BLACKSTONE_DOOR_ITEM.get(), Items.POLISHED_BLACKSTONE, consumer);
+        door(SecretDoorsRegistry.SECRET_POLISHED_BASALT_DOOR_ITEM.get(), Items.POLISHED_BASALT, consumer);
+        door(SecretDoorsRegistry.SECRET_BLACKSTONE_DOOR_ITEM.get(), Items.BLACKSTONE, consumer);
+        door(SecretDoorsRegistry.SECRET_ANDESITE_DOOR_ITEM.get(), Items.ANDESITE, consumer);
+        door(SecretDoorsRegistry.SECRET_POLISHED_ANDESITE_DOOR_ITEM.get(), Items.POLISHED_ANDESITE, consumer);
+        door(SecretDoorsRegistry.SECRET_DIORITE_DOOR_ITEM.get(), Items.DIORITE, consumer);
+        door(SecretDoorsRegistry.SECRET_POLISHED_DIORITE_DOOR_ITEM.get(), Items.POLISHED_DIORITE, consumer);
+        door(SecretDoorsRegistry.SECRET_GRANITE_DOOR_ITEM.get(), Items.GRANITE, consumer);
+        door(SecretDoorsRegistry.SECRET_POLISHED_GRANITE_DOOR_ITEM.get(), Items.POLISHED_GRANITE, consumer);
 
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_DOOR.get())
-                .pattern("X X").pattern("X#X").pattern("X X")
-                .define('X', Items.STRIPPED_JUNGLE_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("stripped_jungle_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_JUNGLE_LOG)).save(consumer);
-
-
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_OAK_LOG_DOOR.get())
-                .pattern("XXX").pattern(" # ").pattern("XXX")
-                .define('X', Items.STRIPPED_OAK_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("stripped_oak_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_OAK_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_DARK_OAK_LOG_DOOR.get())
-                .pattern("XXX").pattern(" # ").pattern("XXX")
-                .define('X', Items.STRIPPED_DARK_OAK_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("stripped_dark_oak_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_DARK_OAK_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_BIRCH_LOG_DOOR.get())
-                .pattern("XXX").pattern(" # ").pattern("XXX")
-                .define('X', Items.STRIPPED_BIRCH_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("stripped_birch_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_BIRCH_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_ACACIA_LOG_DOOR.get())
-                .pattern("XXX").pattern(" # ").pattern("XXX")
-                .define('X', Items.STRIPPED_ACACIA_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("stripped_acacia_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_ACACIA_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_SPRUCE_LOG_DOOR.get())
-                .pattern("XXX").pattern(" # ").pattern("XXX")
-                .define('X', Items.STRIPPED_SPRUCE_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("stripped)_spruce_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_SPRUCE_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_JUNGLE_LOG_DOOR.get())
-                .pattern("XXX").pattern(" # ").pattern("XXX")
-                .define('X', Items.STRIPPED_JUNGLE_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("stripped_jungle_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_JUNGLE_LOG)).save(consumer);
-
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_HORIZONTAL_OAK_LOG_DOOR.get())
-                .pattern("XXX").pattern(" # ").pattern("XXX")
-                .define('X', Items.OAK_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("oak_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.OAK_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_HORIZONTAL_DARK_OAK_LOG_DOOR.get())
-                .pattern("XXX").pattern(" # ").pattern("XXX")
-                .define('X', Items.DARK_OAK_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("dark_oak_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DARK_OAK_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_HORIZONTAL_BIRCH_LOG_DOOR.get())
-                .pattern("XXX").pattern(" # ").pattern("XXX")
-                .define('X', Items.BIRCH_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("birch_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.BIRCH_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_HORIZONTAL_ACACIA_LOG_DOOR.get())
-                .pattern("XXX").pattern(" # ").pattern("XXX")
-                .define('X', Items.ACACIA_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("acacia_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.ACACIA_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_HORIZONTAL_SPRUCE_LOG_DOOR.get())
-                .pattern("XXX").pattern(" # ").pattern("XXX")
-                .define('X', Items.SPRUCE_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("spruce_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.SPRUCE_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_HORIZONTAL_JUNGLE_LOG_DOOR.get())
-                .pattern("XXX").pattern(" # ").pattern("XXX")
-                .define('X', Items.JUNGLE_LOG).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("jungle_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.JUNGLE_LOG)).save(consumer);
-
-
-
-
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STONE_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.STONE).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("stone", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STONE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_COBBLESTONE_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.COBBLESTONE).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("cobblestone", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COBBLESTONE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STONE_BRICKS_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.STONE_BRICKS).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("stone_bricks", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STONE_BRICKS)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_DEEPSLATE_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.DEEPSLATE).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("deepslate", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DEEPSLATE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_COBBLED_DEEPSLATE_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.COBBLED_DEEPSLATE).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("cobbled_deepslate", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COBBLED_DEEPSLATE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_DEEPSLATE_BRICKS_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.DEEPSLATE_BRICKS).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("deepslate", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DEEPSLATE_BRICKS)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_DEEPSLATE_TILES_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.DEEPSLATE_TILES).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("deepslate_tiles", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DEEPSLATE_TILES)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_POLISHED_DEEPSLATE_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.POLISHED_DEEPSLATE).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("polished_deepslate", InventoryChangeTrigger.TriggerInstance.hasItems(Items.POLISHED_DEEPSLATE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_BOOKSHELF_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.BOOKSHELF).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("deepslate", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DEEPSLATE_BRICKS)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_NETHERRACK_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.NETHERRACK).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("netherrack", InventoryChangeTrigger.TriggerInstance.hasItems(Items.NETHERRACK)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_NETHER_BRICK_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.NETHER_BRICK).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("nether_brick", InventoryChangeTrigger.TriggerInstance.hasItems(Items.NETHER_BRICK)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_POLISHED_BLACKSTONE_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.POLISHED_BLACKSTONE).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("polished_blackstone", InventoryChangeTrigger.TriggerInstance.hasItems(Items.POLISHED_BLACKSTONE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_POLISHED_BASALT_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.POLISHED_BASALT).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("polished_basalt", InventoryChangeTrigger.TriggerInstance.hasItems(Items.POLISHED_BASALT)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_BLACKSTONE_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.BLACKSTONE).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("blackstone", InventoryChangeTrigger.TriggerInstance.hasItems(Items.BLACKSTONE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_ANDESITE_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.ANDESITE).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("andesite", InventoryChangeTrigger.TriggerInstance.hasItems(Items.ANDESITE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_POLISHED_ANDESITE_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.POLISHED_ANDESITE).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("polished_andesite", InventoryChangeTrigger.TriggerInstance.hasItems(Items.POLISHED_ANDESITE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_DIORITE_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.DIORITE).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("diorite", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DIORITE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_POLISHED_DIORITE_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.POLISHED_DIORITE).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("polished_diorite", InventoryChangeTrigger.TriggerInstance.hasItems(Items.POLISHED_DIORITE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_GRANITE_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.GRANITE).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("granite", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GRANITE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_POLISHED_GRANITE_DOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.POLISHED_GRANITE).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("polished_granite", InventoryChangeTrigger.TriggerInstance.hasItems(Items.POLISHED_GRANITE)).save(consumer);
+        door(SecretDoorsRegistry.SECRET_QUARTZ_BLOCK_DOOR_ITEM.get(), Items.QUARTZ_BLOCK, consumer);
+        door(SecretDoorsRegistry.SECRET_SMOOTH_QUARTZ_DOOR_ITEM.get(), Items.SMOOTH_QUARTZ, consumer);
+        door(SecretDoorsRegistry.SECRET_QUARTZ_BRICKS_DOOR_ITEM.get(), Items.QUARTZ_BRICKS, consumer);
+        door(SecretDoorsRegistry.SECRET_SANDSTONE_DOOR_ITEM.get(), Items.SANDSTONE, consumer);
+        door(SecretDoorsRegistry.SECRET_CUT_SANDSTONE_DOOR_ITEM.get(), Items.CUT_SANDSTONE, consumer);
+        door(SecretDoorsRegistry.SECRET_SMOOTH_SANDSTONE_DOOR_ITEM.get(), Items.SMOOTH_SANDSTONE, consumer);
+        door(SecretDoorsRegistry.SECRET_RED_SANDSTONE_DOOR_ITEM.get(), Items.RED_SANDSTONE, consumer);
+        door(SecretDoorsRegistry.SECRET_CUT_RED_SANDSTONE_DOOR_ITEM.get(), Items.CUT_RED_SANDSTONE, consumer);
+        door(SecretDoorsRegistry.SECRET_SMOOTH_RED_SANDSTONE_DOOR_ITEM.get(), Items.SMOOTH_RED_SANDSTONE, consumer);
+        door(SecretDoorsRegistry.SECRET_BRICKS_DOOR_ITEM.get(), Items.BRICKS, consumer);
+        door(SecretDoorsRegistry.SECRET_PURPUR_DOOR_ITEM.get(), Items.PURPUR_BLOCK, consumer);
+        door(SecretDoorsRegistry.SECRET_END_STONE_BRICKS_DOOR_ITEM.get(), Items.END_STONE_BRICKS, consumer);
+        door(SecretDoorsRegistry.SECRET_PRISMARINE_BRICKS_DOOR_ITEM.get(), Items.PRISMARINE_BRICKS, consumer);
+        door(SecretDoorsRegistry.SECRET_DARK_PRISMARINE_DOOR_ITEM.get(), Items.DARK_PRISMARINE, consumer);
 
         /*
          * TRAPDOORS
          */
 
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_OAK_PLANK_TRAPDOOR.get())
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_OAK_PLANK_TRAPDOOR_ITEM.get(), Items.OAK_PLANKS, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_DARK_OAK_PLANK_TRAPDOOR_ITEM.get(), Items.DARK_OAK_PLANKS, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_BIRCH_PLANK_TRAPDOOR_ITEM.get(), Items.BIRCH_PLANKS, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_ACACIA_PLANK_TRAPDOOR_ITEM.get(), Items.ACACIA_PLANKS, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_SPRUCE_PLANK_TRAPDOOR_ITEM.get(), Items.SPRUCE_PLANKS, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_JUNGLE_PLANK_TRAPDOOR_ITEM.get(), Items.JUNGLE_PLANKS, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_OAK_LOG_TRAPDOOR_ITEM.get(), Items.OAK_LOG, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_DARK_OAK_LOG_TRAPDOOR_ITEM.get(), Items.DARK_OAK_LOG, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_BIRCH_LOG_TRAPDOOR_ITEM.get(), Items.BIRCH_LOG, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_ACACIA_LOG_TRAPDOOR_ITEM.get(), Items.ACACIA_LOG, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_SPRUCE_LOG_TRAPDOOR_ITEM.get(), Items.SPRUCE_LOG, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_JUNGLE_LOG_TRAPDOOR_ITEM.get(), Items.JUNGLE_LOG, consumer);
+
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_TRAPDOOR_ITEM.get(), Items.STRIPPED_OAK_LOG, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_TRAPDOOR_ITEM.get(), Items.STRIPPED_DARK_OAK_LOG, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_STRIPPED_BIRCH_LOG_TRAPDOOR_ITEM.get(), Items.STRIPPED_BIRCH_LOG, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_TRAPDOOR_ITEM.get(), Items.STRIPPED_ACACIA_LOG, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_TRAPDOOR_ITEM.get(), Items.STRIPPED_SPRUCE_LOG, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_TRAPDOOR_ITEM.get(), Items.STRIPPED_JUNGLE_LOG, consumer);
+
+        trapdoor(SecretDoorsRegistry.SECRET_STONE_TRAPDOOR_ITEM.get(), Items.STONE, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_COBBLESTONE_TRAPDOOR_ITEM.get(), Items.COBBLESTONE, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_STONE_BRICKS_TRAPDOOR_ITEM.get(), Items.STONE_BRICKS, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_DEEPSLATE_TRAPDOOR_ITEM.get(), Items.DEEPSLATE, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_COBBLED_DEEPSLATE_TRAPDOOR_ITEM.get(), Items.COBBLED_DEEPSLATE, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_DEEPSLATE_BRICKS_TRAPDOOR_ITEM.get(), Items.DEEPSLATE_BRICKS, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_DEEPSLATE_TILES_TRAPDOOR_ITEM.get(), Items.DEEPSLATE_TILES, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_POLISHED_DEEPSLATE_TRAPDOOR_ITEM.get(), Items.POLISHED_DEEPSLATE, consumer);
+
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_BOOKSHELF_TRAPDOOR_ITEM.get(), Items.BOOKSHELF, consumer);
+
+        trapdoor(SecretDoorsRegistry.SECRET_NETHERRACK_TRAPDOOR_ITEM.get(), Items.NETHERRACK, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_NETHER_BRICK_TRAPDOOR_ITEM.get(), Items.NETHER_BRICK, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_POLISHED_BLACKSTONE_TRAPDOOR_ITEM.get(), Items.POLISHED_BLACKSTONE, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_POLISHED_BASALT_TRAPDOOR_ITEM.get(), Items.POLISHED_BASALT, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_BLACKSTONE_TRAPDOOR_ITEM.get(), Items.BLACKSTONE, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_ANDESITE_TRAPDOOR_ITEM.get(), Items.ANDESITE, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_POLISHED_ANDESITE_TRAPDOOR_ITEM.get(), Items.POLISHED_ANDESITE, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_DIORITE_TRAPDOOR_ITEM.get(), Items.DIORITE, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_POLISHED_DIORITE_TRAPDOOR_ITEM.get(), Items.POLISHED_DIORITE, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_GRANITE_TRAPDOOR_ITEM.get(), Items.GRANITE, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_POLISHED_GRANITE_TRAPDOOR_ITEM.get(), Items.POLISHED_GRANITE, consumer);
+
+        trapdoor(SecretDoorsRegistry.SECRET_QUARTZ_BLOCK_TRAPDOOR_ITEM.get(), Items.QUARTZ_BLOCK, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_SMOOTH_QUARTZ_TRAPDOOR_ITEM.get(), Items.SMOOTH_QUARTZ, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_QUARTZ_BRICKS_TRAPDOOR_ITEM.get(), Items.QUARTZ_BRICKS, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_SANDSTONE_TRAPDOOR_ITEM.get(), Items.SANDSTONE, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_CUT_SANDSTONE_TRAPDOOR_ITEM.get(), Items.CUT_SANDSTONE, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_SMOOTH_SANDSTONE_TRAPDOOR_ITEM.get(), Items.SMOOTH_SANDSTONE, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_RED_SANDSTONE_TRAPDOOR_ITEM.get(), Items.RED_SANDSTONE, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_CUT_RED_SANDSTONE_TRAPDOOR_ITEM.get(), Items.CUT_RED_SANDSTONE, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_SMOOTH_RED_SANDSTONE_TRAPDOOR_ITEM.get(), Items.SMOOTH_RED_SANDSTONE, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_BRICKS_TRAPDOOR_ITEM.get(), Items.BRICKS, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_PURPUR_TRAPDOOR_ITEM.get(), Items.PURPUR_BLOCK, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_END_STONE_BRICKS_TRAPDOOR_ITEM.get(), Items.END_STONE_BRICKS, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_PRISMARINE_BRICKS_TRAPDOOR_ITEM.get(), Items.PRISMARINE_BRICKS, consumer);
+        trapdoor(SecretDoorsRegistry.SECRET_DARK_PRISMARINE_TRAPDOOR_ITEM.get(), Items.DARK_PRISMARINE, consumer);
+    }
+
+    public static void woodenDoor(Item doorItem, Item craftItem, Consumer<FinishedRecipe> consumer) {
+        ShapedRecipeBuilder.shaped(doorItem)
                 .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.OAK_PLANKS).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("oak_planks", InventoryChangeTrigger.TriggerInstance.hasItems(Items.OAK_PLANKS)).save(consumer);
+                .define('X', craftItem).define('#', ItemTags.WOODEN_DOORS)
+                .group("secretdoors").unlockedBy("has_" + ForgeRegistries.ITEMS.getKey(craftItem).getPath(), has(craftItem)).save(consumer);
+    }
 
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_DARK_OAK_PLANK_TRAPDOOR.get())
+    public static void door(Item doorItem, Item craftItem, Consumer<FinishedRecipe> consumer) {
+        ShapedRecipeBuilder.shaped(doorItem)
                 .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.DARK_OAK_PLANKS).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("dark_oak_planks", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DARK_OAK_PLANKS)).save(consumer);
+                .define('X', craftItem).define('#', ItemTags.DOORS)
+                .group("secretdoors").unlockedBy("has_" + ForgeRegistries.ITEMS.getKey(craftItem).getPath(), has(craftItem)).save(consumer);
+    }
 
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_BIRCH_PLANK_TRAPDOOR.get())
+    public static void horizontalDoor(Item doorItem, Item craftItem, Consumer<FinishedRecipe> consumer) {
+        ShapedRecipeBuilder.shaped(doorItem)
+                .pattern("XXX").pattern(" # ").pattern("XXX")
+                .define('X', craftItem).define('#', ItemTags.WOODEN_DOORS)
+                .group("secretdoors").unlockedBy("has_" + ForgeRegistries.ITEMS.getKey(craftItem).getPath(), has(craftItem)).save(consumer);
+    }
+
+    public static void verticalDoor(Item doorItem, Item craftItem, Consumer<FinishedRecipe> consumer) {
+        ShapedRecipeBuilder.shaped(doorItem)
+                .pattern("X X").pattern("X#X").pattern("X X")
+                .define('X', craftItem).define('#', ItemTags.WOODEN_DOORS)
+                .group("secretdoors").unlockedBy("has_" + ForgeRegistries.ITEMS.getKey(craftItem).getPath(), has(craftItem)).save(consumer);
+    }
+
+    public static void woodenTrapdoor(Item doorItem, Item craftItem, Consumer<FinishedRecipe> consumer) {
+        ShapedRecipeBuilder.shaped(doorItem)
                 .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.BIRCH_PLANKS).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("birch_planks", InventoryChangeTrigger.TriggerInstance.hasItems(Items.BIRCH_PLANKS)).save(consumer);
+                .define('X', craftItem).define('#', ItemTags.WOODEN_TRAPDOORS)
+                .group("secretdoors").unlockedBy("has_" + ForgeRegistries.ITEMS.getKey(craftItem).getPath(), has(craftItem)).save(consumer);
+    }
 
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_ACACIA_PLANK_TRAPDOOR.get())
+    public static void trapdoor(Item doorItem, Item craftItem, Consumer<FinishedRecipe> consumer) {
+        ShapedRecipeBuilder.shaped(doorItem)
                 .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.ACACIA_PLANKS).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("acacia_planks", InventoryChangeTrigger.TriggerInstance.hasItems(Items.ACACIA_PLANKS)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_SPRUCE_PLANK_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.SPRUCE_PLANKS).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("spruce_planks", InventoryChangeTrigger.TriggerInstance.hasItems(Items.SPRUCE_PLANKS)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_JUNGLE_PLANK_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.JUNGLE_PLANKS).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("jungle_planks", InventoryChangeTrigger.TriggerInstance.hasItems(Items.JUNGLE_PLANKS)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_OAK_LOG_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.OAK_LOG).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("oak_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.OAK_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_DARK_OAK_LOG_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.DARK_OAK_LOG).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("dark_oak_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DARK_OAK_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_BIRCH_LOG_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.BIRCH_LOG).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("birch_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.BIRCH_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_ACACIA_LOG_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.ACACIA_LOG).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("acacia_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.ACACIA_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_SPRUCE_LOG_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.SPRUCE_LOG).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("spruce_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.SPRUCE_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_JUNGLE_LOG_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.JUNGLE_LOG).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("jungle_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.JUNGLE_LOG)).save(consumer);
-
-
-
-
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.STRIPPED_OAK_LOG).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("stripped_oak_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_OAK_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.STRIPPED_DARK_OAK_LOG).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("stripped_dark_oak_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_DARK_OAK_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_BIRCH_LOG_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.STRIPPED_BIRCH_LOG).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("stripped_birch_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_BIRCH_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.STRIPPED_ACACIA_LOG).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("stripped_acacia_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_ACACIA_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.STRIPPED_SPRUCE_LOG).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("stripped)_spruce_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_SPRUCE_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.STRIPPED_JUNGLE_LOG).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("stripped_jungle_log", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRIPPED_JUNGLE_LOG)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STONE_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.STONE).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("stone", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STONE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_COBBLESTONE_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.COBBLESTONE).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("cobblestone", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COBBLESTONE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_STONE_BRICKS_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.STONE_BRICKS).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("stone_bricks", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STONE_BRICKS)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_DEEPSLATE_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.DEEPSLATE).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("deepslate", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DEEPSLATE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_COBBLED_DEEPSLATE_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.COBBLED_DEEPSLATE).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("cobbled_deepslate", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COBBLED_DEEPSLATE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_DEEPSLATE_BRICKS_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.DEEPSLATE_BRICKS).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("deepslate", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DEEPSLATE_BRICKS)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_DEEPSLATE_TILES_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.DEEPSLATE_TILES).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("deepslate_tiles", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DEEPSLATE_TILES)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_POLISHED_DEEPSLATE_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.POLISHED_DEEPSLATE).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("polished_deepslate", InventoryChangeTrigger.TriggerInstance.hasItems(Items.POLISHED_DEEPSLATE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_BOOKSHELF_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.BOOKSHELF).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("deepslate", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DEEPSLATE_BRICKS)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_NETHERRACK_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.NETHERRACK).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("netherrack", InventoryChangeTrigger.TriggerInstance.hasItems(Items.NETHERRACK)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_NETHER_BRICK_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.NETHER_BRICK).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("nether_brick", InventoryChangeTrigger.TriggerInstance.hasItems(Items.NETHER_BRICK)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_POLISHED_BLACKSTONE_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.POLISHED_BLACKSTONE).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("polished_blackstone", InventoryChangeTrigger.TriggerInstance.hasItems(Items.POLISHED_BLACKSTONE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_POLISHED_BASALT_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.POLISHED_BASALT).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("polished_basalt", InventoryChangeTrigger.TriggerInstance.hasItems(Items.POLISHED_BASALT)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_BLACKSTONE_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.BLACKSTONE).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("blackstone", InventoryChangeTrigger.TriggerInstance.hasItems(Items.BLACKSTONE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_ANDESITE_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.ANDESITE).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("andesite", InventoryChangeTrigger.TriggerInstance.hasItems(Items.ANDESITE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_POLISHED_ANDESITE_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.POLISHED_ANDESITE).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("polished_andesite", InventoryChangeTrigger.TriggerInstance.hasItems(Items.POLISHED_ANDESITE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_DIORITE_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.DIORITE).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("diorite", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DIORITE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_POLISHED_DIORITE_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.POLISHED_DIORITE).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("polished_diorite", InventoryChangeTrigger.TriggerInstance.hasItems(Items.POLISHED_DIORITE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_GRANITE_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.GRANITE).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("granite", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GRANITE)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(SecretDoorsRegistry.SECRET_POLISHED_GRANITE_TRAPDOOR.get())
-                .pattern("XXX").pattern("X#X").pattern("XXX")
-                .define('X', Items.POLISHED_GRANITE).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("polished_granite", InventoryChangeTrigger.TriggerInstance.hasItems(Items.POLISHED_GRANITE)).save(consumer);
-
-
+                .define('X', craftItem).define('#', ItemTags.TRAPDOORS)
+                .group("secretdoors").unlockedBy("has_" + ForgeRegistries.ITEMS.getKey(craftItem).getPath(), has(craftItem)).save(consumer);
     }
 }

@@ -1,0 +1,13 @@
+// 1.19.2	2024-02-15T10:36:14.15073	Tags for minecraft:block
+560f30fcedacce273492030646a2e889c709e978 data/minecraft/tags/blocks/doors.json
+1463786b108de1cf7964dbd6d0b5f34f2c2d9785 data/minecraft/tags/blocks/trapdoors.json
+9dd0e7154a827afd59d3972694cb08185dfc6bbe data/minecraft/tags/blocks/wooden_doors.json
+ce50df70cafc50d7b7012b5c71ce0b645219b3df data/minecraft/tags/blocks/wooden_trapdoors.json
+396e81c96d2ebe46690b70d45ac0c060b6a1c2e2 data/secretdoors/tags/blocks/secret_log_doors.json
+81edbcd2647f9cd593b8c4da7a896966895c9978 data/secretdoors/tags/blocks/secret_log_trapdoors.json
+851f45f40db7767cbf1c925583d23654fcf6c204 data/secretdoors/tags/blocks/secret_stone_doors.json
+3e67fe0bc59a65f74fdbdac8b8a10e10232dcb12 data/secretdoors/tags/blocks/secret_stone_trapdoors.json
+81c5d4da882bd0dc08da57653519de86c8a34676 data/secretdoors/tags/blocks/secret_wooden_doors.json
+54e0714ab2b83d154782a9447ef10d15b8585592 data/secretdoors/tags/blocks/secret_wooden_plank_doors.json
+83b0f550d0302fff32a001de49a93d666f87f79f data/secretdoors/tags/blocks/secret_wooden_plank_trapdoors.json
+ce50df70cafc50d7b7012b5c71ce0b645219b3df data/secretdoors/tags/blocks/secret_wooden_trapdoors.json

@@ -81,6 +81,22 @@ public class ItemModels extends ItemModelProvider {
         generated(SecretDoorsRegistry.SECRET_GRANITE_DOOR_ITEM.get(), "item/secret_granite_door");
         generated(SecretDoorsRegistry.SECRET_POLISHED_GRANITE_DOOR_ITEM.get(), "item/secret_polished_granite_door");
 
+        generated(SecretDoorsRegistry.SECRET_QUARTZ_BLOCK_DOOR_ITEM.get(), "item/secret_quartz_block_door");
+        generated(SecretDoorsRegistry.SECRET_SMOOTH_QUARTZ_DOOR_ITEM.get(), "item/secret_smooth_quartz_door");
+        generated(SecretDoorsRegistry.SECRET_QUARTZ_BRICKS_DOOR_ITEM.get(), "item/secret_quartz_bricks_door");
+        generated(SecretDoorsRegistry.SECRET_SANDSTONE_DOOR_ITEM.get(), "item/secret_sandstone_door");
+        generated(SecretDoorsRegistry.SECRET_CUT_SANDSTONE_DOOR_ITEM.get(), "item/secret_cut_sandstone_door");
+        generated(SecretDoorsRegistry.SECRET_SMOOTH_SANDSTONE_DOOR_ITEM.get(), "item/secret_smooth_sandstone_door");
+        generated(SecretDoorsRegistry.SECRET_RED_SANDSTONE_DOOR_ITEM.get(), "item/secret_red_sandstone_door");
+        generated(SecretDoorsRegistry.SECRET_CUT_RED_SANDSTONE_DOOR_ITEM.get(), "item/secret_cut_red_sandstone_door");
+        generated(SecretDoorsRegistry.SECRET_SMOOTH_RED_SANDSTONE_DOOR_ITEM.get(), "item/secret_smooth_red_sandstone_door");
+        generated(SecretDoorsRegistry.SECRET_BRICKS_DOOR_ITEM.get(), "item/secret_bricks_door");
+        generated(SecretDoorsRegistry.SECRET_PURPUR_DOOR_ITEM.get(), "item/secret_purpur_door");
+        generated(SecretDoorsRegistry.SECRET_END_STONE_BRICKS_DOOR_ITEM.get(), "item/secret_end_stone_bricks_door");
+        generated(SecretDoorsRegistry.SECRET_PRISMARINE_BRICKS_DOOR_ITEM.get(), "item/secret_prismarine_bricks_door");
+        generated(SecretDoorsRegistry.SECRET_DARK_PRISMARINE_DOOR_ITEM.get(), "item/secret_dark_prismarine_door");
+
+
         /*
          * TRAP DOORS
          */
@@ -129,6 +145,21 @@ public class ItemModels extends ItemModelProvider {
         blockItem(SecretDoorsRegistry.SECRET_POLISHED_DIORITE_TRAPDOOR_ITEM.get(), modLoc("block/secret_polished_diorite_trapdoor_bottom"));
         blockItem(SecretDoorsRegistry.SECRET_GRANITE_TRAPDOOR_ITEM.get(), modLoc("block/secret_granite_trapdoor_bottom"));
         blockItem(SecretDoorsRegistry.SECRET_POLISHED_GRANITE_TRAPDOOR_ITEM.get(), modLoc("block/secret_polished_granite_trapdoor_bottom"));
+
+        blockItem(SecretDoorsRegistry.SECRET_QUARTZ_BLOCK_TRAPDOOR_ITEM.get(),  modLoc("block/secret_quartz_block_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_SMOOTH_QUARTZ_TRAPDOOR_ITEM.get(),  modLoc("block/secret_smooth_quartz_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_QUARTZ_BRICKS_TRAPDOOR_ITEM.get(),  modLoc("block/secret_quartz_bricks_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_SANDSTONE_TRAPDOOR_ITEM.get(),  modLoc("block/secret_sandstone_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_CUT_SANDSTONE_TRAPDOOR_ITEM.get(),  modLoc("block/secret_cut_sandstone_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_SMOOTH_SANDSTONE_TRAPDOOR_ITEM.get(),  modLoc("block/secret_smooth_sandstone_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_RED_SANDSTONE_TRAPDOOR_ITEM.get(),  modLoc("block/secret_red_sandstone_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_CUT_RED_SANDSTONE_TRAPDOOR_ITEM.get(),  modLoc("block/secret_cut_red_sandstone_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_SMOOTH_RED_SANDSTONE_TRAPDOOR_ITEM.get(),  modLoc("block/secret_smooth_red_sandstone_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_BRICKS_TRAPDOOR_ITEM.get(),  modLoc("block/secret_bricks_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_PURPUR_TRAPDOOR_ITEM.get(),  modLoc("block/secret_purpur_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_END_STONE_BRICKS_TRAPDOOR_ITEM.get(),  modLoc("block/secret_end_stone_bricks_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_PRISMARINE_BRICKS_TRAPDOOR_ITEM.get(),  modLoc("block/secret_prismarine_bricks_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_DARK_PRISMARINE_TRAPDOOR_ITEM.get(),  modLoc("block/secret_dark_prismarine_trapdoor_bottom"));
     }
 
     private ItemModelBuilder generated(Item item, String texture) {

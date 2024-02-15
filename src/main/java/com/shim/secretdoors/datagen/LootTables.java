@@ -71,6 +71,22 @@ public class LootTables  extends BaseLootTableProvider {
         lootTables.put(SecretDoorsRegistry.SECRET_GRANITE_DOOR.get(), createDoorTable("secret_granite_door", SecretDoorsRegistry.SECRET_GRANITE_DOOR.get()));
         lootTables.put(SecretDoorsRegistry.SECRET_POLISHED_GRANITE_DOOR.get(), createDoorTable("secret_polished_granite_door", SecretDoorsRegistry.SECRET_POLISHED_GRANITE_DOOR.get()));
 
+        lootTables.put(SecretDoorsRegistry.SECRET_QUARTZ_BLOCK_DOOR.get(), createDoorTable("secret_quartz_block_door", SecretDoorsRegistry.SECRET_QUARTZ_BLOCK_DOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_SMOOTH_QUARTZ_DOOR.get(), createDoorTable("secret_smooth_quartz_door", SecretDoorsRegistry.SECRET_SMOOTH_QUARTZ_DOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_QUARTZ_BRICKS_DOOR.get(), createDoorTable("secret_quartz_bricks_door", SecretDoorsRegistry.SECRET_QUARTZ_BRICKS_DOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_SANDSTONE_DOOR.get(), createDoorTable("secret_sandstone_door", SecretDoorsRegistry.SECRET_SANDSTONE_DOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_CUT_SANDSTONE_DOOR.get(), createDoorTable("secret_cut_sandstone_door", SecretDoorsRegistry.SECRET_CUT_SANDSTONE_DOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_SMOOTH_SANDSTONE_DOOR.get(), createDoorTable("secret_smooth_sandstone_door", SecretDoorsRegistry.SECRET_SMOOTH_SANDSTONE_DOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_RED_SANDSTONE_DOOR.get(), createDoorTable("secret_red_sandstone_door", SecretDoorsRegistry.SECRET_RED_SANDSTONE_DOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_CUT_RED_SANDSTONE_DOOR.get(), createDoorTable("secret_cut_red_sandstone_door", SecretDoorsRegistry.SECRET_CUT_RED_SANDSTONE_DOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_SMOOTH_RED_SANDSTONE_DOOR.get(), createDoorTable("secret_smooth_red_sandstone_door", SecretDoorsRegistry.SECRET_SMOOTH_RED_SANDSTONE_DOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_BRICKS_DOOR.get(), createDoorTable("secret_bricks_door", SecretDoorsRegistry.SECRET_BRICKS_DOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_PURPUR_DOOR.get(), createDoorTable("secret_purpur_door", SecretDoorsRegistry.SECRET_PURPUR_DOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_END_STONE_BRICKS_DOOR.get(), createDoorTable("secret_end_stone_bricks_door", SecretDoorsRegistry.SECRET_END_STONE_BRICKS_DOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_PRISMARINE_BRICKS_DOOR.get(), createDoorTable("secret_prismarine_bricks_door", SecretDoorsRegistry.SECRET_PRISMARINE_BRICKS_DOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_DARK_PRISMARINE_DOOR.get(), createDoorTable("secret_dark_prismarine_door", SecretDoorsRegistry.SECRET_DARK_PRISMARINE_DOOR.get()));
+
+
         /*
          * TRAPDOORS
          */
@@ -120,6 +136,21 @@ public class LootTables  extends BaseLootTableProvider {
         lootTables.put(SecretDoorsRegistry.SECRET_POLISHED_DIORITE_TRAPDOOR.get(), createSimpleTable("secret_polished_diorite_trapdoor", SecretDoorsRegistry.SECRET_POLISHED_DIORITE_TRAPDOOR.get()));
         lootTables.put(SecretDoorsRegistry.SECRET_GRANITE_TRAPDOOR.get(), createSimpleTable("secret_granite_trapdoor", SecretDoorsRegistry.SECRET_GRANITE_TRAPDOOR.get()));
         lootTables.put(SecretDoorsRegistry.SECRET_POLISHED_GRANITE_TRAPDOOR.get(), createSimpleTable("secret_polished_granite_trapdoor", SecretDoorsRegistry.SECRET_POLISHED_GRANITE_TRAPDOOR.get()));
+
+        lootTables.put(SecretDoorsRegistry.SECRET_QUARTZ_BLOCK_TRAPDOOR.get(), createSimpleTable("secret_quartz_block_trapdoor", SecretDoorsRegistry.SECRET_QUARTZ_BLOCK_TRAPDOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_SMOOTH_QUARTZ_TRAPDOOR.get(), createSimpleTable("secret_smooth_quartz_trapdoor", SecretDoorsRegistry.SECRET_SMOOTH_QUARTZ_TRAPDOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_QUARTZ_BRICKS_TRAPDOOR.get(), createSimpleTable("secret_quartz_bricks_trapdoor", SecretDoorsRegistry.SECRET_QUARTZ_BRICKS_TRAPDOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_SANDSTONE_TRAPDOOR.get(), createSimpleTable("secret_sandstone_trapdoor", SecretDoorsRegistry.SECRET_SANDSTONE_TRAPDOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_CUT_SANDSTONE_TRAPDOOR.get(), createSimpleTable("secret_cut_sandstone_trapdoor", SecretDoorsRegistry.SECRET_CUT_SANDSTONE_TRAPDOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_SMOOTH_SANDSTONE_TRAPDOOR.get(), createSimpleTable("secret_smooth_sandstone_trapdoor", SecretDoorsRegistry.SECRET_SMOOTH_SANDSTONE_TRAPDOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_RED_SANDSTONE_TRAPDOOR.get(), createSimpleTable("secret_red_sandstone_trapdoor", SecretDoorsRegistry.SECRET_RED_SANDSTONE_TRAPDOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_CUT_RED_SANDSTONE_TRAPDOOR.get(), createSimpleTable("secret_cut_red_sandstone_trapdoor", SecretDoorsRegistry.SECRET_CUT_RED_SANDSTONE_TRAPDOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_SMOOTH_RED_SANDSTONE_TRAPDOOR.get(), createSimpleTable("secret_smooth_red_sandstone_trapdoor", SecretDoorsRegistry.SECRET_SMOOTH_RED_SANDSTONE_TRAPDOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_BRICKS_TRAPDOOR.get(), createSimpleTable("secret_bricks_trapdoor", SecretDoorsRegistry.SECRET_BRICKS_TRAPDOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_PURPUR_TRAPDOOR.get(), createSimpleTable("secret_purpur_trapdoor", SecretDoorsRegistry.SECRET_PURPUR_TRAPDOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_END_STONE_BRICKS_TRAPDOOR.get(), createSimpleTable("secret_end_stone_bricks_trapdoor", SecretDoorsRegistry.SECRET_END_STONE_BRICKS_TRAPDOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_PRISMARINE_BRICKS_TRAPDOOR.get(), createSimpleTable("secret_prismarine_bricks_trapdoor", SecretDoorsRegistry.SECRET_PRISMARINE_BRICKS_TRAPDOOR.get()));
+        lootTables.put(SecretDoorsRegistry.SECRET_DARK_PRISMARINE_TRAPDOOR.get(), createSimpleTable("secret_dark_prismarine_trapdoor", SecretDoorsRegistry.SECRET_DARK_PRISMARINE_TRAPDOOR.get()));
 
 
     }
