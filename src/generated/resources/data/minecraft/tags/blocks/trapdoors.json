@@ -38,6 +38,20 @@
     "secretdoors:secret_diorite_trapdoor",
     "secretdoors:secret_polished_diorite_trapdoor",
     "secretdoors:secret_granite_trapdoor",
-    "secretdoors:secret_polished_granite_trapdoor"
+    "secretdoors:secret_polished_granite_trapdoor",
+    "secretdoors:secret_quartz_block_trapdoor",
+    "secretdoors:secret_smooth_quartz_trapdoor",
+    "secretdoors:secret_quartz_bricks_trapdoor",
+    "secretdoors:secret_sandstone_trapdoor",
+    "secretdoors:secret_cut_sandstone_trapdoor",
+    "secretdoors:secret_smooth_sandstone_trapdoor",
+    "secretdoors:secret_red_sandstone_trapdoor",
+    "secretdoors:secret_cut_red_sandstone_trapdoor",
+    "secretdoors:secret_smooth_red_sandstone_trapdoor",
+    "secretdoors:secret_bricks_trapdoor",
+    "secretdoors:secret_purpur_trapdoor",
+    "secretdoors:secret_end_stone_bricks_trapdoor",
+    "secretdoors:secret_prismarine_bricks_trapdoor",
+    "secretdoors:secret_dark_prismarine_trapdoor"
   ]
 }

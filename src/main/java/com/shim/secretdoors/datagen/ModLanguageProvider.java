@@ -74,6 +74,22 @@ public class ModLanguageProvider extends LanguageProvider {
         add(SecretDoorsRegistry.SECRET_GRANITE_DOOR.get(), "Secret Granite Door");
         add(SecretDoorsRegistry.SECRET_POLISHED_GRANITE_DOOR.get(), "Secret Polished Granite Door");
 
+        add(SecretDoorsRegistry.SECRET_QUARTZ_BLOCK_DOOR.get(), "Secret Block of Quartz Door");
+        add(SecretDoorsRegistry.SECRET_SMOOTH_QUARTZ_DOOR.get(), "Secret Smooth Quartz Door");
+        add(SecretDoorsRegistry.SECRET_QUARTZ_BRICKS_DOOR.get(), "Secret Quartz Bricks Door");
+        add(SecretDoorsRegistry.SECRET_SANDSTONE_DOOR.get(), "Secret Sandstone Door");
+        add(SecretDoorsRegistry.SECRET_CUT_SANDSTONE_DOOR.get(), "Secret Cut Sandstone Door");
+        add(SecretDoorsRegistry.SECRET_SMOOTH_SANDSTONE_DOOR.get(), "Secret Smooth Sandstone Door");
+        add(SecretDoorsRegistry.SECRET_RED_SANDSTONE_DOOR.get(), "Secret Red Sandstone Door");
+        add(SecretDoorsRegistry.SECRET_CUT_RED_SANDSTONE_DOOR.get(), "Secret Cut Red Sandstone Door");
+        add(SecretDoorsRegistry.SECRET_SMOOTH_RED_SANDSTONE_DOOR.get(), "Secret Smooth Red Sandstone Door");
+        add(SecretDoorsRegistry.SECRET_BRICKS_DOOR.get(), "Secret Bricks Door");
+        add(SecretDoorsRegistry.SECRET_PURPUR_DOOR.get(), "Secret Purpur Door");
+        add(SecretDoorsRegistry.SECRET_END_STONE_BRICKS_DOOR.get(), "Secret End Stone Bricks Door");
+        add(SecretDoorsRegistry.SECRET_PRISMARINE_BRICKS_DOOR.get(), "Secret Prismarine Bricks Door");
+        add(SecretDoorsRegistry.SECRET_DARK_PRISMARINE_DOOR.get(), "Secret Dark Prismarine Door");
+
+
         /*
          * TRAPDOORs
          */
@@ -123,5 +139,20 @@ public class ModLanguageProvider extends LanguageProvider {
         add(SecretDoorsRegistry.SECRET_GRANITE_TRAPDOOR.get(), "Secret Granite Trapdoor");
         add(SecretDoorsRegistry.SECRET_POLISHED_GRANITE_TRAPDOOR.get(), "Secret Polished Granite Trapdoor");
 
+        add(SecretDoorsRegistry.SECRET_QUARTZ_BLOCK_TRAPDOOR.get(), "Secret Block of Quartz Trapdoor");
+        add(SecretDoorsRegistry.SECRET_SMOOTH_QUARTZ_TRAPDOOR.get(), "Secret Smooth Quartz Trapdoor");
+        add(SecretDoorsRegistry.SECRET_QUARTZ_BRICKS_TRAPDOOR.get(), "Secret Quartz Bricks Trapdoor");
+        add(SecretDoorsRegistry.SECRET_SANDSTONE_TRAPDOOR.get(), "Secret Sandstone Trapdoor");
+        add(SecretDoorsRegistry.SECRET_CUT_SANDSTONE_TRAPDOOR.get(), "Secret Cut Sandstone Trapdoor");
+        add(SecretDoorsRegistry.SECRET_SMOOTH_SANDSTONE_TRAPDOOR.get(), "Secret Smooth Sandstone Trapdoor");
+        add(SecretDoorsRegistry.SECRET_RED_SANDSTONE_TRAPDOOR.get(), "Secret Red Sandstone Trapdoor");
+        add(SecretDoorsRegistry.SECRET_CUT_RED_SANDSTONE_TRAPDOOR.get(), "Secret Cut Red Sandstone Trapdoor");
+        add(SecretDoorsRegistry.SECRET_SMOOTH_RED_SANDSTONE_TRAPDOOR.get(), "Secret Smooth Red Sandstone Trapdoor");
+        add(SecretDoorsRegistry.SECRET_BRICKS_TRAPDOOR.get(), "Secret Bricks Trapdoor");
+        add(SecretDoorsRegistry.SECRET_PURPUR_TRAPDOOR.get(), "Secret Purpur Trapdoor");
+        add(SecretDoorsRegistry.SECRET_END_STONE_BRICKS_TRAPDOOR.get(), "Secret End Stone Bricks Trapdoor");
+        add(SecretDoorsRegistry.SECRET_PRISMARINE_BRICKS_TRAPDOOR.get(), "Secret Prismarine Bricks Trapdoor");
+        add(SecretDoorsRegistry.SECRET_DARK_PRISMARINE_TRAPDOOR.get(), "Secret Dark Prismarine Trapdoor");
+        
     }
 }

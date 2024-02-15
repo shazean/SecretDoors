@@ -76,6 +76,22 @@ public class ItemModels extends ItemModelProvider {
         singleTexture(SecretDoorsRegistry.SECRET_GRANITE_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_granite_door"));
         singleTexture(SecretDoorsRegistry.SECRET_POLISHED_GRANITE_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_polished_granite_door"));
 
+        singleTexture(SecretDoorsRegistry.SECRET_QUARTZ_BLOCK_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_quartz_block_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_SMOOTH_QUARTZ_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_smooth_quartz_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_QUARTZ_BRICKS_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_quartz_bricks_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_SANDSTONE_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_sandstone_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_CUT_SANDSTONE_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_cut_sandstone_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_SMOOTH_SANDSTONE_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_smooth_sandstone_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_RED_SANDSTONE_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_red_sandstone_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_CUT_RED_SANDSTONE_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_cut_red_sandstone_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_SMOOTH_RED_SANDSTONE_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_smooth_red_sandstone_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_BRICKS_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_bricks_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_PURPUR_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_purpur_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_END_STONE_BRICKS_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_end_stone_bricks_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_PRISMARINE_BRICKS_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_prismarine_bricks_door"));
+        singleTexture(SecretDoorsRegistry.SECRET_DARK_PRISMARINE_DOOR_ITEM.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"), "layer0", new ResourceLocation(SecretDoors.MODID, "item/secret_dark_prismarine_door"));
+
+
         /*
          * TRAP DOORS
          */
@@ -125,5 +141,19 @@ public class ItemModels extends ItemModelProvider {
         withExistingParent(SecretDoorsRegistry.SECRET_GRANITE_TRAPDOOR_ITEM.get().getRegistryName().getPath(), modLoc("block/secret_granite_trapdoor_bottom"));
         withExistingParent(SecretDoorsRegistry.SECRET_POLISHED_GRANITE_TRAPDOOR_ITEM.get().getRegistryName().getPath(), modLoc("block/secret_polished_granite_trapdoor_bottom"));
 
+        withExistingParent(SecretDoorsRegistry.SECRET_QUARTZ_BLOCK_TRAPDOOR_ITEM.get().getRegistryName().getPath(),  modLoc("block/secret_quartz_block_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_SMOOTH_QUARTZ_TRAPDOOR_ITEM.get().getRegistryName().getPath(),  modLoc("block/secret_smooth_quartz_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_QUARTZ_BRICKS_TRAPDOOR_ITEM.get().getRegistryName().getPath(),  modLoc("block/secret_quartz_bricks_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_SANDSTONE_TRAPDOOR_ITEM.get().getRegistryName().getPath(),  modLoc("block/secret_sandstone_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_CUT_SANDSTONE_TRAPDOOR_ITEM.get().getRegistryName().getPath(),  modLoc("block/secret_cut_sandstone_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_SMOOTH_SANDSTONE_TRAPDOOR_ITEM.get().getRegistryName().getPath(),  modLoc("block/secret_smooth_sandstone_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_RED_SANDSTONE_TRAPDOOR_ITEM.get().getRegistryName().getPath(),  modLoc("block/secret_red_sandstone_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_CUT_RED_SANDSTONE_TRAPDOOR_ITEM.get().getRegistryName().getPath(),  modLoc("block/secret_cut_red_sandstone_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_SMOOTH_RED_SANDSTONE_TRAPDOOR_ITEM.get().getRegistryName().getPath(),  modLoc("block/secret_smooth_red_sandstone_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_BRICKS_TRAPDOOR_ITEM.get().getRegistryName().getPath(),  modLoc("block/secret_bricks_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_PURPUR_TRAPDOOR_ITEM.get().getRegistryName().getPath(),  modLoc("block/secret_purpur_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_END_STONE_BRICKS_TRAPDOOR_ITEM.get().getRegistryName().getPath(),  modLoc("block/secret_end_stone_bricks_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_PRISMARINE_BRICKS_TRAPDOOR_ITEM.get().getRegistryName().getPath(),  modLoc("block/secret_prismarine_bricks_trapdoor_bottom"));
+        withExistingParent(SecretDoorsRegistry.SECRET_DARK_PRISMARINE_TRAPDOOR_ITEM.get().getRegistryName().getPath(),  modLoc("block/secret_dark_prismarine_trapdoor_bottom"));
     }
 }

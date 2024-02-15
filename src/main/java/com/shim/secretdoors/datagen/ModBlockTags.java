@@ -78,6 +78,21 @@ public class ModBlockTags extends BlockTagsProvider {
                 .add(SecretDoorsRegistry.SECRET_POLISHED_GRANITE_DOOR.get())
 
 
+                .add(SecretDoorsRegistry.SECRET_QUARTZ_BLOCK_DOOR.get())
+                .add(SecretDoorsRegistry.SECRET_SMOOTH_QUARTZ_DOOR.get())
+                .add(SecretDoorsRegistry.SECRET_QUARTZ_BRICKS_DOOR.get())
+                .add(SecretDoorsRegistry.SECRET_SANDSTONE_DOOR.get())
+                .add(SecretDoorsRegistry.SECRET_CUT_SANDSTONE_DOOR.get())
+                .add(SecretDoorsRegistry.SECRET_SMOOTH_SANDSTONE_DOOR.get())
+                .add(SecretDoorsRegistry.SECRET_RED_SANDSTONE_DOOR.get())
+                .add(SecretDoorsRegistry.SECRET_CUT_RED_SANDSTONE_DOOR.get())
+                .add(SecretDoorsRegistry.SECRET_SMOOTH_RED_SANDSTONE_DOOR.get())
+                .add(SecretDoorsRegistry.SECRET_BRICKS_DOOR.get())
+                .add(SecretDoorsRegistry.SECRET_PURPUR_DOOR.get())
+                .add(SecretDoorsRegistry.SECRET_END_STONE_BRICKS_DOOR.get())
+                .add(SecretDoorsRegistry.SECRET_PRISMARINE_BRICKS_DOOR.get())
+                .add(SecretDoorsRegistry.SECRET_DARK_PRISMARINE_DOOR.get())
+
 
         ;
 
@@ -137,7 +152,6 @@ public class ModBlockTags extends BlockTagsProvider {
                 .add(SecretDoorsRegistry.SECRET_JUNGLE_LOG_TRAPDOOR.get())
 
 
-
                 .add(SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_TRAPDOOR.get())
                 .add(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_TRAPDOOR.get())
                 .add(SecretDoorsRegistry.SECRET_STRIPPED_BIRCH_LOG_TRAPDOOR.get())
@@ -169,6 +183,20 @@ public class ModBlockTags extends BlockTagsProvider {
                 .add(SecretDoorsRegistry.SECRET_POLISHED_GRANITE_TRAPDOOR.get())
 
 
+                .add(SecretDoorsRegistry.SECRET_QUARTZ_BLOCK_TRAPDOOR.get())
+                .add(SecretDoorsRegistry.SECRET_SMOOTH_QUARTZ_TRAPDOOR.get())
+                .add(SecretDoorsRegistry.SECRET_QUARTZ_BRICKS_TRAPDOOR.get())
+                .add(SecretDoorsRegistry.SECRET_SANDSTONE_TRAPDOOR.get())
+                .add(SecretDoorsRegistry.SECRET_CUT_SANDSTONE_TRAPDOOR.get())
+                .add(SecretDoorsRegistry.SECRET_SMOOTH_SANDSTONE_TRAPDOOR.get())
+                .add(SecretDoorsRegistry.SECRET_RED_SANDSTONE_TRAPDOOR.get())
+                .add(SecretDoorsRegistry.SECRET_CUT_RED_SANDSTONE_TRAPDOOR.get())
+                .add(SecretDoorsRegistry.SECRET_SMOOTH_RED_SANDSTONE_TRAPDOOR.get())
+                .add(SecretDoorsRegistry.SECRET_BRICKS_TRAPDOOR.get())
+                .add(SecretDoorsRegistry.SECRET_PURPUR_TRAPDOOR.get())
+                .add(SecretDoorsRegistry.SECRET_END_STONE_BRICKS_TRAPDOOR.get())
+                .add(SecretDoorsRegistry.SECRET_PRISMARINE_BRICKS_TRAPDOOR.get())
+                .add(SecretDoorsRegistry.SECRET_DARK_PRISMARINE_TRAPDOOR.get())
 
         ;
 
