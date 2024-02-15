@@ -1,5 +1,6 @@
 package com.shim.secretdoors;
 
+import com.shim.secretdoors.datagen.DataGenerators;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,14 +24,10 @@ public class SecretDoors {
     public SecretDoors() {
 
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        IEventBus bus = MinecraftForge.EVENT_BUS;
 
-        // Register the setup method for modloading
-        modEventBus.addListener(this::setup);
-        // Register the enqueueIMC method for modloading
-        modEventBus.addListener(this::enqueueIMC);
-        // Register the processIMC method for modloading
-        modEventBus.addListener(this::processIMC);
+        SecretDoorsRegistry.register(modEventBus);
+        modEventBus.addListener(SecretDoorsRegistry::addCreative);
+//        modEventBus.addListener(DataGenerators::gatherData);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -39,7 +36,6 @@ public class SecretDoors {
 //            modEventBus.addListener(this::clientSetup);
 //        });
 
-        SecretDoorsRegistry.register(modEventBus);
     }
 
 
