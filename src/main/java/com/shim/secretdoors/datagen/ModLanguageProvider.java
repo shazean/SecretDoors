@@ -19,6 +19,8 @@ public class ModLanguageProvider extends LanguageProvider {
         add(SecretDoorsRegistry.SECRET_ACACIA_PLANK_DOOR.get(), "Secret Acacia Plank Door");
         add(SecretDoorsRegistry.SECRET_SPRUCE_PLANK_DOOR.get(), "Secret Spruce Plank Door");
         add(SecretDoorsRegistry.SECRET_JUNGLE_PLANK_DOOR.get(), "Secret Jungle Plank Door");
+        add(SecretDoorsRegistry.SECRET_CRIMSON_PLANK_DOOR.get(), "Secret Crimson Plank Door");
+        add(SecretDoorsRegistry.SECRET_WARPED_PLANK_DOOR.get(), "Secret Warped Plank Door");
 
         add(SecretDoorsRegistry.SECRET_OAK_LOG_DOOR.get(), "Secret Oak Log Door");
         add(SecretDoorsRegistry.SECRET_DARK_OAK_LOG_DOOR.get(), "Secret Dark Oak Log Door");
@@ -26,13 +28,17 @@ public class ModLanguageProvider extends LanguageProvider {
         add(SecretDoorsRegistry.SECRET_ACACIA_LOG_DOOR.get(), "Secret Acacia Log Door");
         add(SecretDoorsRegistry.SECRET_SPRUCE_LOG_DOOR.get(), "Secret Spruce Log Door");
         add(SecretDoorsRegistry.SECRET_JUNGLE_LOG_DOOR.get(), "Secret Jungle Log Door");
+        add(SecretDoorsRegistry.SECRET_CRIMSON_STEM_DOOR.get(), "Secret Crimson Stem Door");
+        add(SecretDoorsRegistry.SECRET_WARPED_STEM_DOOR.get(), "Secret Warped Stem Door");
 
         add(SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_DOOR.get(), "Secret Stripped Oak Log Door");
-        add(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_DOOR.get(), "Secret Stripped Horizontal Dark Oak Log Door");
-        add(SecretDoorsRegistry.SECRET_STRIPPED_BIRCH_LOG_DOOR.get(), "Secret Stripped Horizontal Birch Log Door");
-        add(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_DOOR.get(), "Secret Stripped Horizontal Acacia Log Door");
-        add(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_DOOR.get(), "Secret Stripped Horizontal Spruce Log Door");
-        add(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_DOOR.get(), "Secret Stripped Horizontal Jungle Log Door");
+        add(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_DOOR.get(), "Secret Stripped Dark Oak Log Door");
+        add(SecretDoorsRegistry.SECRET_STRIPPED_BIRCH_LOG_DOOR.get(), "Secret Stripped Birch Log Door");
+        add(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_DOOR.get(), "Secret Stripped Acacia Log Door");
+        add(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_DOOR.get(), "Secret Stripped Spruce Log Door");
+        add(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_DOOR.get(), "Secret Stripped Jungle Log Door");
+        add(SecretDoorsRegistry.SECRET_STRIPPED_CRIMSON_STEM_DOOR.get(), "Secret Stripped Crimson Stem Door");
+        add(SecretDoorsRegistry.SECRET_STRIPPED_WARPED_STEM_DOOR.get(), "Secret Stripped Warped Stem Door");
 
         add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_OAK_LOG_DOOR.get(), "Secret Stripped Horizontal Oak Log Door");
         add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_DARK_OAK_LOG_DOOR.get(), "Secret Stripped Horizontal Dark Oak Log Door");
@@ -40,6 +46,8 @@ public class ModLanguageProvider extends LanguageProvider {
         add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_ACACIA_LOG_DOOR.get(), "Secret Stripped Horizontal Acacia Log Door");
         add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_SPRUCE_LOG_DOOR.get(), "Secret Stripped Horizontal Spruce Log Door");
         add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_JUNGLE_LOG_DOOR.get(), "Secret Stripped Horizontal Jungle Log Door");
+        add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_CRIMSON_STEM_DOOR.get(), "Secret Stripped Horizontal Crimson Stem Door");
+        add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_WARPED_STEM_DOOR.get(), "Secret Stripped Horizontal Warped Stem Door");
 
         add(SecretDoorsRegistry.SECRET_HORIZONTAL_OAK_LOG_DOOR.get(), "Secret Horizontal Oak Log Door");
         add(SecretDoorsRegistry.SECRET_HORIZONTAL_DARK_OAK_LOG_DOOR.get(), "Secret Horizontal Dark Oak Log Door");
@@ -47,6 +55,8 @@ public class ModLanguageProvider extends LanguageProvider {
         add(SecretDoorsRegistry.SECRET_HORIZONTAL_ACACIA_LOG_DOOR.get(), "Secret Horizontal Acacia Log Door");
         add(SecretDoorsRegistry.SECRET_HORIZONTAL_SPRUCE_LOG_DOOR.get(), "Secret Horizontal Spruce Log Door");
         add(SecretDoorsRegistry.SECRET_HORIZONTAL_JUNGLE_LOG_DOOR.get(), "Secret Horizontal Jungle Log Door");
+        add(SecretDoorsRegistry.SECRET_HORIZONTAL_CRIMSON_STEM_DOOR.get(), "Secret Horizontal Crimson Stem Door");
+        add(SecretDoorsRegistry.SECRET_HORIZONTAL_WARPED_STEM_DOOR.get(), "Secret Horizontal Warped Stem Door");
 
 
         add(SecretDoorsRegistry.SECRET_STONE_DOOR.get(), "Secret Stone Door");
@@ -99,6 +109,8 @@ public class ModLanguageProvider extends LanguageProvider {
         add(SecretDoorsRegistry.SECRET_ACACIA_PLANK_TRAPDOOR.get(), "Secret Acacia Plank Trapdoor");
         add(SecretDoorsRegistry.SECRET_SPRUCE_PLANK_TRAPDOOR.get(), "Secret Spruce Plank Trapdoor");
         add(SecretDoorsRegistry.SECRET_JUNGLE_PLANK_TRAPDOOR.get(), "Secret Jungle Plank Trapdoor");
+        add(SecretDoorsRegistry.SECRET_CRIMSON_PLANK_TRAPDOOR.get(), "Secret Crimson Plank Trapdoor");
+        add(SecretDoorsRegistry.SECRET_WARPED_PLANK_TRAPDOOR.get(), "Secret Warped Plank Trapdoor");
 
         add(SecretDoorsRegistry.SECRET_OAK_LOG_TRAPDOOR.get(), "Secret Oak Log Trapdoor");
         add(SecretDoorsRegistry.SECRET_DARK_OAK_LOG_TRAPDOOR.get(), "Secret Dark Oak Log Trapdoor");
@@ -106,13 +118,17 @@ public class ModLanguageProvider extends LanguageProvider {
         add(SecretDoorsRegistry.SECRET_ACACIA_LOG_TRAPDOOR.get(), "Secret Acacia Log Trapdoor");
         add(SecretDoorsRegistry.SECRET_SPRUCE_LOG_TRAPDOOR.get(), "Secret Spruce Log Trapdoor");
         add(SecretDoorsRegistry.SECRET_JUNGLE_LOG_TRAPDOOR.get(), "Secret Jungle Log Trapdoor");
+        add(SecretDoorsRegistry.SECRET_CRIMSON_STEM_TRAPDOOR.get(), "Secret Crimson Stem Trapdoor");
+        add(SecretDoorsRegistry.SECRET_WARPED_STEM_TRAPDOOR.get(), "Secret Warped Stem Trapdoor");
 
         add(SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_TRAPDOOR.get(), "Secret Stripped Oak Log Trapdoor");
-        add(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_TRAPDOOR.get(), "Secret Stripped Horizontal Dark Oak Log Trapdoor");
-        add(SecretDoorsRegistry.SECRET_STRIPPED_BIRCH_LOG_TRAPDOOR.get(), "Secret Stripped Horizontal Birch Log Trapdoor");
-        add(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_TRAPDOOR.get(), "Secret Stripped Horizontal Acacia Log Trapdoor");
-        add(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_TRAPDOOR.get(), "Secret Stripped Horizontal Spruce Log Trapdoor");
-        add(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_TRAPDOOR.get(), "Secret Stripped Horizontal Jungle Log Trapdoor");
+        add(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_TRAPDOOR.get(), "Secret Stripped Dark Oak Log Trapdoor");
+        add(SecretDoorsRegistry.SECRET_STRIPPED_BIRCH_LOG_TRAPDOOR.get(), "Secret Stripped Birch Log Trapdoor");
+        add(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_TRAPDOOR.get(), "Secret Stripped Acacia Log Trapdoor");
+        add(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_TRAPDOOR.get(), "Secret Stripped Spruce Log Trapdoor");
+        add(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_TRAPDOOR.get(), "Secret Stripped Jungle Log Trapdoor");
+        add(SecretDoorsRegistry.SECRET_STRIPPED_CRIMSON_STEM_TRAPDOOR.get(), "Secret Stripped Crimson Stem Trapdoor");
+        add(SecretDoorsRegistry.SECRET_STRIPPED_WARPED_STEM_TRAPDOOR.get(), "Secret Stripped Warped Stem Trapdoor");
 
         add(SecretDoorsRegistry.SECRET_STONE_TRAPDOOR.get(), "Secret Stone Trapdoor");
         add(SecretDoorsRegistry.SECRET_COBBLESTONE_TRAPDOOR.get(), "Secret Cobblestone Trapdoor");
