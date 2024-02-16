@@ -26,6 +26,9 @@ public class ItemModels extends ItemModelProvider {
         generated(SecretDoorsRegistry.SECRET_ACACIA_PLANK_DOOR_ITEM.get(), "item/secret_acacia_plank_door");
         generated(SecretDoorsRegistry.SECRET_SPRUCE_PLANK_DOOR_ITEM.get(), "item/secret_spruce_plank_door");
         generated(SecretDoorsRegistry.SECRET_JUNGLE_PLANK_DOOR_ITEM.get(), "item/secret_jungle_plank_door");
+        generated(SecretDoorsRegistry.SECRET_MANGROVE_PLANK_DOOR_ITEM.get(), "item/secret_mangrove_plank_door");
+        generated(SecretDoorsRegistry.SECRET_CRIMSON_PLANK_DOOR_ITEM.get(), "item/secret_crimson_plank_door");
+        generated(SecretDoorsRegistry.SECRET_WARPED_PLANK_DOOR_ITEM.get(), "item/secret_warped_plank_door");
 
         generated(SecretDoorsRegistry.SECRET_OAK_LOG_DOOR_ITEM.get(), "item/secret_oak_log_door");
         generated(SecretDoorsRegistry.SECRET_DARK_OAK_LOG_DOOR_ITEM.get(), "item/secret_dark_oak_log_door");
@@ -33,6 +36,9 @@ public class ItemModels extends ItemModelProvider {
         generated(SecretDoorsRegistry.SECRET_ACACIA_LOG_DOOR_ITEM.get(), "item/secret_acacia_log_door");
         generated(SecretDoorsRegistry.SECRET_SPRUCE_LOG_DOOR_ITEM.get(), "item/secret_spruce_log_door");
         generated(SecretDoorsRegistry.SECRET_JUNGLE_LOG_DOOR_ITEM.get(), "item/secret_jungle_log_door");
+        generated(SecretDoorsRegistry.SECRET_MANGROVE_LOG_DOOR_ITEM.get(), "item/secret_mangrove_log_door");
+        generated(SecretDoorsRegistry.SECRET_CRIMSON_STEM_DOOR_ITEM.get(), "item/secret_crimson_stem_door");
+        generated(SecretDoorsRegistry.SECRET_WARPED_STEM_DOOR_ITEM.get(), "item/secret_warped_stem_door");
 
         generated(SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_DOOR_ITEM.get(), "item/secret_stripped_oak_log_door");
         generated(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_DOOR_ITEM.get(), "item/secret_stripped_dark_oak_log_door");
@@ -40,6 +46,9 @@ public class ItemModels extends ItemModelProvider {
         generated(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_DOOR_ITEM.get(), "item/secret_stripped_acacia_log_door");
         generated(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_DOOR_ITEM.get(), "item/secret_stripped_spruce_log_door");
         generated(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_DOOR_ITEM.get(), "item/secret_stripped_jungle_log_door");
+        generated(SecretDoorsRegistry.SECRET_STRIPPED_MANGROVE_LOG_DOOR_ITEM.get(), "item/secret_stripped_mangrove_log_door");
+        generated(SecretDoorsRegistry.SECRET_STRIPPED_CRIMSON_STEM_DOOR_ITEM.get(), "item/secret_stripped_crimson_stem_door");
+        generated(SecretDoorsRegistry.SECRET_STRIPPED_WARPED_STEM_DOOR_ITEM.get(), "item/secret_stripped_warped_stem_door");
 
         generated(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_OAK_LOG_DOOR_ITEM.get(), "item/secret_stripped_horizontal_oak_log_door");
         generated(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_DARK_OAK_LOG_DOOR_ITEM.get(), "item/secret_stripped_horizontal_dark_oak_log_door");
@@ -47,6 +56,9 @@ public class ItemModels extends ItemModelProvider {
         generated(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_ACACIA_LOG_DOOR_ITEM.get(), "item/secret_stripped_horizontal_acacia_log_door");
         generated(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_SPRUCE_LOG_DOOR_ITEM.get(), "item/secret_stripped_horizontal_spruce_log_door");
         generated(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_JUNGLE_LOG_DOOR_ITEM.get(), "item/secret_stripped_horizontal_jungle_log_door");
+        generated(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_MANGROVE_LOG_DOOR_ITEM.get(), "item/secret_stripped_horizontal_mangrove_log_door");
+        generated(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_CRIMSON_STEM_DOOR_ITEM.get(), "item/secret_stripped_horizontal_crimson_stem_door");
+        generated(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_WARPED_STEM_DOOR_ITEM.get(), "item/secret_stripped_horizontal_warped_stem_door");
 
         generated(SecretDoorsRegistry.SECRET_HORIZONTAL_OAK_LOG_DOOR_ITEM.get(), "item/secret_horizontal_oak_log_door");
         generated(SecretDoorsRegistry.SECRET_HORIZONTAL_DARK_OAK_LOG_DOOR_ITEM.get(), "item/secret_horizontal_dark_oak_log_door");
@@ -54,6 +66,9 @@ public class ItemModels extends ItemModelProvider {
         generated(SecretDoorsRegistry.SECRET_HORIZONTAL_ACACIA_LOG_DOOR_ITEM.get(), "item/secret_horizontal_acacia_log_door");
         generated(SecretDoorsRegistry.SECRET_HORIZONTAL_SPRUCE_LOG_DOOR_ITEM.get(), "item/secret_horizontal_spruce_log_door");
         generated(SecretDoorsRegistry.SECRET_HORIZONTAL_JUNGLE_LOG_DOOR_ITEM.get(), "item/secret_horizontal_jungle_log_door");
+        generated(SecretDoorsRegistry.SECRET_HORIZONTAL_MANGROVE_LOG_DOOR_ITEM.get(), "item/secret_horizontal_mangrove_log_door");
+        generated(SecretDoorsRegistry.SECRET_HORIZONTAL_CRIMSON_STEM_DOOR_ITEM.get(), "item/secret_horizontal_crimson_stem_door");
+        generated(SecretDoorsRegistry.SECRET_HORIZONTAL_WARPED_STEM_DOOR_ITEM.get(), "item/secret_horizontal_warped_stem_door");
 
 
         generated(SecretDoorsRegistry.SECRET_STONE_DOOR_ITEM.get(), "item/secret_stone_door");
@@ -106,6 +121,9 @@ public class ItemModels extends ItemModelProvider {
         blockItem(SecretDoorsRegistry.SECRET_ACACIA_PLANK_TRAPDOOR_ITEM.get(), modLoc("block/secret_acacia_plank_trapdoor_bottom"));
         blockItem(SecretDoorsRegistry.SECRET_SPRUCE_PLANK_TRAPDOOR_ITEM.get(), modLoc("block/secret_spruce_plank_trapdoor_bottom"));
         blockItem(SecretDoorsRegistry.SECRET_JUNGLE_PLANK_TRAPDOOR_ITEM.get(), modLoc("block/secret_jungle_plank_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_MANGROVE_PLANK_TRAPDOOR_ITEM.get(), modLoc("block/secret_mangrove_plank_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_CRIMSON_PLANK_TRAPDOOR_ITEM.get(), modLoc("block/secret_crimson_plank_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_WARPED_PLANK_TRAPDOOR_ITEM.get(), modLoc("block/secret_warped_plank_trapdoor_bottom"));
 
         blockItem(SecretDoorsRegistry.SECRET_OAK_LOG_TRAPDOOR_ITEM.get(), modLoc("block/secret_oak_log_trapdoor_bottom"));
         blockItem(SecretDoorsRegistry.SECRET_DARK_OAK_LOG_TRAPDOOR_ITEM.get(), modLoc("block/secret_dark_oak_log_trapdoor_bottom"));
@@ -113,6 +131,9 @@ public class ItemModels extends ItemModelProvider {
         blockItem(SecretDoorsRegistry.SECRET_ACACIA_LOG_TRAPDOOR_ITEM.get(), modLoc("block/secret_acacia_log_trapdoor_bottom"));
         blockItem(SecretDoorsRegistry.SECRET_SPRUCE_LOG_TRAPDOOR_ITEM.get(), modLoc("block/secret_spruce_log_trapdoor_bottom"));
         blockItem(SecretDoorsRegistry.SECRET_JUNGLE_LOG_TRAPDOOR_ITEM.get(), modLoc("block/secret_jungle_log_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_MANGROVE_LOG_TRAPDOOR_ITEM.get(), modLoc("block/secret_mangrove_log_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_CRIMSON_STEM_TRAPDOOR_ITEM.get(), modLoc("block/secret_crimson_stem_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_WARPED_STEM_TRAPDOOR_ITEM.get(), modLoc("block/secret_warped_stem_trapdoor_bottom"));
 
         blockItem(SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_TRAPDOOR_ITEM.get(), modLoc("block/secret_stripped_oak_log_trapdoor_bottom"));
         blockItem(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_TRAPDOOR_ITEM.get(), modLoc("block/secret_stripped_dark_oak_log_trapdoor_bottom"));
@@ -120,6 +141,9 @@ public class ItemModels extends ItemModelProvider {
         blockItem(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_TRAPDOOR_ITEM.get(), modLoc("block/secret_stripped_acacia_log_trapdoor_bottom"));
         blockItem(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_TRAPDOOR_ITEM.get(), modLoc("block/secret_stripped_spruce_log_trapdoor_bottom"));
         blockItem(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_TRAPDOOR_ITEM.get(), modLoc("block/secret_stripped_jungle_log_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_STRIPPED_MANGROVE_LOG_TRAPDOOR_ITEM.get(), modLoc("block/secret_stripped_mangrove_log_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_STRIPPED_CRIMSON_STEM_TRAPDOOR_ITEM.get(), modLoc("block/secret_stripped_crimson_stem_trapdoor_bottom"));
+        blockItem(SecretDoorsRegistry.SECRET_STRIPPED_WARPED_STEM_TRAPDOOR_ITEM.get(), modLoc("block/secret_stripped_warped_stem_trapdoor_bottom"));
 
         blockItem(SecretDoorsRegistry.SECRET_STONE_TRAPDOOR_ITEM.get(), modLoc("block/secret_stone_trapdoor_bottom"));
         blockItem(SecretDoorsRegistry.SECRET_COBBLESTONE_TRAPDOOR_ITEM.get(), modLoc("block/secret_cobblestone_trapdoor_bottom"));

@@ -25,6 +25,9 @@ public class ModItemTags extends ItemTagsProvider {
                 .add(SecretDoorsRegistry.SECRET_ACACIA_PLANK_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_SPRUCE_PLANK_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_JUNGLE_PLANK_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_MANGROVE_PLANK_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_CRIMSON_PLANK_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_WARPED_PLANK_DOOR_ITEM.get())
 
                 .add(SecretDoorsRegistry.SECRET_OAK_LOG_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_DARK_OAK_LOG_DOOR_ITEM.get())
@@ -32,6 +35,9 @@ public class ModItemTags extends ItemTagsProvider {
                 .add(SecretDoorsRegistry.SECRET_ACACIA_LOG_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_SPRUCE_LOG_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_JUNGLE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_MANGROVE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_CRIMSON_STEM_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_WARPED_STEM_DOOR_ITEM.get())
 
                 .add(SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_DOOR_ITEM.get())
@@ -39,6 +45,9 @@ public class ModItemTags extends ItemTagsProvider {
                 .add(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_MANGROVE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_CRIMSON_STEM_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_WARPED_STEM_DOOR_ITEM.get())
 
                 .add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_OAK_LOG_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_DARK_OAK_LOG_DOOR_ITEM.get())
@@ -46,6 +55,9 @@ public class ModItemTags extends ItemTagsProvider {
                 .add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_ACACIA_LOG_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_SPRUCE_LOG_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_JUNGLE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_MANGROVE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_CRIMSON_STEM_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_WARPED_STEM_DOOR_ITEM.get())
 
                 .add(SecretDoorsRegistry.SECRET_HORIZONTAL_OAK_LOG_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_HORIZONTAL_DARK_OAK_LOG_DOOR_ITEM.get())
@@ -53,6 +65,9 @@ public class ModItemTags extends ItemTagsProvider {
                 .add(SecretDoorsRegistry.SECRET_HORIZONTAL_ACACIA_LOG_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_HORIZONTAL_SPRUCE_LOG_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_HORIZONTAL_JUNGLE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_HORIZONTAL_MANGROVE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_HORIZONTAL_CRIMSON_STEM_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_HORIZONTAL_WARPED_STEM_DOOR_ITEM.get())
 
 
                 .add(SecretDoorsRegistry.SECRET_STONE_DOOR_ITEM.get())
@@ -103,6 +118,9 @@ public class ModItemTags extends ItemTagsProvider {
                 .add(SecretDoorsRegistry.SECRET_ACACIA_PLANK_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_SPRUCE_PLANK_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_JUNGLE_PLANK_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_MANGROVE_PLANK_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_CRIMSON_PLANK_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_WARPED_PLANK_DOOR_ITEM.get())
 
                 .add(SecretDoorsRegistry.SECRET_OAK_LOG_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_DARK_OAK_LOG_DOOR_ITEM.get())
@@ -110,7 +128,40 @@ public class ModItemTags extends ItemTagsProvider {
                 .add(SecretDoorsRegistry.SECRET_ACACIA_LOG_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_SPRUCE_LOG_DOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_JUNGLE_LOG_DOOR_ITEM.get())
-                .add(SecretDoorsRegistry.SECRET_BOOKSHELF_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_MANGROVE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_CRIMSON_STEM_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_WARPED_STEM_DOOR_ITEM.get())
+
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_BIRCH_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_MANGROVE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_CRIMSON_STEM_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_WARPED_STEM_DOOR_ITEM.get())
+
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_OAK_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_DARK_OAK_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_BIRCH_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_ACACIA_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_SPRUCE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_JUNGLE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_MANGROVE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_CRIMSON_STEM_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_WARPED_STEM_DOOR_ITEM.get())
+
+                .add(SecretDoorsRegistry.SECRET_HORIZONTAL_OAK_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_HORIZONTAL_DARK_OAK_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_HORIZONTAL_BIRCH_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_HORIZONTAL_ACACIA_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_HORIZONTAL_SPRUCE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_HORIZONTAL_JUNGLE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_HORIZONTAL_MANGROVE_LOG_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_HORIZONTAL_CRIMSON_STEM_DOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_HORIZONTAL_WARPED_STEM_DOOR_ITEM.get())
+
 
         ;
 
@@ -121,6 +172,10 @@ public class ModItemTags extends ItemTagsProvider {
                 .add(SecretDoorsRegistry.SECRET_ACACIA_PLANK_TRAPDOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_SPRUCE_PLANK_TRAPDOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_JUNGLE_PLANK_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_MANGROVE_PLANK_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_CRIMSON_PLANK_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_WARPED_PLANK_TRAPDOOR_ITEM.get())
+
 
                 .add(SecretDoorsRegistry.SECRET_OAK_LOG_TRAPDOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_DARK_OAK_LOG_TRAPDOOR_ITEM.get())
@@ -128,6 +183,9 @@ public class ModItemTags extends ItemTagsProvider {
                 .add(SecretDoorsRegistry.SECRET_ACACIA_LOG_TRAPDOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_SPRUCE_LOG_TRAPDOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_JUNGLE_LOG_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_MANGROVE_LOG_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_CRIMSON_STEM_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_WARPED_STEM_TRAPDOOR_ITEM.get())
 
 
 
@@ -137,6 +195,9 @@ public class ModItemTags extends ItemTagsProvider {
                 .add(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_TRAPDOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_TRAPDOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_MANGROVE_LOG_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_CRIMSON_STEM_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_WARPED_STEM_TRAPDOOR_ITEM.get())
 
                 .add(SecretDoorsRegistry.SECRET_STONE_TRAPDOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_COBBLESTONE_TRAPDOOR_ITEM.get())
@@ -187,6 +248,9 @@ public class ModItemTags extends ItemTagsProvider {
                 .add(SecretDoorsRegistry.SECRET_ACACIA_PLANK_TRAPDOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_SPRUCE_PLANK_TRAPDOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_JUNGLE_PLANK_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_MANGROVE_PLANK_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_CRIMSON_PLANK_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_WARPED_PLANK_TRAPDOOR_ITEM.get())
 
                 .add(SecretDoorsRegistry.SECRET_OAK_LOG_TRAPDOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_DARK_OAK_LOG_TRAPDOOR_ITEM.get())
@@ -194,6 +258,20 @@ public class ModItemTags extends ItemTagsProvider {
                 .add(SecretDoorsRegistry.SECRET_ACACIA_LOG_TRAPDOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_SPRUCE_LOG_TRAPDOOR_ITEM.get())
                 .add(SecretDoorsRegistry.SECRET_JUNGLE_LOG_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_MANGROVE_LOG_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_CRIMSON_STEM_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_WARPED_STEM_TRAPDOOR_ITEM.get())
+
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_BIRCH_LOG_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_MANGROVE_LOG_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_CRIMSON_STEM_TRAPDOOR_ITEM.get())
+                .add(SecretDoorsRegistry.SECRET_STRIPPED_WARPED_STEM_TRAPDOOR_ITEM.get())
+
                 .add(SecretDoorsRegistry.SECRET_BOOKSHELF_TRAPDOOR_ITEM.get())
 
         ;

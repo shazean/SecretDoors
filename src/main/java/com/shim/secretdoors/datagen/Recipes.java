@@ -29,6 +29,9 @@ public class Recipes extends RecipeProvider {
         woodenDoor(SecretDoorsRegistry.SECRET_ACACIA_PLANK_DOOR_ITEM.get(), Items.ACACIA_PLANKS, consumer);
         woodenDoor(SecretDoorsRegistry.SECRET_SPRUCE_PLANK_DOOR_ITEM.get(), Items.SPRUCE_PLANKS, consumer);
         woodenDoor(SecretDoorsRegistry.SECRET_JUNGLE_PLANK_DOOR_ITEM.get(), Items.JUNGLE_PLANKS, consumer);
+        woodenDoor(SecretDoorsRegistry.SECRET_MANGROVE_PLANK_DOOR_ITEM.get(), Items.MANGROVE_PLANKS, consumer);
+        woodenDoor(SecretDoorsRegistry.SECRET_CRIMSON_PLANK_DOOR_ITEM.get(), Items.CRIMSON_PLANKS, consumer);
+        woodenDoor(SecretDoorsRegistry.SECRET_WARPED_PLANK_DOOR_ITEM.get(), Items.WARPED_PLANKS, consumer);
 
         verticalDoor(SecretDoorsRegistry.SECRET_OAK_LOG_DOOR_ITEM.get(), Items.OAK_LOG, consumer);
         verticalDoor(SecretDoorsRegistry.SECRET_DARK_OAK_LOG_DOOR_ITEM.get(), Items.DARK_OAK_LOG, consumer);
@@ -36,6 +39,9 @@ public class Recipes extends RecipeProvider {
         verticalDoor(SecretDoorsRegistry.SECRET_ACACIA_LOG_DOOR_ITEM.get(), Items.ACACIA_LOG, consumer);
         verticalDoor(SecretDoorsRegistry.SECRET_SPRUCE_LOG_DOOR_ITEM.get(), Items.SPRUCE_LOG, consumer);
         verticalDoor(SecretDoorsRegistry.SECRET_JUNGLE_LOG_DOOR_ITEM.get(), Items.JUNGLE_LOG, consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_MANGROVE_LOG_DOOR_ITEM.get(), Items.MANGROVE_LOG, consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_CRIMSON_STEM_DOOR_ITEM.get(), Items.CRIMSON_STEM, consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_WARPED_STEM_DOOR_ITEM.get(), Items.WARPED_STEM, consumer);
 
         verticalDoor(SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_DOOR_ITEM.get(), Items.STRIPPED_OAK_LOG, consumer);
         verticalDoor(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_DOOR_ITEM.get(), Items.STRIPPED_DARK_OAK_LOG, consumer);
@@ -43,6 +49,9 @@ public class Recipes extends RecipeProvider {
         verticalDoor(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_DOOR_ITEM.get(), Items.STRIPPED_ACACIA_LOG, consumer);
         verticalDoor(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_DOOR_ITEM.get(), Items.STRIPPED_SPRUCE_LOG, consumer);
         verticalDoor(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_DOOR_ITEM.get(), Items.STRIPPED_JUNGLE_LOG, consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_STRIPPED_MANGROVE_LOG_DOOR_ITEM.get(), Items.STRIPPED_MANGROVE_LOG, consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_STRIPPED_CRIMSON_STEM_DOOR_ITEM.get(), Items.STRIPPED_CRIMSON_STEM, consumer);
+        verticalDoor(SecretDoorsRegistry.SECRET_STRIPPED_WARPED_STEM_DOOR_ITEM.get(), Items.STRIPPED_WARPED_STEM, consumer);
 
         horizontalDoor(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_OAK_LOG_DOOR_ITEM.get(), Items.STRIPPED_OAK_LOG, consumer);
         horizontalDoor(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_DARK_OAK_LOG_DOOR_ITEM.get(), Items.STRIPPED_DARK_OAK_LOG, consumer);
@@ -50,6 +59,9 @@ public class Recipes extends RecipeProvider {
         horizontalDoor(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_ACACIA_LOG_DOOR_ITEM.get(), Items.STRIPPED_ACACIA_LOG, consumer);
         horizontalDoor(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_SPRUCE_LOG_DOOR_ITEM.get(), Items.STRIPPED_SPRUCE_LOG, consumer);
         horizontalDoor(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_JUNGLE_LOG_DOOR_ITEM.get(), Items.STRIPPED_JUNGLE_LOG, consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_MANGROVE_LOG_DOOR_ITEM.get(), Items.STRIPPED_MANGROVE_LOG, consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_CRIMSON_STEM_DOOR_ITEM.get(), Items.STRIPPED_CRIMSON_STEM, consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_STRIPPED_HORIZONTAL_WARPED_STEM_DOOR_ITEM.get(), Items.STRIPPED_WARPED_STEM, consumer);
 
         horizontalDoor(SecretDoorsRegistry.SECRET_HORIZONTAL_OAK_LOG_DOOR_ITEM.get(), Items.OAK_LOG, consumer);
         horizontalDoor(SecretDoorsRegistry.SECRET_HORIZONTAL_DARK_OAK_LOG_DOOR_ITEM.get(), Items.DARK_OAK_LOG, consumer);
@@ -57,6 +69,9 @@ public class Recipes extends RecipeProvider {
         horizontalDoor(SecretDoorsRegistry.SECRET_HORIZONTAL_ACACIA_LOG_DOOR_ITEM.get(), Items.ACACIA_LOG, consumer);
         horizontalDoor(SecretDoorsRegistry.SECRET_HORIZONTAL_SPRUCE_LOG_DOOR_ITEM.get(), Items.SPRUCE_LOG, consumer);
         horizontalDoor(SecretDoorsRegistry.SECRET_HORIZONTAL_JUNGLE_LOG_DOOR_ITEM.get(), Items.JUNGLE_LOG, consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_HORIZONTAL_MANGROVE_LOG_DOOR_ITEM.get(), Items.MANGROVE_LOG, consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_HORIZONTAL_CRIMSON_STEM_DOOR_ITEM.get(), Items.CRIMSON_STEM, consumer);
+        horizontalDoor(SecretDoorsRegistry.SECRET_HORIZONTAL_WARPED_STEM_DOOR_ITEM.get(), Items.WARPED_STEM, consumer);
 
 
         door(SecretDoorsRegistry.SECRET_STONE_DOOR_ITEM.get(), Items.STONE, consumer);
@@ -109,12 +124,19 @@ public class Recipes extends RecipeProvider {
         woodenTrapdoor(SecretDoorsRegistry.SECRET_ACACIA_PLANK_TRAPDOOR_ITEM.get(), Items.ACACIA_PLANKS, consumer);
         woodenTrapdoor(SecretDoorsRegistry.SECRET_SPRUCE_PLANK_TRAPDOOR_ITEM.get(), Items.SPRUCE_PLANKS, consumer);
         woodenTrapdoor(SecretDoorsRegistry.SECRET_JUNGLE_PLANK_TRAPDOOR_ITEM.get(), Items.JUNGLE_PLANKS, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_MANGROVE_PLANK_TRAPDOOR_ITEM.get(), Items.MANGROVE_PLANKS, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_CRIMSON_PLANK_TRAPDOOR_ITEM.get(), Items.CRIMSON_PLANKS, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_WARPED_PLANK_TRAPDOOR_ITEM.get(), Items.WARPED_PLANKS, consumer);
+
         woodenTrapdoor(SecretDoorsRegistry.SECRET_OAK_LOG_TRAPDOOR_ITEM.get(), Items.OAK_LOG, consumer);
         woodenTrapdoor(SecretDoorsRegistry.SECRET_DARK_OAK_LOG_TRAPDOOR_ITEM.get(), Items.DARK_OAK_LOG, consumer);
         woodenTrapdoor(SecretDoorsRegistry.SECRET_BIRCH_LOG_TRAPDOOR_ITEM.get(), Items.BIRCH_LOG, consumer);
         woodenTrapdoor(SecretDoorsRegistry.SECRET_ACACIA_LOG_TRAPDOOR_ITEM.get(), Items.ACACIA_LOG, consumer);
         woodenTrapdoor(SecretDoorsRegistry.SECRET_SPRUCE_LOG_TRAPDOOR_ITEM.get(), Items.SPRUCE_LOG, consumer);
         woodenTrapdoor(SecretDoorsRegistry.SECRET_JUNGLE_LOG_TRAPDOOR_ITEM.get(), Items.JUNGLE_LOG, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_MANGROVE_LOG_TRAPDOOR_ITEM.get(), Items.MANGROVE_LOG, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_CRIMSON_STEM_TRAPDOOR_ITEM.get(), Items.CRIMSON_STEM, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_WARPED_STEM_TRAPDOOR_ITEM.get(), Items.WARPED_STEM, consumer);
 
         woodenTrapdoor(SecretDoorsRegistry.SECRET_STRIPPED_OAK_LOG_TRAPDOOR_ITEM.get(), Items.STRIPPED_OAK_LOG, consumer);
         woodenTrapdoor(SecretDoorsRegistry.SECRET_STRIPPED_DARK_OAK_LOG_TRAPDOOR_ITEM.get(), Items.STRIPPED_DARK_OAK_LOG, consumer);
@@ -122,6 +144,9 @@ public class Recipes extends RecipeProvider {
         woodenTrapdoor(SecretDoorsRegistry.SECRET_STRIPPED_ACACIA_LOG_TRAPDOOR_ITEM.get(), Items.STRIPPED_ACACIA_LOG, consumer);
         woodenTrapdoor(SecretDoorsRegistry.SECRET_STRIPPED_SPRUCE_LOG_TRAPDOOR_ITEM.get(), Items.STRIPPED_SPRUCE_LOG, consumer);
         woodenTrapdoor(SecretDoorsRegistry.SECRET_STRIPPED_JUNGLE_LOG_TRAPDOOR_ITEM.get(), Items.STRIPPED_JUNGLE_LOG, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_STRIPPED_MANGROVE_LOG_TRAPDOOR_ITEM.get(), Items.STRIPPED_MANGROVE_LOG, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_STRIPPED_CRIMSON_STEM_TRAPDOOR_ITEM.get(), Items.STRIPPED_CRIMSON_STEM, consumer);
+        woodenTrapdoor(SecretDoorsRegistry.SECRET_STRIPPED_WARPED_STEM_TRAPDOOR_ITEM.get(), Items.STRIPPED_WARPED_STEM, consumer);
 
         trapdoor(SecretDoorsRegistry.SECRET_STONE_TRAPDOOR_ITEM.get(), Items.STONE, consumer);
         trapdoor(SecretDoorsRegistry.SECRET_COBBLESTONE_TRAPDOOR_ITEM.get(), Items.COBBLESTONE, consumer);
