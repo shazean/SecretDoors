@@ -2,10 +2,12 @@ buildscript {
     repositories {
         // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
         maven { url = 'https://maven.minecraftforge.net' }
+        maven { url = 'https://repo.spongepowered.org/maven' }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
     }
 }
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
@@ -14,9 +16,9 @@ plugins {
     id 'maven-publish'
 }
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.spongepowered.mixin'
 
-
-version = '1.1.0'
+version = '1.3.0'
 group = 'com.shim.secretdoors' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'secretdoors'
 
@@ -123,7 +125,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'secretdoors', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'secretdoors', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'), '--existing-mod', 'celestialexploration'
 
             mods {
                 secretdoors {
@@ -145,6 +147,17 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+
+    maven {
+        url 'https://cursemaven.com'
+    }
+
+    maven {
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+    }
+
+    maven { url 'https://maven.blamejared.com' }
+
 }
 
 dependencies {
@@ -161,9 +174,26 @@ dependencies {
     // Examples using mod jars from ./libs
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
 
+//    compileOnly fg.deobf('software.bernie.geckolib:geckolib-1.18-forge:3.0.13')
+//    runtimeOnly fg.deobf('software.bernie.geckolib:geckolib-1.18-forge:3.0.13')
+    implementation fg.deobf("curse.maven:azurelib-817423:5512627")
+    implementation fg.deobf("curse.maven:celestial-exploration-577208:5969833")
+
+    implementation fg.deobf("curse.maven:terrablender-563928:3957976")
+    implementation fg.deobf("curse.maven:oh-the-biomes-youll-go-247560:4971536")
+
+    implementation fg.deobf("curse.maven:biomes-o-plenty-220318:3827434")
+
+    // Apply Mixin AP
+    annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
+
     // For more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+}
+
+mixin {
+    add sourceSets.main, "secretdoors.mixin-refmap.json"
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
@@ -172,7 +202,7 @@ jar {
         attributes([
                 "Specification-Title"     : "secretdoors",
                 "Specification-Vendor"    : "shim",
-                "Specification-Version"   : "0", // We are version 1 of ourselves
+                "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "shim",

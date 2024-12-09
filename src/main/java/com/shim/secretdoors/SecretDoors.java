@@ -1,5 +1,7 @@
 package com.shim.secretdoors;
 
+import com.shim.secretdoors.registry.SDBlocks;
+import com.shim.secretdoors.registry.SDItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -41,7 +43,9 @@ public class SecretDoors {
 //            modEventBus.addListener(this::clientSetup);
 //        });
 
-        SecretDoorsRegistry.register(modEventBus);
+        SDBlocks.register(modEventBus);
+        SDItems.register(modEventBus);
+
     }
 
 

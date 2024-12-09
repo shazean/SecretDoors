@@ -61,6 +61,14 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
         return LootTable.lootTable().withPool(builder);
     }
 
+    protected LootTable.Builder createSimplerTable(Block block) {
+        LootPool.Builder builder = LootPool.lootPool()
+                .name(block.getRegistryName().getPath())
+                .setRolls(ConstantValue.exactly(1))
+                .add(LootItem.lootTableItem(block));
+        return LootTable.lootTable().withPool(builder);
+    }
+
     protected LootTable.Builder createSimpleItemTable(String name, Item item) {
         LootPool.Builder builder = LootPool.lootPool()
                 .name(name)
@@ -107,9 +115,21 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
 //                .name(name)
                 .setRolls(ConstantValue.exactly(1))
                 .add(LootItem.lootTableItem(block)
-                    .when(() -> new LootItemBlockStatePropertyCondition.Builder(block)
-                        .setProperties(StatePropertiesPredicate.Builder.properties()
-                            .hasProperty(BlockStateProperties.HALF, "lower")).build()))
+                        .when(() -> new LootItemBlockStatePropertyCondition.Builder(block)
+                                .setProperties(StatePropertiesPredicate.Builder.properties()
+                                        .hasProperty(BlockStateProperties.HALF, "lower")).build()))
+                .when(ExplosionCondition.survivesExplosion());
+        return LootTable.lootTable().withPool(builder);
+    }
+
+    protected LootTable.Builder createSimpleDoorTable(Block block) {
+        LootPool.Builder builder = LootPool.lootPool()
+//                .name(name)
+                .setRolls(ConstantValue.exactly(1))
+                .add(LootItem.lootTableItem(block)
+                        .when(() -> new LootItemBlockStatePropertyCondition.Builder(block)
+                                .setProperties(StatePropertiesPredicate.Builder.properties()
+                                        .hasProperty(BlockStateProperties.HALF, "lower")).build()))
                 .when(ExplosionCondition.survivesExplosion());
         return LootTable.lootTable().withPool(builder);
     }

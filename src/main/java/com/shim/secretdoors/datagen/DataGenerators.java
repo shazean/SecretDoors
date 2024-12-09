@@ -1,7 +1,6 @@
 package com.shim.secretdoors.datagen;
 
 import com.shim.secretdoors.SecretDoors;
-import com.shim.secretdoors.SecretDoorsRegistry;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -12,7 +11,6 @@ public class DataGenerators {
 
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
-        SecretDoors.LOGGER.debug("gatherData event? Hello?");
         DataGenerator generator = event.getGenerator();
         if (event.includeServer()) {
             generator.addProvider(new Recipes(generator));
@@ -28,5 +26,4 @@ public class DataGenerators {
 
         }
     }
-
 }
