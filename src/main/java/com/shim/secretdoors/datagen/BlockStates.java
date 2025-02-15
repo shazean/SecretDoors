@@ -3,7 +3,6 @@ package com.shim.secretdoors.datagen;
 import com.shim.secretdoors.SecretDoors;
 import com.shim.secretdoors.registry.SDBlocks;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -17,250 +16,173 @@ public class BlockStates extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        //---- VANILLA DOORS -------------------------------------------------------------------------------
-        doorBlock(SDBlocks.SECRET_OAK_PLANK_DOOR.get(), mcLoc("block/oak_planks"), mcLoc("block/oak_planks"));
-        doorBlock(SDBlocks.SECRET_DARK_OAK_PLANK_DOOR.get(), mcLoc("block/dark_oak_planks"), mcLoc("block/dark_oak_planks"));
-        doorBlock(SDBlocks.SECRET_BIRCH_PLANK_DOOR.get(), mcLoc("block/birch_planks"), mcLoc("block/birch_planks"));
-        doorBlock(SDBlocks.SECRET_ACACIA_PLANK_DOOR.get(), mcLoc("block/acacia_planks"), mcLoc("block/acacia_planks"));
-        doorBlock(SDBlocks.SECRET_SPRUCE_PLANK_DOOR.get(), mcLoc("block/spruce_planks"), mcLoc("block/spruce_planks"));
-        doorBlock(SDBlocks.SECRET_JUNGLE_PLANK_DOOR.get(), mcLoc("block/jungle_planks"), mcLoc("block/jungle_planks"));
-        doorBlock(SDBlocks.SECRET_CRIMSON_PLANK_DOOR.get(), mcLoc("block/crimson_planks"), mcLoc("block/crimson_planks"));
-        doorBlock(SDBlocks.SECRET_WARPED_PLANK_DOOR.get(), mcLoc("block/warped_planks"), mcLoc("block/warped_planks"));
+        //---- DOORS -------------------------------------------------------------------------------
+        secretDoorBlock(SDBlocks.SECRET_OAK_PLANK_DOOR.get(), "oak_planks");
+        secretDoorBlock(SDBlocks.SECRET_DARK_OAK_PLANK_DOOR.get(), "dark_oak_planks");
+        secretDoorBlock(SDBlocks.SECRET_BIRCH_PLANK_DOOR.get(), "birch_planks");
+        secretDoorBlock(SDBlocks.SECRET_ACACIA_PLANK_DOOR.get(), "acacia_planks");
+        secretDoorBlock(SDBlocks.SECRET_SPRUCE_PLANK_DOOR.get(), "spruce_planks");
+        secretDoorBlock(SDBlocks.SECRET_JUNGLE_PLANK_DOOR.get(), "jungle_planks");
+        secretDoorBlock(SDBlocks.SECRET_CRIMSON_PLANK_DOOR.get(), "crimson_planks");
+        secretDoorBlock(SDBlocks.SECRET_WARPED_PLANK_DOOR.get(), "warped_planks");
 
-        doorBlock(SDBlocks.SECRET_OAK_LOG_DOOR.get(), mcLoc("block/oak_log"), mcLoc("block/oak_log"));
-        doorBlock(SDBlocks.SECRET_DARK_OAK_LOG_DOOR.get(), mcLoc("block/dark_oak_log"), mcLoc("block/dark_oak_log"));
-        doorBlock(SDBlocks.SECRET_BIRCH_LOG_DOOR.get(), mcLoc("block/birch_log"), mcLoc("block/birch_log"));
-        doorBlock(SDBlocks.SECRET_ACACIA_LOG_DOOR.get(), mcLoc("block/acacia_log"), mcLoc("block/acacia_log"));
-        doorBlock(SDBlocks.SECRET_SPRUCE_LOG_DOOR.get(), mcLoc("block/spruce_log"), mcLoc("block/spruce_log"));
-        doorBlock(SDBlocks.SECRET_JUNGLE_LOG_DOOR.get(), mcLoc("block/jungle_log"), mcLoc("block/jungle_log"));
-        doorBlock(SDBlocks.SECRET_CRIMSON_STEM_DOOR.get(), mcLoc("block/crimson_stem"), mcLoc("block/crimson_stem"));
-        doorBlock(SDBlocks.SECRET_WARPED_STEM_DOOR.get(), mcLoc("block/warped_stem"), mcLoc("block/warped_stem"));
+        secretDoorBlock(SDBlocks.SECRET_OAK_LOG_DOOR.get(), "oak_log");
+        secretDoorBlock(SDBlocks.SECRET_DARK_OAK_LOG_DOOR.get(), "dark_oak_log");
+        secretDoorBlock(SDBlocks.SECRET_BIRCH_LOG_DOOR.get(), "birch_log");
+        secretDoorBlock(SDBlocks.SECRET_ACACIA_LOG_DOOR.get(), "acacia_log");
+        secretDoorBlock(SDBlocks.SECRET_SPRUCE_LOG_DOOR.get(), "spruce_log");
+        secretDoorBlock(SDBlocks.SECRET_JUNGLE_LOG_DOOR.get(), "jungle_log");
+        secretDoorBlock(SDBlocks.SECRET_CRIMSON_STEM_DOOR.get(), "crimson_stem");
+        secretDoorBlock(SDBlocks.SECRET_WARPED_STEM_DOOR.get(), "warped_stem");
 
-        doorBlock(SDBlocks.SECRET_STRIPPED_OAK_LOG_DOOR.get(), mcLoc("block/stripped_oak_log"), mcLoc("block/stripped_oak_log"));
-        doorBlock(SDBlocks.SECRET_STRIPPED_DARK_OAK_LOG_DOOR.get(), mcLoc("block/stripped_dark_oak_log"), mcLoc("block/stripped_dark_oak_log"));
-        doorBlock(SDBlocks.SECRET_STRIPPED_BIRCH_LOG_DOOR.get(), mcLoc("block/stripped_birch_log"), mcLoc("block/stripped_birch_log"));
-        doorBlock(SDBlocks.SECRET_STRIPPED_ACACIA_LOG_DOOR.get(), mcLoc("block/stripped_acacia_log"), mcLoc("block/stripped_acacia_log"));
-        doorBlock(SDBlocks.SECRET_STRIPPED_SPRUCE_LOG_DOOR.get(), mcLoc("block/stripped_spruce_log"), mcLoc("block/stripped_spruce_log"));
-        doorBlock(SDBlocks.SECRET_STRIPPED_JUNGLE_LOG_DOOR.get(), mcLoc("block/stripped_jungle_log"), mcLoc("block/stripped_jungle_log"));
-        doorBlock(SDBlocks.SECRET_STRIPPED_CRIMSON_STEM_DOOR.get(), mcLoc("block/stripped_crimson_stem"), mcLoc("block/stripped_crimson_stem"));
-        doorBlock(SDBlocks.SECRET_STRIPPED_WARPED_STEM_DOOR.get(), mcLoc("block/stripped_warped_stem"), mcLoc("block/stripped_warped_stem"));
+        secretDoorBlock(SDBlocks.SECRET_STRIPPED_OAK_LOG_DOOR.get(), "stripped_oak_log");
+        secretDoorBlock(SDBlocks.SECRET_STRIPPED_DARK_OAK_LOG_DOOR.get(), "stripped_dark_oak_log");
+        secretDoorBlock(SDBlocks.SECRET_STRIPPED_BIRCH_LOG_DOOR.get(), "stripped_birch_log");
+        secretDoorBlock(SDBlocks.SECRET_STRIPPED_ACACIA_LOG_DOOR.get(), "stripped_acacia_log");
+        secretDoorBlock(SDBlocks.SECRET_STRIPPED_SPRUCE_LOG_DOOR.get(), "stripped_spruce_log");
+        secretDoorBlock(SDBlocks.SECRET_STRIPPED_JUNGLE_LOG_DOOR.get(), "stripped_jungle_log");
+        secretDoorBlock(SDBlocks.SECRET_STRIPPED_CRIMSON_STEM_DOOR.get(), "stripped_crimson_stem");
+        secretDoorBlock(SDBlocks.SECRET_STRIPPED_WARPED_STEM_DOOR.get(), "stripped_warped_stem");
 
-        doorBlock(SDBlocks.SECRET_STRIPPED_HORIZONTAL_OAK_LOG_DOOR.get(), modLoc("block/stripped_horizontal_oak_log"), modLoc("block/stripped_horizontal_oak_log"));
-        doorBlock(SDBlocks.SECRET_STRIPPED_HORIZONTAL_DARK_OAK_LOG_DOOR.get(), modLoc("block/stripped_horizontal_dark_oak_log"), modLoc("block/stripped_horizontal_dark_oak_log"));
-        doorBlock(SDBlocks.SECRET_STRIPPED_HORIZONTAL_BIRCH_LOG_DOOR.get(), modLoc("block/stripped_horizontal_birch_log"), modLoc("block/stripped_horizontal_birch_log"));
-        doorBlock(SDBlocks.SECRET_STRIPPED_HORIZONTAL_ACACIA_LOG_DOOR.get(), modLoc("block/stripped_horizontal_acacia_log"), modLoc("block/stripped_horizontal_acacia_log"));
-        doorBlock(SDBlocks.SECRET_STRIPPED_HORIZONTAL_SPRUCE_LOG_DOOR.get(), modLoc("block/stripped_horizontal_spruce_log"), modLoc("block/stripped_horizontal_spruce_log"));
-        doorBlock(SDBlocks.SECRET_STRIPPED_HORIZONTAL_JUNGLE_LOG_DOOR.get(), modLoc("block/stripped_horizontal_jungle_log"), modLoc("block/stripped_horizontal_jungle_log"));
-        doorBlock(SDBlocks.SECRET_STRIPPED_HORIZONTAL_CRIMSON_STEM_DOOR.get(), modLoc("block/stripped_horizontal_crimson_stem"), modLoc("block/stripped_horizontal_crimson_stem"));
-        doorBlock(SDBlocks.SECRET_STRIPPED_HORIZONTAL_WARPED_STEM_DOOR.get(), modLoc("block/stripped_horizontal_warped_stem"), modLoc("block/stripped_horizontal_warped_stem"));
+        horizontalDoorBlock(SDBlocks.SECRET_STRIPPED_HORIZONTAL_OAK_LOG_DOOR.get(), "stripped_oak_log");
+        horizontalDoorBlock(SDBlocks.SECRET_STRIPPED_HORIZONTAL_DARK_OAK_LOG_DOOR.get(), "stripped_dark_oak_log");
+        horizontalDoorBlock(SDBlocks.SECRET_STRIPPED_HORIZONTAL_BIRCH_LOG_DOOR.get(), "stripped_birch_log");
+        horizontalDoorBlock(SDBlocks.SECRET_STRIPPED_HORIZONTAL_ACACIA_LOG_DOOR.get(), "stripped_acacia_log");
+        horizontalDoorBlock(SDBlocks.SECRET_STRIPPED_HORIZONTAL_SPRUCE_LOG_DOOR.get(), "stripped_spruce_log");
+        horizontalDoorBlock(SDBlocks.SECRET_STRIPPED_HORIZONTAL_JUNGLE_LOG_DOOR.get(), "stripped_jungle_log");
+        horizontalDoorBlock(SDBlocks.SECRET_STRIPPED_HORIZONTAL_CRIMSON_STEM_DOOR.get(), "stripped_crimson_stem");
+        horizontalDoorBlock(SDBlocks.SECRET_STRIPPED_HORIZONTAL_WARPED_STEM_DOOR.get(), "stripped_warped_stem");
 
-        doorBlock(SDBlocks.SECRET_HORIZONTAL_OAK_LOG_DOOR.get(), modLoc("block/horizontal_oak_log"), modLoc("block/horizontal_oak_log"));
-        doorBlock(SDBlocks.SECRET_HORIZONTAL_DARK_OAK_LOG_DOOR.get(), modLoc("block/horizontal_dark_oak_log"), modLoc("block/horizontal_dark_oak_log"));
-        doorBlock(SDBlocks.SECRET_HORIZONTAL_BIRCH_LOG_DOOR.get(), modLoc("block/horizontal_birch_log"), modLoc("block/horizontal_birch_log"));
-        doorBlock(SDBlocks.SECRET_HORIZONTAL_ACACIA_LOG_DOOR.get(), modLoc("block/horizontal_acacia_log"), modLoc("block/horizontal_acacia_log"));
-        doorBlock(SDBlocks.SECRET_HORIZONTAL_SPRUCE_LOG_DOOR.get(), modLoc("block/horizontal_spruce_log"), modLoc("block/horizontal_spruce_log"));
-        doorBlock(SDBlocks.SECRET_HORIZONTAL_JUNGLE_LOG_DOOR.get(), modLoc("block/horizontal_jungle_log"), modLoc("block/horizontal_jungle_log"));
-        doorBlock(SDBlocks.SECRET_HORIZONTAL_CRIMSON_STEM_DOOR.get(), modLoc("block/horizontal_crimson_stem"), modLoc("block/horizontal_crimson_stem"));
-        doorBlock(SDBlocks.SECRET_HORIZONTAL_WARPED_STEM_DOOR.get(), modLoc("block/horizontal_warped_stem"), modLoc("block/horizontal_warped_stem"));
+        horizontalDoorBlock(SDBlocks.SECRET_HORIZONTAL_OAK_LOG_DOOR.get(), "oak_log");
+        horizontalDoorBlock(SDBlocks.SECRET_HORIZONTAL_DARK_OAK_LOG_DOOR.get(), "dark_oak_log");
+        horizontalDoorBlock(SDBlocks.SECRET_HORIZONTAL_BIRCH_LOG_DOOR.get(), "birch_log");
+        horizontalDoorBlock(SDBlocks.SECRET_HORIZONTAL_ACACIA_LOG_DOOR.get(), "acacia_log");
+        horizontalDoorBlock(SDBlocks.SECRET_HORIZONTAL_SPRUCE_LOG_DOOR.get(), "spruce_log");
+        horizontalDoorBlock(SDBlocks.SECRET_HORIZONTAL_JUNGLE_LOG_DOOR.get(), "jungle_log");
+        horizontalDoorBlock(SDBlocks.SECRET_HORIZONTAL_CRIMSON_STEM_DOOR.get(), "crimson_stem");
+        horizontalDoorBlock(SDBlocks.SECRET_HORIZONTAL_WARPED_STEM_DOOR.get(), "warped_stem");
 
-        doorBlock(SDBlocks.SECRET_STONE_DOOR.get(), mcLoc("block/stone"), mcLoc("block/stone"));
-        doorBlock(SDBlocks.SECRET_COBBLESTONE_DOOR.get(), mcLoc("block/cobblestone"), mcLoc("block/cobblestone"));
-        doorBlock(SDBlocks.SECRET_STONE_BRICKS_DOOR.get(), mcLoc("block/stone_bricks"), mcLoc("block/stone_bricks"));
-        doorBlock(SDBlocks.SECRET_DEEPSLATE_DOOR.get(), mcLoc("block/deepslate"), mcLoc("block/deepslate"));
-        doorBlock(SDBlocks.SECRET_COBBLED_DEEPSLATE_DOOR.get(), mcLoc("block/cobbled_deepslate"), mcLoc("block/cobbled_deepslate"));
-        doorBlock(SDBlocks.SECRET_DEEPSLATE_BRICKS_DOOR.get(), mcLoc("block/deepslate_bricks"), mcLoc("block/deepslate_bricks"));
-        doorBlock(SDBlocks.SECRET_DEEPSLATE_TILES_DOOR.get(), mcLoc("block/deepslate_tiles"), mcLoc("block/deepslate_tiles"));
-        doorBlock(SDBlocks.SECRET_POLISHED_DEEPSLATE_DOOR.get(), mcLoc("block/polished_deepslate"), mcLoc("block/polished_deepslate"));
+        secretDoorBlock(SDBlocks.SECRET_STONE_DOOR.get(), "stone");
+        secretDoorBlock(SDBlocks.SECRET_COBBLESTONE_DOOR.get(), "cobblestone");
+        secretDoorBlock(SDBlocks.SECRET_STONE_BRICKS_DOOR.get(), "stone_bricks");
+        secretDoorBlock(SDBlocks.SECRET_DEEPSLATE_DOOR.get(), "deepslate");
+        secretDoorBlock(SDBlocks.SECRET_COBBLED_DEEPSLATE_DOOR.get(), "cobbled_deepslate");
+        secretDoorBlock(SDBlocks.SECRET_DEEPSLATE_BRICKS_DOOR.get(), "deepslate_bricks");
+        secretDoorBlock(SDBlocks.SECRET_DEEPSLATE_TILES_DOOR.get(), "deepslate_tiles");
+        secretDoorBlock(SDBlocks.SECRET_POLISHED_DEEPSLATE_DOOR.get(), "polished_deepslate");
 
-        doorBlock(SDBlocks.SECRET_BOOKSHELF_DOOR.get(), mcLoc("block/bookshelf"), mcLoc("block/bookshelf"));
+        secretDoorBlock(SDBlocks.SECRET_BOOKSHELF_DOOR.get(), "bookshelf");
 
-        doorBlock(SDBlocks.SECRET_NETHERRACK_DOOR.get(), mcLoc("block/netherrack"), mcLoc("block/netherrack"));
-        doorBlock(SDBlocks.SECRET_NETHER_BRICK_DOOR.get(), mcLoc("block/nether_bricks"), mcLoc("block/nether_bricks"));
+        secretDoorBlock(SDBlocks.SECRET_NETHERRACK_DOOR.get(), "netherrack");
+        secretDoorBlock(SDBlocks.SECRET_NETHER_BRICK_DOOR.get(), "nether_bricks");
 
-        doorBlock(SDBlocks.SECRET_BLACKSTONE_DOOR.get(), mcLoc("block/blackstone"), mcLoc("block/blackstone"));
-        doorBlock(SDBlocks.SECRET_POLISHED_BLACKSTONE_DOOR.get(), mcLoc("block/polished_blackstone"), mcLoc("block/polished_blackstone"));
-        doorBlock(SDBlocks.SECRET_POLISHED_BASALT_DOOR.get(), mcLoc("block/polished_basalt_side"), mcLoc("block/polished_basalt_side"));
+        secretDoorBlock(SDBlocks.SECRET_BLACKSTONE_DOOR.get(), "blackstone");
+        secretDoorBlock(SDBlocks.SECRET_POLISHED_BLACKSTONE_DOOR.get(), "polished_blackstone");
+        secretDoorBlock(SDBlocks.SECRET_POLISHED_BASALT_DOOR.get(), "polished_basalt_side");
 
-        doorBlock(SDBlocks.SECRET_ANDESITE_DOOR.get(), mcLoc("block/andesite"), mcLoc("block/andesite"));
-        doorBlock(SDBlocks.SECRET_POLISHED_ANDESITE_DOOR.get(), mcLoc("block/polished_andesite"), mcLoc("block/polished_andesite"));
-        doorBlock(SDBlocks.SECRET_DIORITE_DOOR.get(), mcLoc("block/diorite"), mcLoc("block/diorite"));
-        doorBlock(SDBlocks.SECRET_POLISHED_DIORITE_DOOR.get(), mcLoc("block/polished_diorite"), mcLoc("block/polished_diorite"));
-        doorBlock(SDBlocks.SECRET_GRANITE_DOOR.get(), mcLoc("block/granite"), mcLoc("block/granite"));
-        doorBlock(SDBlocks.SECRET_POLISHED_GRANITE_DOOR.get(), mcLoc("block/polished_granite"), mcLoc("block/polished_granite"));
+        secretDoorBlock(SDBlocks.SECRET_ANDESITE_DOOR.get(), "andesite");
+        secretDoorBlock(SDBlocks.SECRET_POLISHED_ANDESITE_DOOR.get(), "polished_andesite");
+        secretDoorBlock(SDBlocks.SECRET_DIORITE_DOOR.get(), "diorite");
+        secretDoorBlock(SDBlocks.SECRET_POLISHED_DIORITE_DOOR.get(), "polished_diorite");
+        secretDoorBlock(SDBlocks.SECRET_GRANITE_DOOR.get(), "granite");
+        secretDoorBlock(SDBlocks.SECRET_POLISHED_GRANITE_DOOR.get(), "polished_granite");
 
-        doorBlock(SDBlocks.SECRET_QUARTZ_BLOCK_DOOR.get(), mcLoc("block/quartz_block_side"), mcLoc("block/quartz_block_side"));
-        doorBlock(SDBlocks.SECRET_SMOOTH_QUARTZ_DOOR.get(), mcLoc("block/quartz_block_bottom"), mcLoc("block/quartz_block_bottom"));
-        doorBlock(SDBlocks.SECRET_QUARTZ_BRICKS_DOOR.get(), mcLoc("block/quartz_bricks"), mcLoc("block/quartz_bricks"));
-        doorBlock(SDBlocks.SECRET_SANDSTONE_DOOR.get(), mcLoc("block/sandstone"), mcLoc("block/sandstone"));
-        doorBlock(SDBlocks.SECRET_CUT_SANDSTONE_DOOR.get(), mcLoc("block/cut_sandstone"), mcLoc("block/cut_sandstone"));
-        doorBlock(SDBlocks.SECRET_SMOOTH_SANDSTONE_DOOR.get(), mcLoc("block/sandstone_top"), mcLoc("block/sandstone_top"));
-        doorBlock(SDBlocks.SECRET_RED_SANDSTONE_DOOR.get(), mcLoc("block/red_sandstone"), mcLoc("block/red_sandstone"));
-        doorBlock(SDBlocks.SECRET_CUT_RED_SANDSTONE_DOOR.get(), mcLoc("block/cut_red_sandstone"), mcLoc("block/cut_red_sandstone"));
-        doorBlock(SDBlocks.SECRET_SMOOTH_RED_SANDSTONE_DOOR.get(), mcLoc("block/red_sandstone_top"), mcLoc("block/red_sandstone_top"));
-        doorBlock(SDBlocks.SECRET_BRICKS_DOOR.get(), mcLoc("block/bricks"), mcLoc("block/bricks"));
-        doorBlock(SDBlocks.SECRET_PURPUR_DOOR.get(), mcLoc("block/purpur_block"), mcLoc("block/purpur_block"));
-        doorBlock(SDBlocks.SECRET_END_STONE_BRICKS_DOOR.get(), mcLoc("block/end_stone_bricks"), mcLoc("block/end_stone_bricks"));
-        doorBlock(SDBlocks.SECRET_PRISMARINE_BRICKS_DOOR.get(), mcLoc("block/prismarine_bricks"), mcLoc("block/prismarine_bricks"));
-        doorBlock(SDBlocks.SECRET_DARK_PRISMARINE_DOOR.get(), mcLoc("block/dark_prismarine"), mcLoc("block/dark_prismarine"));
+        secretDoorBlock(SDBlocks.SECRET_QUARTZ_BLOCK_DOOR.get(), "quartz_block_side");
+        secretDoorBlock(SDBlocks.SECRET_SMOOTH_QUARTZ_DOOR.get(), "quartz_block_bottom");
+        secretDoorBlock(SDBlocks.SECRET_QUARTZ_BRICKS_DOOR.get(), "quartz_bricks");
+        secretDoorBlock(SDBlocks.SECRET_SANDSTONE_DOOR.get(), "sandstone");
+        secretDoorBlock(SDBlocks.SECRET_CUT_SANDSTONE_DOOR.get(), "cut_sandstone");
+        secretDoorBlock(SDBlocks.SECRET_SMOOTH_SANDSTONE_DOOR.get(), "sandstone_top");
+        secretDoorBlock(SDBlocks.SECRET_RED_SANDSTONE_DOOR.get(), "red_sandstone");
+        secretDoorBlock(SDBlocks.SECRET_CUT_RED_SANDSTONE_DOOR.get(), "cut_red_sandstone");
+        secretDoorBlock(SDBlocks.SECRET_SMOOTH_RED_SANDSTONE_DOOR.get(), "red_sandstone_top");
+        secretDoorBlock(SDBlocks.SECRET_BRICKS_DOOR.get(), "bricks");
+        secretDoorBlock(SDBlocks.SECRET_PURPUR_DOOR.get(), "purpur_block");
+        secretDoorBlock(SDBlocks.SECRET_END_STONE_BRICKS_DOOR.get(), "end_stone_bricks");
+        secretDoorBlock(SDBlocks.SECRET_PRISMARINE_BRICKS_DOOR.get(), "prismarine_bricks");
+        secretDoorBlock(SDBlocks.SECRET_DARK_PRISMARINE_DOOR.get(), "dark_prismarine");
 
-        //---- VANILLA TRAPDOORS -------------------------------------------------------------------------------
-        trapdoorBlock(SDBlocks.SECRET_OAK_PLANK_TRAPDOOR.get(), mcLoc("block/oak_planks"), true);
-        trapdoorBlock(SDBlocks.SECRET_DARK_OAK_PLANK_TRAPDOOR.get(), mcLoc("block/dark_oak_planks"), true);
-        trapdoorBlock(SDBlocks.SECRET_BIRCH_PLANK_TRAPDOOR.get(), mcLoc("block/birch_planks"), true);
-        trapdoorBlock(SDBlocks.SECRET_ACACIA_PLANK_TRAPDOOR.get(), mcLoc("block/acacia_planks"), true);
-        trapdoorBlock(SDBlocks.SECRET_SPRUCE_PLANK_TRAPDOOR.get(), mcLoc("block/spruce_planks"), true);
-        trapdoorBlock(SDBlocks.SECRET_JUNGLE_PLANK_TRAPDOOR.get(), mcLoc("block/jungle_planks"), true);
-        trapdoorBlock(SDBlocks.SECRET_CRIMSON_PLANK_TRAPDOOR.get(), mcLoc("block/crimson_planks"), true);
-        trapdoorBlock(SDBlocks.SECRET_WARPED_PLANK_TRAPDOOR.get(), mcLoc("block/warped_planks"), true);
+        //---- TRAPDOORS -------------------------------------------------------------------------------
+        secretTrapdoorBlock(SDBlocks.SECRET_OAK_PLANK_TRAPDOOR.get(), "oak_planks");
+        secretTrapdoorBlock(SDBlocks.SECRET_DARK_OAK_PLANK_TRAPDOOR.get(), "dark_oak_planks");
+        secretTrapdoorBlock(SDBlocks.SECRET_BIRCH_PLANK_TRAPDOOR.get(), "birch_planks");
+        secretTrapdoorBlock(SDBlocks.SECRET_ACACIA_PLANK_TRAPDOOR.get(), "acacia_planks");
+        secretTrapdoorBlock(SDBlocks.SECRET_SPRUCE_PLANK_TRAPDOOR.get(), "spruce_planks");
+        secretTrapdoorBlock(SDBlocks.SECRET_JUNGLE_PLANK_TRAPDOOR.get(), "jungle_planks");
+        secretTrapdoorBlock(SDBlocks.SECRET_CRIMSON_PLANK_TRAPDOOR.get(), "crimson_planks");
+        secretTrapdoorBlock(SDBlocks.SECRET_WARPED_PLANK_TRAPDOOR.get(), "warped_planks");
 
-        trapdoorBlock(SDBlocks.SECRET_OAK_LOG_TRAPDOOR.get(), mcLoc("block/oak_log"), true);
-        trapdoorBlock(SDBlocks.SECRET_DARK_OAK_LOG_TRAPDOOR.get(), mcLoc("block/dark_oak_log"), true);
-        trapdoorBlock(SDBlocks.SECRET_BIRCH_LOG_TRAPDOOR.get(), mcLoc("block/birch_log"), true);
-        trapdoorBlock(SDBlocks.SECRET_ACACIA_LOG_TRAPDOOR.get(), mcLoc("block/acacia_log"), true);
-        trapdoorBlock(SDBlocks.SECRET_SPRUCE_LOG_TRAPDOOR.get(), mcLoc("block/spruce_log"), true);
-        trapdoorBlock(SDBlocks.SECRET_JUNGLE_LOG_TRAPDOOR.get(), mcLoc("block/jungle_log"), true);
-        trapdoorBlock(SDBlocks.SECRET_CRIMSON_STEM_TRAPDOOR.get(), mcLoc("block/crimson_stem"), true);
-        trapdoorBlock(SDBlocks.SECRET_WARPED_STEM_TRAPDOOR.get(), mcLoc("block/warped_stem"), true);
+        secretTrapdoorBlock(SDBlocks.SECRET_OAK_LOG_TRAPDOOR.get(), "oak_log");
+        secretTrapdoorBlock(SDBlocks.SECRET_DARK_OAK_LOG_TRAPDOOR.get(), "dark_oak_log");
+        secretTrapdoorBlock(SDBlocks.SECRET_BIRCH_LOG_TRAPDOOR.get(), "birch_log");
+        secretTrapdoorBlock(SDBlocks.SECRET_ACACIA_LOG_TRAPDOOR.get(), "acacia_log");
+        secretTrapdoorBlock(SDBlocks.SECRET_SPRUCE_LOG_TRAPDOOR.get(), "spruce_log");
+        secretTrapdoorBlock(SDBlocks.SECRET_JUNGLE_LOG_TRAPDOOR.get(), "jungle_log");
+        secretTrapdoorBlock(SDBlocks.SECRET_CRIMSON_STEM_TRAPDOOR.get(), "crimson_stem");
+        secretTrapdoorBlock(SDBlocks.SECRET_WARPED_STEM_TRAPDOOR.get(), "warped_stem");
 
-        trapdoorBlock(SDBlocks.SECRET_STRIPPED_OAK_LOG_TRAPDOOR.get(), mcLoc("block/stripped_oak_log"), true);
-        trapdoorBlock(SDBlocks.SECRET_STRIPPED_DARK_OAK_LOG_TRAPDOOR.get(), mcLoc("block/stripped_dark_oak_log"), true);
-        trapdoorBlock(SDBlocks.SECRET_STRIPPED_BIRCH_LOG_TRAPDOOR.get(), mcLoc("block/stripped_birch_log"),  true);
-        trapdoorBlock(SDBlocks.SECRET_STRIPPED_ACACIA_LOG_TRAPDOOR.get(), mcLoc("block/stripped_acacia_log"), true);
-        trapdoorBlock(SDBlocks.SECRET_STRIPPED_SPRUCE_LOG_TRAPDOOR.get(), mcLoc("block/stripped_spruce_log"), true);
-        trapdoorBlock(SDBlocks.SECRET_STRIPPED_JUNGLE_LOG_TRAPDOOR.get(), mcLoc("block/stripped_jungle_log"), true);
-        trapdoorBlock(SDBlocks.SECRET_STRIPPED_CRIMSON_STEM_TRAPDOOR.get(), mcLoc("block/stripped_crimson_stem"), true);
-        trapdoorBlock(SDBlocks.SECRET_STRIPPED_WARPED_STEM_TRAPDOOR.get(), mcLoc("block/stripped_warped_stem"), true);
+        secretTrapdoorBlock(SDBlocks.SECRET_STRIPPED_OAK_LOG_TRAPDOOR.get(), "stripped_oak_log");
+        secretTrapdoorBlock(SDBlocks.SECRET_STRIPPED_DARK_OAK_LOG_TRAPDOOR.get(), "stripped_dark_oak_log");
+        secretTrapdoorBlock(SDBlocks.SECRET_STRIPPED_BIRCH_LOG_TRAPDOOR.get(), "stripped_birch_log");
+        secretTrapdoorBlock(SDBlocks.SECRET_STRIPPED_ACACIA_LOG_TRAPDOOR.get(), "stripped_acacia_log");
+        secretTrapdoorBlock(SDBlocks.SECRET_STRIPPED_SPRUCE_LOG_TRAPDOOR.get(), "stripped_spruce_log");
+        secretTrapdoorBlock(SDBlocks.SECRET_STRIPPED_JUNGLE_LOG_TRAPDOOR.get(), "stripped_jungle_log");
+        secretTrapdoorBlock(SDBlocks.SECRET_STRIPPED_CRIMSON_STEM_TRAPDOOR.get(), "stripped_crimson_stem");
+        secretTrapdoorBlock(SDBlocks.SECRET_STRIPPED_WARPED_STEM_TRAPDOOR.get(), "stripped_warped_stem");
 
-        trapdoorBlock(SDBlocks.SECRET_STONE_TRAPDOOR.get(), mcLoc("block/stone"), true);
-        trapdoorBlock(SDBlocks.SECRET_COBBLESTONE_TRAPDOOR.get(), mcLoc("block/cobblestone"), true);
-        trapdoorBlock(SDBlocks.SECRET_STONE_BRICKS_TRAPDOOR.get(), mcLoc("block/stone_bricks"), true);
-        trapdoorBlock(SDBlocks.SECRET_DEEPSLATE_TRAPDOOR.get(), mcLoc("block/deepslate"), true);
-        trapdoorBlock(SDBlocks.SECRET_COBBLED_DEEPSLATE_TRAPDOOR.get(), mcLoc("block/cobbled_deepslate"), true);
-        trapdoorBlock(SDBlocks.SECRET_DEEPSLATE_BRICKS_TRAPDOOR.get(), mcLoc("block/deepslate_bricks"), true);
-        trapdoorBlock(SDBlocks.SECRET_DEEPSLATE_TILES_TRAPDOOR.get(), mcLoc("block/deepslate_tiles"), true);
-        trapdoorBlock(SDBlocks.SECRET_POLISHED_DEEPSLATE_TRAPDOOR.get(), mcLoc("block/polished_deepslate"), true);
+        secretTrapdoorBlock(SDBlocks.SECRET_STONE_TRAPDOOR.get(), "stone");
+        secretTrapdoorBlock(SDBlocks.SECRET_COBBLESTONE_TRAPDOOR.get(), "cobblestone");
+        secretTrapdoorBlock(SDBlocks.SECRET_STONE_BRICKS_TRAPDOOR.get(), "stone_bricks");
+        secretTrapdoorBlock(SDBlocks.SECRET_DEEPSLATE_TRAPDOOR.get(), "deepslate");
+        secretTrapdoorBlock(SDBlocks.SECRET_COBBLED_DEEPSLATE_TRAPDOOR.get(), "cobbled_deepslate");
+        secretTrapdoorBlock(SDBlocks.SECRET_DEEPSLATE_BRICKS_TRAPDOOR.get(), "deepslate_bricks");
+        secretTrapdoorBlock(SDBlocks.SECRET_DEEPSLATE_TILES_TRAPDOOR.get(), "deepslate_tiles");
+        secretTrapdoorBlock(SDBlocks.SECRET_POLISHED_DEEPSLATE_TRAPDOOR.get(), "polished_deepslate");
 
-        trapdoorBlock(SDBlocks.SECRET_BOOKSHELF_TRAPDOOR.get(), mcLoc("block/bookshelf"), true);
+        secretTrapdoorBlock(SDBlocks.SECRET_BOOKSHELF_TRAPDOOR.get(), "bookshelf");
 
-        trapdoorBlock(SDBlocks.SECRET_NETHERRACK_TRAPDOOR.get(), mcLoc("block/netherrack"), true);
-        trapdoorBlock(SDBlocks.SECRET_NETHER_BRICK_TRAPDOOR.get(), mcLoc("block/nether_bricks"), true);
+        secretTrapdoorBlock(SDBlocks.SECRET_NETHERRACK_TRAPDOOR.get(), "netherrack");
+        secretTrapdoorBlock(SDBlocks.SECRET_NETHER_BRICK_TRAPDOOR.get(), "nether_bricks");
 
-        trapdoorBlock(SDBlocks.SECRET_BLACKSTONE_TRAPDOOR.get(), mcLoc("block/blackstone"), true);
-        trapdoorBlock(SDBlocks.SECRET_POLISHED_BLACKSTONE_TRAPDOOR.get(), mcLoc("block/polished_blackstone"), true);
-        trapdoorBlock(SDBlocks.SECRET_POLISHED_BASALT_TRAPDOOR.get(), mcLoc("block/polished_basalt_side"), true);
+        secretTrapdoorBlock(SDBlocks.SECRET_BLACKSTONE_TRAPDOOR.get(), "blackstone");
+        secretTrapdoorBlock(SDBlocks.SECRET_POLISHED_BLACKSTONE_TRAPDOOR.get(), "polished_blackstone");
+        secretTrapdoorBlock(SDBlocks.SECRET_POLISHED_BASALT_TRAPDOOR.get(), "polished_basalt_side");
 
-        trapdoorBlock(SDBlocks.SECRET_ANDESITE_TRAPDOOR.get(), mcLoc("block/andesite"), true);
-        trapdoorBlock(SDBlocks.SECRET_POLISHED_ANDESITE_TRAPDOOR.get(), mcLoc("block/polished_andesite"), true);
-        trapdoorBlock(SDBlocks.SECRET_DIORITE_TRAPDOOR.get(), mcLoc("block/diorite"), true);
-        trapdoorBlock(SDBlocks.SECRET_POLISHED_DIORITE_TRAPDOOR.get(), mcLoc("block/polished_diorite"), true);
-        trapdoorBlock(SDBlocks.SECRET_GRANITE_TRAPDOOR.get(), mcLoc("block/granite"), true);
-        trapdoorBlock(SDBlocks.SECRET_POLISHED_GRANITE_TRAPDOOR.get(), mcLoc("block/polished_granite"), true);
+        secretTrapdoorBlock(SDBlocks.SECRET_ANDESITE_TRAPDOOR.get(), "andesite");
+        secretTrapdoorBlock(SDBlocks.SECRET_POLISHED_ANDESITE_TRAPDOOR.get(), "polished_andesite");
+        secretTrapdoorBlock(SDBlocks.SECRET_DIORITE_TRAPDOOR.get(), "diorite");
+        secretTrapdoorBlock(SDBlocks.SECRET_POLISHED_DIORITE_TRAPDOOR.get(), "polished_diorite");
+        secretTrapdoorBlock(SDBlocks.SECRET_GRANITE_TRAPDOOR.get(), "granite");
+        secretTrapdoorBlock(SDBlocks.SECRET_POLISHED_GRANITE_TRAPDOOR.get(), "polished_granite");
 
-        trapdoorBlock(SDBlocks.SECRET_QUARTZ_BLOCK_TRAPDOOR.get(), mcLoc("block/quartz_block_side"), true);
-        trapdoorBlock(SDBlocks.SECRET_SMOOTH_QUARTZ_TRAPDOOR.get(), mcLoc("block/quartz_block_bottom"), true);
-        trapdoorBlock(SDBlocks.SECRET_QUARTZ_BRICKS_TRAPDOOR.get(), mcLoc("block/quartz_bricks"), true);
-        trapdoorBlock(SDBlocks.SECRET_SANDSTONE_TRAPDOOR.get(), mcLoc("block/sandstone"), true);
-        trapdoorBlock(SDBlocks.SECRET_CUT_SANDSTONE_TRAPDOOR.get(), mcLoc("block/cut_sandstone"), true);
-        trapdoorBlock(SDBlocks.SECRET_SMOOTH_SANDSTONE_TRAPDOOR.get(), mcLoc("block/sandstone_top"), true);
-        trapdoorBlock(SDBlocks.SECRET_RED_SANDSTONE_TRAPDOOR.get(), mcLoc("block/red_sandstone"), true);
-        trapdoorBlock(SDBlocks.SECRET_CUT_RED_SANDSTONE_TRAPDOOR.get(), mcLoc("block/cut_red_sandstone"), true);
-        trapdoorBlock(SDBlocks.SECRET_SMOOTH_RED_SANDSTONE_TRAPDOOR.get(), mcLoc("block/red_sandstone_top"), true);
-        trapdoorBlock(SDBlocks.SECRET_BRICKS_TRAPDOOR.get(), mcLoc("block/bricks"), true);
-        trapdoorBlock(SDBlocks.SECRET_PURPUR_TRAPDOOR.get(), mcLoc("block/purpur_block"), true);
-        trapdoorBlock(SDBlocks.SECRET_END_STONE_BRICKS_TRAPDOOR.get(), mcLoc("block/end_stone_bricks"), true);
-        trapdoorBlock(SDBlocks.SECRET_PRISMARINE_BRICKS_TRAPDOOR.get(), mcLoc("block/prismarine_bricks"), true);
-        trapdoorBlock(SDBlocks.SECRET_DARK_PRISMARINE_TRAPDOOR.get(), mcLoc("block/dark_prismarine"), true);
-
-
-        ceDoorBlock(SDBlocks.SECRET_MERCURY_STONE_DOOR.get(), "block/mercury_stone");
-        ceDoorBlock(SDBlocks.SECRET_MERCURY_COBBLESTONE_DOOR.get(), "block/mercury_cobblestone");
-        ceDoorBlock(SDBlocks.SECRET_MERCURY_BRICKS_DOOR.get(), "block/mercury_bricks");
-         ceDoorBlock(SDBlocks.SECRET_MERCURY_DEEPSLATE_DOOR.get(), "block/mercury_deepslate_side");
-         ceDoorBlock(SDBlocks.SECRET_MERCURY_COBBLED_DEEPSLATE_DOOR.get(), "block/mercury_cobbled_deepslate");
-         ceDoorBlock(SDBlocks.SECRET_MERCURY_DEEPSLATE_BRICKS_DOOR.get(), "block/mercury_deepslate_bricks");
-         ceDoorBlock(SDBlocks.SECRET_MERCURY_DEEPSLATE_TILES_DOOR.get(), "block/mercury_deepslate_tiles");
-         ceDoorBlock(SDBlocks.SECRET_MERCURY_POLISHED_DEEPSLATE_DOOR.get(), "block/mercury_polished_deepslate");
-
-         ceDoorBlock(SDBlocks.SECRET_JUPITER_DEEPSLATE_DOOR.get(), "block/jupiter_deepslate_side");
-         ceDoorBlock(SDBlocks.SECRET_JUPITER_COBBLED_DEEPSLATE_DOOR.get(), "block/jupiter_cobbled_deepslate");
-         ceDoorBlock(SDBlocks.SECRET_JUPITER_DEEPSLATE_BRICKS_DOOR.get(), "block/jupiter_deepslate_bricks");
-         ceDoorBlock(SDBlocks.SECRET_JUPITER_DEEPSLATE_TILES_DOOR.get(), "block/jupiter_deepslate_tiles");
-         ceDoorBlock(SDBlocks.SECRET_JUPITER_POLISHED_DEEPSLATE_DOOR.get(), "block/jupiter_polished_deepslate");
-
-         ceDoorBlock(SDBlocks.SECRET_EUROPA_BRICKS_DOOR.get(), "block/europa_bricks");
-         ceDoorBlock(SDBlocks.SECRET_CALLISTO_BRICKS_DOOR.get(), "block/callisto_bricks");
-
-         ceDoorBlock(SDBlocks.SECRET_PANEL_DOOR.get(), "block/panel");
-
-         ceDoorBlock(SDBlocks.SECRET_BLACK_CERAMIC_DOOR.get(), "block/black_ceramic");
-         ceDoorBlock(SDBlocks.SECRET_GREY_CERAMIC_DOOR.get(), "block/grey_ceramic");
-         ceDoorBlock(SDBlocks.SECRET_LIGHT_GREY_CERAMIC_DOOR.get(), "block/light_grey_ceramic");
-         ceDoorBlock(SDBlocks.SECRET_WHITE_CERAMIC_DOOR.get(), "block/white_ceramic");
-         ceDoorBlock(SDBlocks.SECRET_PURPLE_CERAMIC_DOOR.get(), "block/purple_ceramic");
-         ceDoorBlock(SDBlocks.SECRET_BLUE_CERAMIC_DOOR.get(), "block/blue_ceramic");
-         ceDoorBlock(SDBlocks.SECRET_LIGHT_BLUE_CERAMIC_DOOR.get(), "block/light_blue_ceramic");
-         ceDoorBlock(SDBlocks.SECRET_CYAN_CERAMIC_DOOR.get(), "block/cyan_ceramic");
-         ceDoorBlock(SDBlocks.SECRET_GREEN_CERAMIC_DOOR.get(), "block/green_ceramic");
-         ceDoorBlock(SDBlocks.SECRET_LIME_CERAMIC_DOOR.get(), "block/lime_ceramic");
-         ceDoorBlock(SDBlocks.SECRET_YELLOW_CERAMIC_DOOR.get(), "block/yellow_ceramic");
-         ceDoorBlock(SDBlocks.SECRET_ORANGE_CERAMIC_DOOR.get(), "block/orange_ceramic");
-         ceDoorBlock(SDBlocks.SECRET_RED_CERAMIC_DOOR.get(), "block/red_ceramic");
-         ceDoorBlock(SDBlocks.SECRET_BROWN_CERAMIC_DOOR.get(), "block/brown_ceramic");
-         ceDoorBlock(SDBlocks.SECRET_PINK_CERAMIC_DOOR.get(), "block/pink_ceramic");
-         ceDoorBlock(SDBlocks.SECRET_MAGENTA_CERAMIC_DOOR.get(), "block/magenta_ceramic");
-         ceDoorBlock(SDBlocks.SECRET_CERAMIC_DOOR.get(), "block/ceramic");
-
-        ceTrapdoorBlock(SDBlocks.SECRET_MERCURY_STONE_TRAPDOOR.get(), "block/mercury_stone");
-        ceTrapdoorBlock(SDBlocks.SECRET_MERCURY_COBBLESTONE_TRAPDOOR.get(), "block/mercury_cobblestone");
-        ceTrapdoorBlock(SDBlocks.SECRET_MERCURY_BRICKS_TRAPDOOR.get(), "block/mercury_bricks");
-        ceTrapdoorBlock(SDBlocks.SECRET_MERCURY_DEEPSLATE_TRAPDOOR.get(), "block/mercury_deepslate_side");
-        ceTrapdoorBlock(SDBlocks.SECRET_MERCURY_COBBLED_DEEPSLATE_TRAPDOOR.get(), "block/mercury_cobbled_deepslate");
-        ceTrapdoorBlock(SDBlocks.SECRET_MERCURY_DEEPSLATE_BRICKS_TRAPDOOR.get(), "block/mercury_deepslate_bricks");
-        ceTrapdoorBlock(SDBlocks.SECRET_MERCURY_DEEPSLATE_TILES_TRAPDOOR.get(), "block/mercury_deepslate_tiles");
-        ceTrapdoorBlock(SDBlocks.SECRET_MERCURY_POLISHED_DEEPSLATE_TRAPDOOR.get(), "block/mercury_polished_deepslate");
-
-        ceTrapdoorBlock(SDBlocks.SECRET_JUPITER_DEEPSLATE_TRAPDOOR.get(), "block/jupiter_deepslate_side");
-        ceTrapdoorBlock(SDBlocks.SECRET_JUPITER_COBBLED_DEEPSLATE_TRAPDOOR.get(), "block/jupiter_cobbled_deepslate");
-        ceTrapdoorBlock(SDBlocks.SECRET_JUPITER_DEEPSLATE_BRICKS_TRAPDOOR.get(), "block/jupiter_deepslate_bricks");
-        ceTrapdoorBlock(SDBlocks.SECRET_JUPITER_DEEPSLATE_TILES_TRAPDOOR.get(), "block/jupiter_deepslate_tiles");
-        ceTrapdoorBlock(SDBlocks.SECRET_JUPITER_POLISHED_DEEPSLATE_TRAPDOOR.get(), "block/jupiter_polished_deepslate");
-
-        ceTrapdoorBlock(SDBlocks.SECRET_EUROPA_BRICKS_TRAPDOOR.get(), "block/europa_bricks");
-        ceTrapdoorBlock(SDBlocks.SECRET_CALLISTO_BRICKS_TRAPDOOR.get(), "block/callisto_bricks");
-
-        ceTrapdoorBlock(SDBlocks.SECRET_PANEL_TRAPDOOR.get(), "block/panel");
-
-        ceTrapdoorBlock(SDBlocks.SECRET_BLACK_CERAMIC_TRAPDOOR.get(), "block/black_ceramic");
-        ceTrapdoorBlock(SDBlocks.SECRET_GREY_CERAMIC_TRAPDOOR.get(), "block/grey_ceramic");
-        ceTrapdoorBlock(SDBlocks.SECRET_LIGHT_GREY_CERAMIC_TRAPDOOR.get(), "block/light_grey_ceramic");
-        ceTrapdoorBlock(SDBlocks.SECRET_WHITE_CERAMIC_TRAPDOOR.get(), "block/white_ceramic");
-        ceTrapdoorBlock(SDBlocks.SECRET_PURPLE_CERAMIC_TRAPDOOR.get(), "block/purple_ceramic");
-        ceTrapdoorBlock(SDBlocks.SECRET_BLUE_CERAMIC_TRAPDOOR.get(), "block/blue_ceramic");
-        ceTrapdoorBlock(SDBlocks.SECRET_LIGHT_BLUE_CERAMIC_TRAPDOOR.get(), "block/light_blue_ceramic");
-        ceTrapdoorBlock(SDBlocks.SECRET_CYAN_CERAMIC_TRAPDOOR.get(), "block/cyan_ceramic");
-        ceTrapdoorBlock(SDBlocks.SECRET_GREEN_CERAMIC_TRAPDOOR.get(), "block/green_ceramic");
-        ceTrapdoorBlock(SDBlocks.SECRET_LIME_CERAMIC_TRAPDOOR.get(), "block/lime_ceramic");
-        ceTrapdoorBlock(SDBlocks.SECRET_YELLOW_CERAMIC_TRAPDOOR.get(), "block/yellow_ceramic");
-        ceTrapdoorBlock(SDBlocks.SECRET_ORANGE_CERAMIC_TRAPDOOR.get(), "block/orange_ceramic");
-        ceTrapdoorBlock(SDBlocks.SECRET_RED_CERAMIC_TRAPDOOR.get(), "block/red_ceramic");
-        ceTrapdoorBlock(SDBlocks.SECRET_BROWN_CERAMIC_TRAPDOOR.get(), "block/brown_ceramic");
-        ceTrapdoorBlock(SDBlocks.SECRET_PINK_CERAMIC_TRAPDOOR.get(), "block/pink_ceramic");
-        ceTrapdoorBlock(SDBlocks.SECRET_MAGENTA_CERAMIC_TRAPDOOR.get(), "block/magenta_ceramic");
-        ceTrapdoorBlock(SDBlocks.SECRET_CERAMIC_TRAPDOOR.get(), "block/ceramic");
-
-    }
-    
-    private void ceDoorBlock(DoorBlock block, String texture) {
-        doorBlock(block, modLoc("celestialexploration", texture), modLoc("celestialexploration", texture));
+        secretTrapdoorBlock(SDBlocks.SECRET_QUARTZ_BLOCK_TRAPDOOR.get(), "quartz_block_side");
+        secretTrapdoorBlock(SDBlocks.SECRET_SMOOTH_QUARTZ_TRAPDOOR.get(), "quartz_block_bottom");
+        secretTrapdoorBlock(SDBlocks.SECRET_QUARTZ_BRICKS_TRAPDOOR.get(), "quartz_bricks");
+        secretTrapdoorBlock(SDBlocks.SECRET_SANDSTONE_TRAPDOOR.get(), "sandstone");
+        secretTrapdoorBlock(SDBlocks.SECRET_CUT_SANDSTONE_TRAPDOOR.get(), "cut_sandstone");
+        secretTrapdoorBlock(SDBlocks.SECRET_SMOOTH_SANDSTONE_TRAPDOOR.get(), "sandstone_top");
+        secretTrapdoorBlock(SDBlocks.SECRET_RED_SANDSTONE_TRAPDOOR.get(), "red_sandstone");
+        secretTrapdoorBlock(SDBlocks.SECRET_CUT_RED_SANDSTONE_TRAPDOOR.get(), "cut_red_sandstone");
+        secretTrapdoorBlock(SDBlocks.SECRET_SMOOTH_RED_SANDSTONE_TRAPDOOR.get(), "red_sandstone_top");
+        secretTrapdoorBlock(SDBlocks.SECRET_BRICKS_TRAPDOOR.get(), "bricks");
+        secretTrapdoorBlock(SDBlocks.SECRET_PURPUR_TRAPDOOR.get(), "purpur_block");
+        secretTrapdoorBlock(SDBlocks.SECRET_END_STONE_BRICKS_TRAPDOOR.get(), "end_stone_bricks");
+        secretTrapdoorBlock(SDBlocks.SECRET_PRISMARINE_BRICKS_TRAPDOOR.get(), "prismarine_bricks");
+        secretTrapdoorBlock(SDBlocks.SECRET_DARK_PRISMARINE_TRAPDOOR.get(), "dark_prismarine");
     }
 
-    private void ceTrapdoorBlock(TrapDoorBlock block, String texture) {
-        trapdoorBlock(block, modLoc("celestialexploration", texture), true);
+    public void secretDoorBlock(DoorBlock block, String texture) {
+        doorBlock(block, mcLoc("block/" + texture), mcLoc("block/" + texture));
     }
 
-
-    public ResourceLocation modLoc(String modid, String name) {
-        return new ResourceLocation(modid, name);
+    public void secretTrapdoorBlock(TrapDoorBlock block, String texture) {
+        trapdoorBlock(block, mcLoc("block/" + texture), true);
     }
 
+    protected void horizontalDoorBlock(DoorBlock block, String texture) {
+        this.doorBlock(block, models().withExistingParent(block.getRegistryName().getPath() + "_bottom", modLoc("horizontal_door_bottom")).texture("bottom", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)),
+                models().withExistingParent(block.getRegistryName().getPath() + "_bottom_hinge", modLoc("horizontal_door_bottom_rh")).texture("bottom", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)),
+                models().withExistingParent(block.getRegistryName().getPath() + "_top", modLoc("horizontal_door_top")).texture("top", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)),
+                models().withExistingParent(block.getRegistryName().getPath() + "_top_hinge", modLoc("horizontal_door_top_rh")).texture("top", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)));
+    }
 }

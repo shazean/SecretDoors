@@ -11,7 +11,6 @@ import net.minecraft.world.level.block.Block;
 public class SDTags {
 
     public class Blocks {
-        /* TAGS */
 
         public static final TagKey<Block> SECRET_WOODEN_DOORS = BlockTags.create(new ResourceLocation(SecretDoors.MODID, "secret_wooden_doors"));
         public static final TagKey<Block> SECRET_WOODEN_PLANK_DOORS = BlockTags.create(new ResourceLocation(SecretDoors.MODID, "secret_wooden_plank_doors"));
@@ -24,7 +23,6 @@ public class SDTags {
         public static final TagKey<Block> SECRET_LOG_TRAPDOORS = BlockTags.create(new ResourceLocation(SecretDoors.MODID, "secret_log_trapdoors"));
         public static final TagKey<Block> SECRET_STONE_TRAPDOORS = BlockTags.create(new ResourceLocation(SecretDoors.MODID, "secret_stone_trapdoors"));
         public static final TagKey<Block> SECRET_BOOKSHELF_TRAPDOORS = BlockTags.create(new ResourceLocation(SecretDoors.MODID, "secret_bookshelf_trapdoors"));
-
     }
 
     public class Items {

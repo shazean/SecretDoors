@@ -3,27 +3,7 @@
   "values": [
     "#secretdoors:secret_wooden_doors",
     "#secretdoors:secret_stone_doors",
-    "secretdoors:secret_black_ceramic_trapdoor",
-    "secretdoors:secret_grey_ceramic_trapdoor",
-    "secretdoors:secret_light_grey_ceramic_trapdoor",
-    "secretdoors:secret_white_ceramic_trapdoor",
-    "secretdoors:secret_purple_ceramic_trapdoor",
-    "secretdoors:secret_blue_ceramic_trapdoor",
-    "secretdoors:secret_light_blue_ceramic_trapdoor",
-    "secretdoors:secret_cyan_ceramic_trapdoor",
-    "secretdoors:secret_green_ceramic_trapdoor",
-    "secretdoors:secret_lime_ceramic_trapdoor",
-    "secretdoors:secret_yellow_ceramic_trapdoor",
-    "secretdoors:secret_orange_ceramic_trapdoor",
-    "secretdoors:secret_red_ceramic_trapdoor",
-    "secretdoors:secret_brown_ceramic_trapdoor",
-    "secretdoors:secret_pink_ceramic_trapdoor",
-    "secretdoors:secret_magenta_ceramic_trapdoor",
-    "secretdoors:secret_ceramic_trapdoor",
     "secretdoors:secret_netherrack_door",
-    "secretdoors:secret_nether_brick_door",
-    "secretdoors:secret_byg_blue_netherrack_door",
-    "secretdoors:secret_byg_blue_nether_bricks_door",
-    "secretdoors:secret_byg_yellow_nether_bricks_door"
+    "secretdoors:secret_nether_brick_door"
   ]
 }
