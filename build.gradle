@@ -172,7 +172,7 @@ jar {
         attributes([
                 "Specification-Title"     : "secretdoors",
                 "Specification-Vendor"    : "shim",
-                "Specification-Version"   : "0", // We are version 1 of ourselves
+                "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "shim",

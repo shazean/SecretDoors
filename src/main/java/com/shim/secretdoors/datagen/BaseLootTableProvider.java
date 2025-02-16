@@ -2,6 +2,7 @@ package com.shim.secretdoors.datagen;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.shim.secretdoors.SecretDoors;
 import net.minecraft.advancements.critereon.*;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
@@ -54,79 +55,20 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
 
     protected abstract void addTables();
 
-    protected LootTable.Builder createSimpleTable(String name, Block block) {
-        LootPool.Builder builder = LootPool.lootPool()
-                .name(name)
-                .setRolls(ConstantValue.exactly(1))
-                .add(LootItem.lootTableItem(block));
+    protected LootTable.Builder createSimpleTable(Block block) {
+        net.minecraft.world.level.storage.loot.LootPool.Builder builder = LootPool.lootPool().name(SecretDoors.name(block)).setRolls(ConstantValue.exactly(1.0F)).add(LootItem.lootTableItem(block));
         return LootTable.lootTable().withPool(builder);
     }
 
-    protected LootTable.Builder createSimpleItemTable(String name, Item item) {
+    protected LootTable.Builder createDoorTable(Block block) {
         LootPool.Builder builder = LootPool.lootPool()
-                .name(name)
-                .setRolls(ConstantValue.exactly(1))
-                .add(LootItem.lootTableItem(item));
-        return LootTable.lootTable().withPool(builder);
-    }
-
-
-    protected LootTable.Builder createSilkTouchTable(String name, Block block, Item lootItem, float min, float max) {
-        LootPool.Builder builder = LootPool.lootPool()
-                .name(name)
-                .setRolls(ConstantValue.exactly(1))
-                .add(AlternativesEntry.alternatives(
-                                LootItem.lootTableItem(block)
-                                        .when(MatchTool.toolMatches(ItemPredicate.Builder.item()
-                                                .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1))))),
-                                LootItem.lootTableItem(lootItem)
-                                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(min, max)))
-                                        .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 1))
-                                        .apply(ApplyExplosionDecay.explosionDecay())
-                        )
-                );
-        return LootTable.lootTable().withPool(builder);
-    }
-
-    protected LootTable.Builder createSilkTouchTable(String name, Block block, Block lootBlock, float min, float max) {
-        LootPool.Builder builder = LootPool.lootPool()
-                .name(name)
-                .setRolls(ConstantValue.exactly(1))
-                .add(AlternativesEntry.alternatives(
-                                LootItem.lootTableItem(block)
-                                        .when(MatchTool.toolMatches(ItemPredicate.Builder.item()
-                                                .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1))))),
-                                LootItem.lootTableItem(lootBlock)
-                                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(min, max)))
-                                        .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE, 1)))
-                );
-        return LootTable.lootTable().withPool(builder);
-    }
-
-    protected LootTable.Builder createDoorTable(String name, Block block) {
-        LootPool.Builder builder = LootPool.lootPool()
-//                .name(name)
+                .name(SecretDoors.name(block))
                 .setRolls(ConstantValue.exactly(1))
                 .add(LootItem.lootTableItem(block)
-                    .when(() -> new LootItemBlockStatePropertyCondition.Builder(block)
-                        .setProperties(StatePropertiesPredicate.Builder.properties()
-                            .hasProperty(BlockStateProperties.HALF, "lower")).build()))
+                        .when(() -> new LootItemBlockStatePropertyCondition.Builder(block)
+                                .setProperties(StatePropertiesPredicate.Builder.properties()
+                                        .hasProperty(BlockStateProperties.HALF, "lower")).build()))
                 .when(ExplosionCondition.survivesExplosion());
-        return LootTable.lootTable().withPool(builder);
-    }
-
-    protected LootTable.Builder createStandardTable(String name, Block block, BlockEntityType<?> type) {
-        LootPool.Builder builder = LootPool.lootPool()
-                .name(name)
-                .setRolls(ConstantValue.exactly(1))
-                .add(LootItem.lootTableItem(block)
-                        .apply(CopyNameFunction.copyName(CopyNameFunction.NameSource.BLOCK_ENTITY))
-                        .apply(CopyNbtFunction.copyData(ContextNbtProvider.BLOCK_ENTITY)
-                                .copy("inv", "BlockEntityTag.inv", CopyNbtFunction.MergeStrategy.REPLACE)
-                                .copy("energy", "BlockEntityTag.energy", CopyNbtFunction.MergeStrategy.REPLACE))
-                        .apply(SetContainerContents.setContents(type)
-                                .withEntry(DynamicLoot.dynamicEntry(new ResourceLocation("minecraft", "contents"))))
-                );
         return LootTable.lootTable().withPool(builder);
     }
 
