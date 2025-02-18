@@ -203,12 +203,12 @@ public class BlockStates extends BlockStateProvider {
     protected void horizontalDoorBlock(DoorBlock block, String texture) {
         this.doorBlock(block,
                 models().withExistingParent(SecretDoors.name(block) + "bottom_left", modLoc("horizontal_door_bottom_left")).texture("bottom", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)),
-                models().withExistingParent(SecretDoors.name(block) + "bottom_left", modLoc("horizontal_door_bottom_left_open")).texture("bottom", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)),
-                models().withExistingParent(SecretDoors.name(block) + "bottom_left", modLoc("horizontal_door_bottom_right")).texture("bottom", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)),
-                models().withExistingParent(SecretDoors.name(block) + "bottom_left", modLoc("horizontal_door_bottom_right_open")).texture("bottom", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)),
-                models().withExistingParent(SecretDoors.name(block) + "bottom_left", modLoc("horizontal_door_top_left")).texture("top", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)),
-                models().withExistingParent(SecretDoors.name(block) + "bottom_left", modLoc("horizontal_door_top_left_open")).texture("top", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)),
-                models().withExistingParent(SecretDoors.name(block) + "bottom_left", modLoc("horizontal_door_top_right")).texture("top", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)),
-                models().withExistingParent(SecretDoors.name(block) + "bottom_left", modLoc("horizontal_door_top_right_open")).texture("top", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)));
+                models().withExistingParent(SecretDoors.name(block) + "bottom_left_open", modLoc("horizontal_door_bottom_left_open")).texture("bottom", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)),
+                models().withExistingParent(SecretDoors.name(block) + "bottom_right", modLoc("horizontal_door_bottom_right")).texture("bottom", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)),
+                models().withExistingParent(SecretDoors.name(block) + "bottom_right_open", modLoc("horizontal_door_bottom_right_open")).texture("bottom", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)),
+                models().withExistingParent(SecretDoors.name(block) + "top_left", modLoc("horizontal_door_top_left")).texture("top", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)),
+                models().withExistingParent(SecretDoors.name(block) + "top_left_open", modLoc("horizontal_door_top_left_open")).texture("top", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)),
+                models().withExistingParent(SecretDoors.name(block) + "top_right", modLoc("horizontal_door_top_right")).texture("top", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)),
+                models().withExistingParent(SecretDoors.name(block) + "top_right_open", modLoc("horizontal_door_top_right_open")).texture("top", mcLoc("block/" + texture)).texture("particle", mcLoc("block/" + texture)));
     }
 }

@@ -1,6 +1,5 @@
 package com.shim.secretdoors.datagen;
 
-
 import com.shim.secretdoors.SecretDoors;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.data.event.GatherDataEvent;
