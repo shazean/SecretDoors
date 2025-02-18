@@ -1,7 +1,6 @@
 package com.shim.secretdoors.datagen;
 
 import com.shim.secretdoors.SecretDoors;
-import com.shim.secretdoors.registry.SDBlocks;
 import com.shim.secretdoors.registry.SDTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -42,6 +41,5 @@ public class ModItemTags extends ItemTagsProvider {
 
         this.copy(BlockTags.DOORS, ItemTags.DOORS);
         this.copy(BlockTags.TRAPDOORS, ItemTags.TRAPDOORS);
-
     }
 }

@@ -18,7 +18,7 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class LootTables  extends VanillaBlockLoot {
+public class LootTables extends VanillaBlockLoot {
 
     @Override
     protected void generate() {
