@@ -238,11 +238,11 @@ public class SDBlocks {
 
 
     public static DoorBlock doorBlock (Block blockToCopy, BlockSetType type) {
-        return new DoorBlock(BlockBehaviour.Properties.of().mapColor(blockToCopy.defaultMapColor()).instrument(blockToCopy.defaultBlockState().instrument()).strength(3.0F).noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY), type);
+        return new DoorBlock(type, BlockBehaviour.Properties.of().mapColor(blockToCopy.defaultMapColor()).instrument(blockToCopy.defaultBlockState().instrument()).strength(3.0F).noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY));
     }
 
     public static TrapDoorBlock trapDoorBlock (Block blockToCopy, BlockSetType type) {
-        return new TrapDoorBlock(BlockBehaviour.Properties.of().mapColor(blockToCopy.defaultMapColor()).instrument(blockToCopy.defaultBlockState().instrument()).strength(3.0F).noOcclusion().isValidSpawn(SDBlocks::never).ignitedByLava(), type);
+        return new TrapDoorBlock(type, BlockBehaviour.Properties.of().mapColor(blockToCopy.defaultMapColor()).instrument(blockToCopy.defaultBlockState().instrument()).strength(3.0F).noOcclusion().isValidSpawn(SDBlocks::never).ignitedByLava());
     }
 
     public static void addCreative(BuildCreativeModeTabContentsEvent event) {

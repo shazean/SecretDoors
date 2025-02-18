@@ -10,7 +10,6 @@ import net.minecraft.world.level.block.Block;
 
 public class SDTags {
     public class Blocks {
-
         public static final TagKey<Block> SECRET_WOODEN_DOORS = BlockTags.create(new ResourceLocation(SecretDoors.MODID, "secret_wooden_doors"));
         public static final TagKey<Block> SECRET_WOODEN_PLANK_DOORS = BlockTags.create(new ResourceLocation(SecretDoors.MODID, "secret_wooden_plank_doors"));
         public static final TagKey<Block> SECRET_LOG_DOORS = BlockTags.create(new ResourceLocation(SecretDoors.MODID, "secret_log_doors"));
@@ -25,7 +24,6 @@ public class SDTags {
     }
 
     public class Items {
-
         public static final TagKey<Item> SECRET_WOODEN_DOORS = ItemTags.create(new ResourceLocation(SecretDoors.MODID, "secret_wooden_doors"));
         public static final TagKey<Item> SECRET_WOODEN_PLANK_DOORS = ItemTags.create(new ResourceLocation(SecretDoors.MODID, "secret_wooden_plank_doors"));
         public static final TagKey<Item> SECRET_LOG_DOORS = ItemTags.create(new ResourceLocation(SecretDoors.MODID, "secret_log_doors"));
@@ -37,6 +35,5 @@ public class SDTags {
         public static final TagKey<Item> SECRET_LOG_TRAPDOORS = ItemTags.create(new ResourceLocation(SecretDoors.MODID, "secret_log_trapdoors"));
         public static final TagKey<Item> SECRET_STONE_TRAPDOORS = ItemTags.create(new ResourceLocation(SecretDoors.MODID, "secret_stone_trapdoors"));
         public static final TagKey<Item> SECRET_BOOKSHELF_TRAPDOORS = ItemTags.create(new ResourceLocation(SecretDoors.MODID, "secret_bookshelf_trapdoors"));
-
     }
 }
