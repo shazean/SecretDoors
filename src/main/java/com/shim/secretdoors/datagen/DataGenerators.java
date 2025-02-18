@@ -35,15 +35,5 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(), new ModItemTags(packOutput, lookupProvider, blockTags, helper));
         generator.addProvider(event.includeServer(), new Recipes(packOutput));
         generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(), List.of(new LootTableProvider.SubProviderEntry(LootTables::new, LootContextParamSets.BLOCK))));
-
-//        generator.addProvider(event.includeServer(), new Recipes(generator));
-//            generator.addProvider(event.includeServer(), new LootTables(generator));
-//            ModBlockTags blockTags = new ModBlockTags(generator, event.getExistingFileHelper());
-//            generator.addProvider(event.includeServer(), blockTags);
-//            generator.addProvider(event.includeServer(), new ModItemTags(generator, blockTags, event.getExistingFileHelper()));
-//            generator.addProvider(event.includeClient(), new BlockStates(packOutput, event.getExistingFileHelper()));
-//            generator.addProvider(event.includeClient(), new ItemModels(generator, event.getExistingFileHelper()));
-//            generator.addProvider(event.includeClient(), new ModLanguageProvider(generator, "en_us"));
     }
-
 }
