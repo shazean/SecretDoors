@@ -7,15 +7,17 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraftforge.common.data.BlockTagsProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.data.BlockTagsProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
+import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 public class ModItemTags extends ItemTagsProvider {
 
-    public ModItemTags(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider, BlockTagsProvider blockTags, ExistingFileHelper helper) {
-        super(packOutput, lookupProvider, blockTags.contentsGetter(), SecretDoors.MODID, helper);
+    public ModItemTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
+        super(output, lookupProvider, blockTags, SecretDoors.MODID, existingFileHelper);
     }
 
     @Override

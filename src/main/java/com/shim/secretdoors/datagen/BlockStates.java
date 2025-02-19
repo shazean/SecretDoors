@@ -5,8 +5,8 @@ import com.shim.secretdoors.registry.SDBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class BlockStates extends BlockStateProvider {
 
@@ -195,7 +195,6 @@ public class BlockStates extends BlockStateProvider {
         secretTrapdoorBlock(SDBlocks.SECRET_END_STONE_BRICKS_TRAPDOOR.get(), "end_stone_bricks");
         secretTrapdoorBlock(SDBlocks.SECRET_PRISMARINE_BRICKS_TRAPDOOR.get(), "prismarine_bricks");
         secretTrapdoorBlock(SDBlocks.SECRET_DARK_PRISMARINE_TRAPDOOR.get(), "dark_prismarine");
-        
     }
 
     public void secretDoorBlock(DoorBlock block, String texture) {

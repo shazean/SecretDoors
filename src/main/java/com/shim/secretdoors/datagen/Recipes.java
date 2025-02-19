@@ -2,6 +2,7 @@ package com.shim.secretdoors.datagen;
 
 import com.shim.secretdoors.SecretDoors;
 import com.shim.secretdoors.registry.SDBlocks;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
@@ -12,18 +13,19 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
-public class Recipes extends RecipeProvider {
+public class Recipes extends RecipeProvider implements IConditionBuilder {
 
-    public Recipes(PackOutput output) {
-        super(output);
+    public Recipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+        super(output, registries);
     }
 
     @Override
     protected void buildRecipes(RecipeOutput output) {
-    
+
         woodenDoor(SDBlocks.SECRET_OAK_PLANK_DOOR.get(), Items.OAK_PLANKS, output);
         woodenDoor(SDBlocks.SECRET_DARK_OAK_PLANK_DOOR.get(), Items.DARK_OAK_PLANKS, output);
         woodenDoor(SDBlocks.SECRET_BIRCH_PLANK_DOOR.get(), Items.BIRCH_PLANKS, output);
