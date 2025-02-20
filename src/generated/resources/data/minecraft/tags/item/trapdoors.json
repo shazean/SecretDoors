@@ -1,0 +1,8 @@
+{
+  "values": [
+    "#secretdoors:secret_wooden_trapdoors",
+    "#secretdoors:secret_stone_trapdoors",
+    "secretdoors:secret_netherrack_trapdoor",
+    "secretdoors:secret_nether_brick_trapdoor"
+  ]
+}

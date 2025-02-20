@@ -16,24 +16,14 @@ public class DataGenerators {
 
     @SubscribeEvent
     public static void gatherData(GatherDataEvent.Client event) {
-//        DataGenerator generator = event.getGenerator();
-//        PackOutput packOutput = generator.getPackOutput();
-//        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
-
         event.createProvider((output, lookupProvider) ->
                 new LootTableProvider(output, Set.of(), List.of(new LootTableProvider.SubProviderEntry(SDLootTables::new, LootContextParamSets.BLOCK)), lookupProvider));
 
         event.createProvider(Recipes.Runner::new);
         event.createProvider(SDLanguageProvider::new);
         event.createProvider(SDModelProvider::new);
-        event.createProvider(SDBlockTags::new);
 
-//        event.createProvider((output, lookupProvider) ->
-//                new ModItemTags(output, lookupProvider, new ModBlockTags(output, lookupProvider).contentsGetter()));
-
-//        BlockTagsProvider blockTagsProvider = new ModBlockTags(packOutput, lookupProvider, helper);
-//        generator.addProvider(event.includeServer(), blockTagsProvider);
-//        generator.addProvider(event.includeServer(), new ModItemTags(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), helper));
+        event.createBlockAndItemTags(SDBlockTags::new, SDItemTags::new);
 
     }
 }
