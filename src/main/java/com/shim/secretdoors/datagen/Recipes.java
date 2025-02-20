@@ -3,6 +3,7 @@ package com.shim.secretdoors.datagen;
 import com.shim.secretdoors.SecretDoors;
 import com.shim.secretdoors.registry.SDBlocks;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
@@ -13,21 +14,38 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.concurrent.CompletableFuture;
 
-public class Recipes extends RecipeProvider implements IConditionBuilder {
+public class Recipes extends RecipeProvider {
 
-    public Recipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries);
+    public Recipes(HolderLookup.Provider provider, RecipeOutput output) {
+        super(provider, output);
+    }
+
+    public static class Runner extends RecipeProvider.Runner {
+        // Get the parameters from the `GatherDataEvent`s.
+        public Runner(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+            super(output, lookupProvider);
+        }
+
+        @Override
+        protected RecipeProvider createRecipeProvider(HolderLookup.Provider provider, RecipeOutput output) {
+            return new Recipes(provider, output);
+        }
+
+        @Override
+        public String getName() {
+            return "Secret Doors Recipes";
+        }
     }
 
     @Override
-    protected void buildRecipes(RecipeOutput output) {
+    protected void buildRecipes() {
 
         woodenDoor(SDBlocks.SECRET_OAK_PLANK_DOOR.get(), Items.OAK_PLANKS, output);
         woodenDoor(SDBlocks.SECRET_DARK_OAK_PLANK_DOOR.get(), Items.DARK_OAK_PLANKS, output);
+        woodenDoor(SDBlocks.SECRET_PALE_OAK_PLANK_DOOR.get(), Items.PALE_OAK_PLANKS, output);
         woodenDoor(SDBlocks.SECRET_BIRCH_PLANK_DOOR.get(), Items.BIRCH_PLANKS, output);
         woodenDoor(SDBlocks.SECRET_ACACIA_PLANK_DOOR.get(), Items.ACACIA_PLANKS, output);
         woodenDoor(SDBlocks.SECRET_SPRUCE_PLANK_DOOR.get(), Items.SPRUCE_PLANKS, output);
@@ -40,6 +58,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
 
         verticalAndHorizontalDoor(SDBlocks.SECRET_OAK_LOG_DOOR.get(), SDBlocks.SECRET_HORIZONTAL_OAK_LOG_DOOR.get(), Blocks.OAK_LOG, output);
         verticalAndHorizontalDoor(SDBlocks.SECRET_DARK_OAK_LOG_DOOR.get(), SDBlocks.SECRET_HORIZONTAL_DARK_OAK_LOG_DOOR.get(), Blocks.DARK_OAK_LOG, output);
+        verticalAndHorizontalDoor(SDBlocks.SECRET_PALE_OAK_LOG_DOOR.get(), SDBlocks.SECRET_HORIZONTAL_PALE_OAK_LOG_DOOR.get(), Blocks.PALE_OAK_LOG, output);
         verticalAndHorizontalDoor(SDBlocks.SECRET_BIRCH_LOG_DOOR.get(), SDBlocks.SECRET_HORIZONTAL_BIRCH_LOG_DOOR.get(), Blocks.BIRCH_LOG, output);
         verticalAndHorizontalDoor(SDBlocks.SECRET_ACACIA_LOG_DOOR.get(), SDBlocks.SECRET_HORIZONTAL_ACACIA_LOG_DOOR.get(), Blocks.ACACIA_LOG, output);
         verticalAndHorizontalDoor(SDBlocks.SECRET_SPRUCE_LOG_DOOR.get(), SDBlocks.SECRET_HORIZONTAL_SPRUCE_LOG_DOOR.get(), Blocks.SPRUCE_LOG, output);
@@ -52,6 +71,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
 
         verticalAndHorizontalDoor(SDBlocks.SECRET_STRIPPED_OAK_LOG_DOOR.get(), SDBlocks.SECRET_STRIPPED_HORIZONTAL_OAK_LOG_DOOR.get(), Blocks.STRIPPED_OAK_LOG, output);
         verticalAndHorizontalDoor(SDBlocks.SECRET_STRIPPED_DARK_OAK_LOG_DOOR.get(), SDBlocks.SECRET_STRIPPED_HORIZONTAL_DARK_OAK_LOG_DOOR.get(), Blocks.STRIPPED_DARK_OAK_LOG, output);
+        verticalAndHorizontalDoor(SDBlocks.SECRET_STRIPPED_PALE_OAK_LOG_DOOR.get(), SDBlocks.SECRET_STRIPPED_HORIZONTAL_PALE_OAK_LOG_DOOR.get(), Blocks.STRIPPED_PALE_OAK_LOG, output);
         verticalAndHorizontalDoor(SDBlocks.SECRET_STRIPPED_BIRCH_LOG_DOOR.get(), SDBlocks.SECRET_STRIPPED_HORIZONTAL_BIRCH_LOG_DOOR.get(), Blocks.STRIPPED_BIRCH_LOG, output);
         verticalAndHorizontalDoor(SDBlocks.SECRET_STRIPPED_ACACIA_LOG_DOOR.get(), SDBlocks.SECRET_STRIPPED_HORIZONTAL_ACACIA_LOG_DOOR.get(), Blocks.STRIPPED_ACACIA_LOG, output);
         verticalAndHorizontalDoor(SDBlocks.SECRET_STRIPPED_SPRUCE_LOG_DOOR.get(), SDBlocks.SECRET_STRIPPED_HORIZONTAL_SPRUCE_LOG_DOOR.get(), Blocks.STRIPPED_SPRUCE_LOG, output);
@@ -106,6 +126,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
 
         woodenTrapdoor(SDBlocks.SECRET_OAK_PLANK_TRAPDOOR.get(), Items.OAK_PLANKS, output);
         woodenTrapdoor(SDBlocks.SECRET_DARK_OAK_PLANK_TRAPDOOR.get(), Items.DARK_OAK_PLANKS, output);
+        woodenTrapdoor(SDBlocks.SECRET_PALE_OAK_PLANK_TRAPDOOR.get(), Items.PALE_OAK_PLANKS, output);
         woodenTrapdoor(SDBlocks.SECRET_BIRCH_PLANK_TRAPDOOR.get(), Items.BIRCH_PLANKS, output);
         woodenTrapdoor(SDBlocks.SECRET_ACACIA_PLANK_TRAPDOOR.get(), Items.ACACIA_PLANKS, output);
         woodenTrapdoor(SDBlocks.SECRET_SPRUCE_PLANK_TRAPDOOR.get(), Items.SPRUCE_PLANKS, output);
@@ -118,6 +139,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
 
         woodenTrapdoor(SDBlocks.SECRET_OAK_LOG_TRAPDOOR.get(), Items.OAK_LOG, output);
         woodenTrapdoor(SDBlocks.SECRET_DARK_OAK_LOG_TRAPDOOR.get(), Items.DARK_OAK_LOG, output);
+        woodenTrapdoor(SDBlocks.SECRET_PALE_OAK_LOG_TRAPDOOR.get(), Items.PALE_OAK_LOG, output);
         woodenTrapdoor(SDBlocks.SECRET_BIRCH_LOG_TRAPDOOR.get(), Items.BIRCH_LOG, output);
         woodenTrapdoor(SDBlocks.SECRET_ACACIA_LOG_TRAPDOOR.get(), Items.ACACIA_LOG, output);
         woodenTrapdoor(SDBlocks.SECRET_SPRUCE_LOG_TRAPDOOR.get(), Items.SPRUCE_LOG, output);
@@ -130,6 +152,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
 
         woodenTrapdoor(SDBlocks.SECRET_STRIPPED_OAK_LOG_TRAPDOOR.get(), Items.STRIPPED_OAK_LOG, output);
         woodenTrapdoor(SDBlocks.SECRET_STRIPPED_DARK_OAK_LOG_TRAPDOOR.get(), Items.STRIPPED_DARK_OAK_LOG, output);
+        woodenTrapdoor(SDBlocks.SECRET_STRIPPED_PALE_OAK_LOG_TRAPDOOR.get(), Items.STRIPPED_PALE_OAK_LOG, output);
         woodenTrapdoor(SDBlocks.SECRET_STRIPPED_BIRCH_LOG_TRAPDOOR.get(), Items.STRIPPED_BIRCH_LOG, output);
         woodenTrapdoor(SDBlocks.SECRET_STRIPPED_ACACIA_LOG_TRAPDOOR.get(), Items.STRIPPED_ACACIA_LOG, output);
         woodenTrapdoor(SDBlocks.SECRET_STRIPPED_SPRUCE_LOG_TRAPDOOR.get(), Items.STRIPPED_SPRUCE_LOG, output);
@@ -181,50 +204,50 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
 
     }
 
-    public static void woodenDoor(Block doorItem, ItemLike craftItem, RecipeOutput output) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, doorItem)
+    public void woodenDoor(Block doorItem, ItemLike craftItem, RecipeOutput output) {
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, doorItem)
                 .pattern("X X").pattern(" # ").pattern("X X")
                 .define('X', craftItem).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("has_" + SecretDoors.key(craftItem.asItem()), has(craftItem)).save(output);
+                .unlockedBy("has_" + SecretDoors.key(craftItem.asItem()), has(craftItem)).save(output);
     }
 
-    public static void door(Block doorItem, ItemLike craftItem, RecipeOutput output) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, doorItem)
+    public void door(Block doorItem, ItemLike craftItem, RecipeOutput output) {
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, doorItem)
                 .pattern("X X").pattern(" # ").pattern("X X")
                 .define('X', craftItem).define('#', ItemTags.DOORS)
-                .group("secretdoors").unlockedBy("has_" + SecretDoors.key(craftItem.asItem()), has(craftItem)).save(output);
+                .unlockedBy("has_" + SecretDoors.key(craftItem.asItem()), has(craftItem)).save(output);
     }
 
-    public static void horizontalDoor(Block doorItem, ItemLike craftItem, RecipeOutput output) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, doorItem)
+    public void horizontalDoor(Block doorItem, ItemLike craftItem, RecipeOutput output) {
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, doorItem)
                 .pattern("XXX").pattern(" # ").pattern("XXX")
                 .define('X', craftItem).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("has_" + SecretDoors.key(craftItem.asItem()), has(craftItem)).save(output);
+                .unlockedBy("has_" + SecretDoors.key(craftItem.asItem()), has(craftItem)).save(output);
     }
 
-    public static void verticalDoor(Block doorItem, ItemLike craftItem, RecipeOutput output) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, doorItem)
+    public void verticalDoor(Block doorItem, ItemLike craftItem, RecipeOutput output) {
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, doorItem)
                 .pattern("X X").pattern("X#X").pattern("X X")
                 .define('X', craftItem).define('#', ItemTags.WOODEN_DOORS)
-                .group("secretdoors").unlockedBy("has_" + SecretDoors.key(craftItem.asItem()), has(craftItem)).save(output);
+                .unlockedBy("has_" + SecretDoors.key(craftItem.asItem()), has(craftItem)).save(output);
     }
 
-    public static void verticalAndHorizontalDoor(Block verticalDoor, Block horizontalDoor, Block craftItem, RecipeOutput output) {
+    public void verticalAndHorizontalDoor(Block verticalDoor, Block horizontalDoor, Block craftItem, RecipeOutput output) {
         verticalDoor(verticalDoor, craftItem, output);
         horizontalDoor(horizontalDoor, craftItem, output);
     }
 
-    public static void woodenTrapdoor(Block doorItem, ItemLike craftItem, RecipeOutput output) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, doorItem)
+    public void woodenTrapdoor(Block doorItem, ItemLike craftItem, RecipeOutput output) {
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, doorItem)
                 .pattern("X X").pattern(" # ").pattern("X X")
                 .define('X', craftItem).define('#', ItemTags.WOODEN_TRAPDOORS)
-                .group("secretdoors").unlockedBy("has_" + SecretDoors.key(craftItem.asItem()), has(craftItem)).save(output);
+                .unlockedBy("has_" + SecretDoors.key(craftItem.asItem()), has(craftItem)).save(output);
     }
 
-    public static void trapdoor(Block doorItem, ItemLike craftItem, RecipeOutput output) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, doorItem)
+    public void trapdoor(Block doorItem, ItemLike craftItem, RecipeOutput output) {
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, doorItem)
                 .pattern("X X").pattern(" # ").pattern("X X")
                 .define('X', craftItem).define('#', ItemTags.TRAPDOORS)
-                .group("secretdoors").unlockedBy("has_" + SecretDoors.key(craftItem.asItem()), has(craftItem)).save(output);
+                .unlockedBy("has_" + SecretDoors.key(craftItem.asItem()), has(craftItem)).save(output);
     }
 }

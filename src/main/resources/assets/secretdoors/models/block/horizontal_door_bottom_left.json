@@ -1,7 +1,7 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "#bottom"
+        "particle": "#texture"
     },
     "elements": [
         {   "from": [ 0, 0, 0 ],

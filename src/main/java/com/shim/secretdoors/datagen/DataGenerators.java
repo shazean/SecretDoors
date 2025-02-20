@@ -2,42 +2,38 @@ package com.shim.secretdoors.datagen;
 
 
 import com.shim.secretdoors.SecretDoors;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.common.data.BlockTagsProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
+import java.util.Set;
 
 @EventBusSubscriber(modid = SecretDoors.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class DataGenerators {
 
     @SubscribeEvent
-    public static void gatherData(GatherDataEvent event) {
-        DataGenerator generator = event.getGenerator();
-        PackOutput packOutput = generator.getPackOutput();
-        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
-        ExistingFileHelper helper = event.getExistingFileHelper();
+    public static void gatherData(GatherDataEvent.Client event) {
+//        DataGenerator generator = event.getGenerator();
+//        PackOutput packOutput = generator.getPackOutput();
+//        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(), List.of(new LootTableProvider.SubProviderEntry(SBDLootTables::new, LootContextParamSets.BLOCK)), lookupProvider));
-        generator.addProvider(event.includeServer(), new Recipes(packOutput, lookupProvider));
+        event.createProvider((output, lookupProvider) ->
+                new LootTableProvider(output, Set.of(), List.of(new LootTableProvider.SubProviderEntry(SDLootTables::new, LootContextParamSets.BLOCK)), lookupProvider));
 
-        BlockTagsProvider blockTagsProvider = new ModBlockTags(packOutput, lookupProvider, helper);
-        generator.addProvider(event.includeServer(), blockTagsProvider);
-        generator.addProvider(event.includeServer(), new ModItemTags(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), helper));
+        event.createProvider(Recipes.Runner::new);
+        event.createProvider(SDLanguageProvider::new);
+        event.createProvider(SDModelProvider::new);
+        event.createProvider(SDBlockTags::new);
 
-        generator.addProvider(event.includeClient(), new BlockStates(packOutput, helper));
+//        event.createProvider((output, lookupProvider) ->
+//                new ModItemTags(output, lookupProvider, new ModBlockTags(output, lookupProvider).contentsGetter()));
 
-        generator.addProvider(event.includeClient(), new ItemModels(packOutput, helper));
-        generator.addProvider(event.includeClient(), new ModLanguageProvider(packOutput, "en_us"));
+//        BlockTagsProvider blockTagsProvider = new ModBlockTags(packOutput, lookupProvider, helper);
+//        generator.addProvider(event.includeServer(), blockTagsProvider);
+//        generator.addProvider(event.includeServer(), new ModItemTags(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), helper));
 
     }
 }
