@@ -1,18 +1,22 @@
 package com.shim.secretdoors.registry;
 
 import com.shim.secretdoors.SecretDoors;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.block.*;
+import net.minecraft.block.material.Material;
+import net.minecraft.entity.EntityType;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class SDBlocks {
@@ -21,26 +25,27 @@ public class SDBlocks {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SecretDoors.MODID);
 
     public static final Map<RegistryObject<? extends Block>, String> BLOCK_LANG_EN_US = new HashMap<>();
-    public static final LinkedList<RegistryObject<? extends Block>> DOOR_LOOT_TABLE = new LinkedList<>();
-    public static final LinkedList<RegistryObject<? extends Block>> TRAPDOOR_LOOT_TABLE = new LinkedList<>();
+    public static final LinkedList<RegistryObject<? extends Block>> DOOR_TABLE = new LinkedList<>();
+    public static final LinkedList<RegistryObject<? extends Block>> TRAPDOOR_TABLE = new LinkedList<>();
 
     private static <T extends Block> RegistryObject<T> registerDoorBlock(String nameIn, String localizationIn, Supplier<T> blockIn) {
         RegistryObject<T> block = BLOCKS.register(nameIn, blockIn);
-        ITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+        ITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(ItemGroup.TAB_REDSTONE)));
         BLOCK_LANG_EN_US.put(block, localizationIn);
-        DOOR_LOOT_TABLE.add(block);
+        DOOR_TABLE.add(block);
         return block;
     }
 
     private static <T extends Block> RegistryObject<T> registerTrapdoorBlock(String nameIn, String localizationIn, Supplier<T> blockIn) {
         RegistryObject<T> block = BLOCKS.register(nameIn, blockIn);
-        ITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+        ITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(ItemGroup.TAB_REDSTONE)));
         BLOCK_LANG_EN_US.put(block, localizationIn);
-        TRAPDOOR_LOOT_TABLE.add(block);
+        TRAPDOOR_TABLE.add(block);
         return block;
     }
 
     public static final RegistryObject<DoorBlock> SECRET_OAK_PLANK_DOOR = registerDoorBlock("secret_oak_plank_door", "Secret Oak Plank Door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.OAK_PLANKS.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+
     public static final RegistryObject<DoorBlock> SECRET_DARK_OAK_PLANK_DOOR = registerDoorBlock("secret_dark_oak_plank_door", "Secret Dark Oak Plank Door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.DARK_OAK_PLANKS.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
     public static final RegistryObject<DoorBlock> SECRET_SPRUCE_PLANK_DOOR = registerDoorBlock("secret_spruce_plank_door", "Secret Spruce Plank Door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.SPRUCE_PLANKS.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
     public static final RegistryObject<DoorBlock> SECRET_ACACIA_PLANK_DOOR = registerDoorBlock("secret_acacia_plank_door", "Secret Acacia Plank Door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.ACACIA_PLANKS.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
@@ -88,13 +93,8 @@ public class SDBlocks {
     public static final RegistryObject<DoorBlock> SECRET_STONE_DOOR = registerDoorBlock("secret_stone_door", "Secret Stone Door", () -> new DoorBlock(Block.Properties.of(Material.STONE, Blocks.STONE.defaultMaterialColor()).strength(3.0F).sound(SoundType.STONE).noOcclusion()));
     public static final RegistryObject<DoorBlock> SECRET_COBBLESTONE_DOOR = registerDoorBlock("secret_cobblestone_door", "Secret Cobblestone Door", () -> new DoorBlock(Block.Properties.of(Material.STONE, Blocks.COBBLESTONE.defaultMaterialColor()).strength(3.0F).sound(SoundType.STONE).noOcclusion()));
     public static final RegistryObject<DoorBlock> SECRET_STONE_BRICKS_DOOR = registerDoorBlock("secret_stone_bricks_door", "Secret Stone Bricks Door", () -> new DoorBlock(Block.Properties.of(Material.STONE, Blocks.STONE_BRICKS.defaultMaterialColor()).strength(3.0F).sound(SoundType.STONE).noOcclusion()));
-    public static final RegistryObject<DoorBlock> SECRET_DEEPSLATE_DOOR = registerDoorBlock("secret_deepslate_door", "Secret Deepslate Door", () -> new DoorBlock(Block.Properties.of(Material.STONE, Blocks.DEEPSLATE.defaultMaterialColor()).strength(3.0F).sound(SoundType.DEEPSLATE).noOcclusion()));
-    public static final RegistryObject<DoorBlock> SECRET_COBBLED_DEEPSLATE_DOOR = registerDoorBlock("secret_cobbled_deepslate_door", "Secret Cobbled Deepslate Door", () -> new DoorBlock(Block.Properties.of(Material.STONE, Blocks.COBBLED_DEEPSLATE.defaultMaterialColor()).strength(3.0F).sound(SoundType.DEEPSLATE).noOcclusion()));
-    public static final RegistryObject<DoorBlock> SECRET_DEEPSLATE_BRICKS_DOOR = registerDoorBlock("secret_deepslate_bricks_door", "Secret Deepslate Bricks Door", () -> new DoorBlock(Block.Properties.of(Material.STONE, Blocks.DEEPSLATE_BRICKS.defaultMaterialColor()).strength(3.0F).sound(SoundType.DEEPSLATE_BRICKS).noOcclusion()));
-    public static final RegistryObject<DoorBlock> SECRET_DEEPSLATE_TILES_DOOR = registerDoorBlock("secret_deepslate_tiles_door", "Secret Deepslate Tiles Door", () -> new DoorBlock(Block.Properties.of(Material.STONE, Blocks.DEEPSLATE_TILES.defaultMaterialColor()).strength(3.0F).sound(SoundType.DEEPSLATE_TILES).noOcclusion()));
-    public static final RegistryObject<DoorBlock> SECRET_POLISHED_DEEPSLATE_DOOR = registerDoorBlock("secret_polished_deepslate_door", "Secret Polished Deepslate Door", () -> new DoorBlock(Block.Properties.of(Material.STONE, Blocks.POLISHED_DEEPSLATE.defaultMaterialColor()).strength(3.0F).sound(SoundType.POLISHED_DEEPSLATE).noOcclusion()));
 
-    public static final RegistryObject<DoorBlock> SECRET_BOOKSHELF_DOOR = registerDoorBlock("secret_bookshelf_door", "Secret Bookshelf Door", () -> new DoorBlock(Block.Properties.of(Material.STONE, Blocks.BOOKSHELF.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<DoorBlock> SECRET_BOOKSHELF_DOOR = registerDoorBlock("secret_bookshelf_door", "Secret Bookshelf Door", () -> new DoorBlock(Block.Properties.of(Material.WOOD, Blocks.BOOKSHELF.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
 
     public static final RegistryObject<DoorBlock> SECRET_NETHERRACK_DOOR = registerDoorBlock("secret_netherrack_door", "Secret Netherrack Door", () -> new DoorBlock(Block.Properties.of(Material.STONE, Blocks.NETHERRACK.defaultMaterialColor()).strength(3.0F).sound(SoundType.NETHERRACK).noOcclusion()));
     public static final RegistryObject<DoorBlock> SECRET_NETHER_BRICK_DOOR = registerDoorBlock("secret_nether_brick_door", "Secret Nether Brick Door", () -> new DoorBlock(Block.Properties.of(Material.STONE, Blocks.NETHER_BRICKS.defaultMaterialColor()).strength(3.0F).sound(SoundType.NETHER_BRICKS).noOcclusion()));
@@ -156,13 +156,8 @@ public class SDBlocks {
     public static final RegistryObject<TrapDoorBlock> SECRET_STONE_TRAPDOOR = registerTrapdoorBlock("secret_stone_trapdoor", "Secret Stone Trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.STONE, Blocks.STONE.defaultMaterialColor()).strength(3.0F).sound(SoundType.STONE).noOcclusion()));
     public static final RegistryObject<TrapDoorBlock> SECRET_COBBLESTONE_TRAPDOOR = registerTrapdoorBlock("secret_cobblestone_trapdoor", "Secret Cobblestone Trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.STONE, Blocks.COBBLESTONE.defaultMaterialColor()).strength(3.0F).sound(SoundType.STONE).noOcclusion()));
     public static final RegistryObject<TrapDoorBlock> SECRET_STONE_BRICKS_TRAPDOOR = registerTrapdoorBlock("secret_stone_bricks_trapdoor", "Secret Stone Bricks Trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.STONE, Blocks.STONE_BRICKS.defaultMaterialColor()).strength(3.0F).sound(SoundType.STONE).noOcclusion()));
-    public static final RegistryObject<TrapDoorBlock> SECRET_DEEPSLATE_TRAPDOOR = registerTrapdoorBlock("secret_deepslate_trapdoor", "Secret Deepslate Trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.STONE, Blocks.DEEPSLATE.defaultMaterialColor()).strength(3.0F).sound(SoundType.DEEPSLATE).noOcclusion()));
-    public static final RegistryObject<TrapDoorBlock> SECRET_COBBLED_DEEPSLATE_TRAPDOOR = registerTrapdoorBlock("secret_cobbled_deepslate_trapdoor", "Secret Cobbled Deepslate Trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.STONE, Blocks.COBBLED_DEEPSLATE.defaultMaterialColor()).strength(3.0F).sound(SoundType.DEEPSLATE).noOcclusion()));
-    public static final RegistryObject<TrapDoorBlock> SECRET_DEEPSLATE_BRICKS_TRAPDOOR = registerTrapdoorBlock("secret_deepslate_bricks_trapdoor", "Secret Deepslate Bricks Trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.STONE, Blocks.DEEPSLATE_BRICKS.defaultMaterialColor()).strength(3.0F).sound(SoundType.DEEPSLATE_BRICKS).noOcclusion()));
-    public static final RegistryObject<TrapDoorBlock> SECRET_DEEPSLATE_TILES_TRAPDOOR = registerTrapdoorBlock("secret_deepslate_tiles_trapdoor", "Secret Deepslate Tiles Trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.STONE, Blocks.DEEPSLATE_TILES.defaultMaterialColor()).strength(3.0F).sound(SoundType.DEEPSLATE_TILES).noOcclusion()));
-    public static final RegistryObject<TrapDoorBlock> SECRET_POLISHED_DEEPSLATE_TRAPDOOR = registerTrapdoorBlock("secret_polished_deepslate_trapdoor", "Secret Polished Deepslate Trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.STONE, Blocks.POLISHED_DEEPSLATE.defaultMaterialColor()).strength(3.0F).sound(SoundType.POLISHED_DEEPSLATE).noOcclusion()));
 
-    public static final RegistryObject<TrapDoorBlock> SECRET_BOOKSHELF_TRAPDOOR = registerTrapdoorBlock("secret_bookshelf_trapdoor", "Secret Bookshelf Trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.STONE, Blocks.BOOKSHELF.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<TrapDoorBlock> SECRET_BOOKSHELF_TRAPDOOR = registerTrapdoorBlock("secret_bookshelf_trapdoor", "Secret Bookshelf Trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.WOOD, Blocks.BOOKSHELF.defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
 
     public static final RegistryObject<TrapDoorBlock> SECRET_NETHERRACK_TRAPDOOR = registerTrapdoorBlock("secret_netherrack_trapdoor", "Secret Netherrack Trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.STONE, Blocks.NETHERRACK.defaultMaterialColor()).strength(3.0F).sound(SoundType.NETHERRACK).noOcclusion()));
     public static final RegistryObject<TrapDoorBlock> SECRET_NETHER_BRICK_TRAPDOOR = registerTrapdoorBlock("secret_nether_brick_trapdoor", "Secret Nether Brick Trapdoor", () -> new TrapDoorBlock(Block.Properties.of(Material.STONE, Blocks.NETHER_BRICKS.defaultMaterialColor()).strength(3.0F).sound(SoundType.NETHER_BRICKS).noOcclusion()));

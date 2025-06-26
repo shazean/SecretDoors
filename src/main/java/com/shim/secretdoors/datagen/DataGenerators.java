@@ -4,7 +4,7 @@ import com.shim.secretdoors.SecretDoors;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
+import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 
 @Mod.EventBusSubscriber(modid = SecretDoors.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenerators {
@@ -13,16 +13,16 @@ public class DataGenerators {
     public static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         if (event.includeServer()) {
-            generator.addProvider(new Recipes(generator));
-            generator.addProvider(new LootTables(generator));
-            ModBlockTags blockTags = new ModBlockTags(generator, event.getExistingFileHelper());
+            generator.addProvider(new SDRecipes(generator));
+            generator.addProvider(new SDLootTables(generator));
+            SDBlockTags blockTags = new SDBlockTags(generator, event.getExistingFileHelper());
             generator.addProvider(blockTags);
-            generator.addProvider(new ModItemTags(generator, blockTags, event.getExistingFileHelper()));
+            generator.addProvider(new SDItemTags(generator, blockTags, event.getExistingFileHelper()));
         }
         if (event.includeClient()) {
-            generator.addProvider(new BlockStates(generator, event.getExistingFileHelper()));
-            generator.addProvider(new ItemModels(generator, event.getExistingFileHelper()));
-            generator.addProvider(new ModLanguageProvider(generator, "en_us"));
+            generator.addProvider(new SDBlockStates(generator, event.getExistingFileHelper()));
+            generator.addProvider(new SDItemModels(generator, event.getExistingFileHelper()));
+            generator.addProvider(new SDLangProvider(generator, "en_us"));
 
         }
     }
